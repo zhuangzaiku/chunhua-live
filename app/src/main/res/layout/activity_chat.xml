@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.quootta.mdate.ui.activity.ChatActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/conversation"
+        android:name="io.rong.imkit.fragment.ConversationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/pop_gift"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:src="@mipmap/popu_gift_image"
+        android:layout_gravity="right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"
+        android:paddingRight="10dp"
+        android:layout_marginTop="150dp" />
+</RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.quootta.mdate.ui.activity.WithdrawActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+
+    <!--<Button-->
+        <!--android:id="@+id/rb_alipay_withdraw"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingTop="@dimen/padding_size_10"-->
+        <!--android:paddingBottom="@dimen/padding_size_10"-->
+        <!--android:background="@color/friend_board"-->
+        <!--android:text="@string/alipay"-->
+
+        <!--android:gravity="center"-->
+        <!--/>-->
+    <!--<RadioGroup-->
+        <!--android:id="@+id/rg_withdraw"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_alipay_withdraw"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingTop="@dimen/padding_size_10"-->
+            <!--android:paddingBottom="@dimen/padding_size_10"-->
+            <!--android:checked="true"-->
+            <!--android:background="@drawable/bg_me_radiogroup"-->
+            <!--android:text="@string/alipay"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"/>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_bank_withdraw"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingTop="@dimen/padding_size_10"-->
+            <!--android:paddingBottom="@dimen/padding_size_10"-->
+            <!--android:background="@drawable/bg_me_radiogroup"-->
+            <!--android:text="@string/bank_card"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"/>-->
+    <!--</RadioGroup>-->
+
+    <com.quootta.mdate.ui.view.MyViewPager
+        android:id="@+id/vp_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.quootta.mdate.ui.view.MyViewPager>
+</LinearLayout>

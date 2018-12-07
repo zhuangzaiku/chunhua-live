@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.quootta.mdate.ui.activity.VideoVerifyActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_video_verify_camera"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/include_title_bar"
+        android:layout_marginTop="@dimen/margin_size_80"
+        android:padding="@dimen/padding_size_16"
+        android:background="@drawable/shape_verify_video"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/red_spot"
+            android:textColor="@color/statusRed"
+            android:layout_alignParentRight="true"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/camera"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_16"
+                android:text="@string/click_to_verify"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_camera"/></RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_50"
+        android:layout_marginLeft="@dimen/margin_size_30"
+        android:layout_marginRight="@dimen/margin_size_30"
+        android:textSize="@dimen/font_size_20"
+        android:layout_below="@id/rl_video_verify_camera"
+        android:text="@string/verify_notify"/>
+
+</RelativeLayout>

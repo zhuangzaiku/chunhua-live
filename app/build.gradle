@@ -1,0 +1,142 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '26.0.2'
+
+    sourceSets.main {
+        jniLibs.srcDirs = ['libs']
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.quootta.mdate"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 53
+        versionName "1.0.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    signingConfigs {
+        debug {
+            // No debug config
+
+        }
+        release {
+            storeFile file("./keystore/testhaha.jks") // 秘钥自己生成
+            storePassword "123456"
+            keyAlias "key0-haha"
+            keyPassword "123456"
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            manifestPlaceholders = [RONG_CLOUD_APP_KEY: "qd46yzrfqi4pf"] // 融云的debugkey
+            minifyEnabled false
+            signingConfig signingConfigs.release
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            manifestPlaceholders = [RONG_CLOUD_APP_KEY: "qd46yzrfqi4pf"] // 融云的Releasekey
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+
+    applicationVariants.all { variant ->
+        if (variant.buildType.name.equals('release')) {
+            variant.outputs.all { output ->
+                def buildName = "chunhua"
+                def type = variant.buildType.name
+                def releaseApkName = buildName + '_' + type + "_" + versionName + '.apk'
+                outputFileName = releaseApkName
+            }
+        } else {
+            variant.outputs.all { output ->
+                def buildName = "chunhua"
+                def releaseApkName = buildName + '_' + "test" + "_" + versionName + '.apk'
+                outputFileName = releaseApkName
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'okio/AsyncTimeout$Watchdog.class'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"//集成RongCloud时防止编译错误
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+        jcenter()
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' //this way we can find the .aar file in libs folder
+    }
+    google()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/gson-2.6.2.jar')
+    compile files('libs/jpush-android-2.1.0.jar')
+    compile files('libs/pldroid-player-1.2.1.jar')
+    compile files('libs/aspectjrt-1.7.3.jar')
+    compile files('libs/isoparser-1.0.6.jar')
+    compile project(':IMKit')
+    compile project(':CallKit')
+    compile project(':lib:pingpp')
+    compile project(':okhttputils')
+    compile files('libs/badgeview.jar')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'cn.finalteam:galleryfinal:1.4.8.7'
+    compile 'com.lovedise:permissiongen:0.0.6'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+    compile 'com.android.support:percent:23.4.0'
+    compile 'com.github.castorflex.verticalviewpager:library:19.0.1'
+    compile 'com.github.zzz40500:android-shapeLoadingView:1.0.3.2'
+    compile 'commons-codec:commons-codec:20041127.091804'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    testCompile 'junit:junit:4.12'
+}

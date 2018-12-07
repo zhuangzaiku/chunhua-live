@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.quootta.mdate.ui.fragment.AlipayFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundWhite"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_amount"/>
+
+        <EditText
+            android:id="@+id/et_amount_alipay_fragment"
+            android:hint="@string/withdraw_amount_hint"
+            android:inputType="number"
+            android:nextFocusDown="@+id/et_account_alipay_fragment"
+            style="@style/WithdrawEditStyle" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_alipay_number"/>
+
+        <EditText
+            android:id="@+id/et_account_alipay_fragment"
+            android:nextFocusDown="@+id/et_payee_name_alipay_fragment"
+            style="@style/WithdrawEditStyle" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_payee_name"/>
+
+        <EditText
+            android:id="@+id/et_payee_name_alipay_fragment"
+            android:nextFocusDown="@+id/et_password_alipay_fragment"
+            style="@style/WithdrawEditStyle" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_password"/>
+
+        <EditText
+            android:id="@+id/et_password_alipay_fragment"
+            android:inputType="textPassword"
+            android:hint="@string/withdraw_password_hint"
+            style="@style/WithdrawEditStyle" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myPink"
+        android:layout_marginTop="@dimen/margin_size_6"
+        android:layout_marginRight="@dimen/margin_size_4"
+        android:layout_gravity="right"
+        android:text="@string/tax_notify"/>
+
+    <Button
+        android:id="@+id/btn_ensure_alipay_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/margin_size_60"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_button"
+        android:textColor="@color/backgroundWhite"
+        android:text="@string/ensure"/>
+</LinearLayout>

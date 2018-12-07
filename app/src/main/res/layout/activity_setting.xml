@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.quootta.mdate.ui.activity.SettingActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+    <!--账号安全-->
+    <RelativeLayout
+        android:id="@+id/iv_security"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:layout_marginBottom="1dp"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/account_security_me"/>
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_down"/>
+    </RelativeLayout>
+    <!--<RelativeLayout-->
+
+        <!--android:id="@+id/rl_security_setting_activity"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/margin_size_20"-->
+        <!--android:layout_marginBottom="1dp"-->
+        <!--android:background="@color/backgroundWhite">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/margin_size_16"-->
+            <!--android:layout_marginTop="@dimen/margin_size_10"-->
+            <!--android:layout_marginBottom="@dimen/margin_size_10"-->
+            <!--android:textSize="@dimen/font_size_16"-->
+            <!--android:text="@string/account_security"/>-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="16dp"-->
+            <!--android:layout_height="16dp"-->
+            <!--android:layout_marginRight="@dimen/margin_size_16"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:src="@mipmap/icon_down"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--隐身模式-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/invisible_mode"/>
+
+        <Switch
+            android:id="@+id/switch_setting_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_switch_setting_activity"
+            android:layout_toStartOf="@+id/tv_switch_setting_activity"
+            android:layout_marginRight="@dimen/margin_size_8"
+            android:layout_marginEnd="@dimen/margin_size_8"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_switch_setting_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_size_10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <!--接听开关-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/answer_switch"/>
+
+        <Switch
+            android:id="@+id/answer_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_answer_switch"
+            android:layout_toStartOf="@+id/tv_answer_switch"
+            android:layout_marginRight="@dimen/margin_size_8"
+            android:layout_marginEnd="@dimen/margin_size_8"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_answer_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_size_10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_about_us_setting_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:layout_marginBottom="1dp"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/about_us"/>
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_down"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_update_setting_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:layout_marginBottom="1dp"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/version_update"/>
+
+        <TextView
+            android:id="@+id/txt_version_name_setting_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/txt_version_name_setting_activity"
+            android:text="@string/current_version"/>
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/rl_clear_cache_setting_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/clear_cache"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="10.32M"/>
+    </RelativeLayout>-->
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_feed_back_setting_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/feedback"/>
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_down"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_log_out_setting_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/log_out"/>
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_down"/>
+    </RelativeLayout>
+
+</LinearLayout>

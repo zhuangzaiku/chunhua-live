@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_profile_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.quootta.mdate.ui.activity.ProfileActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin_size_10"
+        android:layout_height="140dp"
+        android:padding="@dimen/padding_size_4"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardBackgroundColor="@color/myWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_head_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:layout_marginLeft="@dimen/margin_size_10"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.quootta.mdate.ui.view.RoundRectNetworkImageView
+                    android:id="@+id/iv_head_profile"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="@dimen/margin_size_4"
+                    android:src="@mipmap/personal_details_loading_page2" />
+
+                <TextView
+                    android:id="@+id/tv_change_head_pic_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_size_6"
+                    android:layout_below="@id/iv_head_profile"
+                    android:text="@string/change_head_pic"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:layout_toRightOf="@id/ll_head_profile"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlack"
+                    android:paddingTop="@dimen/padding_size_2"
+                    android:textSize="@dimen/font_size_14"
+                    android:layout_gravity="start"
+                    android:text="@string/personal_sign"/>
+
+                <EditText
+                    android:id="@+id/et_sign_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_size_4"
+                    android:paddingTop="@dimen/padding_size_2"
+                    android:textSize="@dimen/font_size_14"
+                    android:gravity="start"
+                    android:background="@null"
+                    android:hint="@string/hint_sign"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_size_10"
+        android:padding="@dimen/padding_size_4"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardBackgroundColor="@color/myWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/nick_name"/>
+
+                <EditText
+                    android:id="@+id/et_nick_name_profile"
+                    style="@style/profile_edit_style" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/sex_colon"/>
+
+                <EditText
+                    android:id="@+id/et_sex_profile"
+                    android:editable="false"
+                    android:focusable="false"
+                    style="@style/profile_edit_style"/>
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:id="@+id/ll_birthday_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/birthday_colon"/>
+
+                <EditText
+                    android:id="@+id/et_birthday_profile"
+                    android:editable="false"
+                    android:focusable="false"
+                    style="@style/profile_edit_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:id="@+id/ll_city_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/city_colon"/>
+
+                <EditText
+                    android:id="@+id/et_city_profile"
+                    android:editable="false"
+                    android:focusable="false"
+                    style="@style/profile_edit_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:id="@+id/ll_weight_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/height_colon"/>
+
+                <EditText
+                    android:id="@+id/et_height_profile"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="请输入身高"
+                    style="@style/profile_edit_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:id="@+id/ll_height_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/weight"/>
+
+                <EditText
+                    android:id="@+id/et_weight_profile"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="请输入体重"
+                    style="@style/profile_edit_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/hobby"/>
+
+                <EditText
+                    android:id="@+id/et_hobby_profile"
+                    style="@style/profile_edit_style"
+                    android:hint="@string/hint_space_spilt"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/job_colon"/>
+
+                <EditText
+                    android:id="@+id/et_job_profile"
+                    style="@style/profile_edit_style"
+                    android:hint="请输入职业"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/liked_date_way"/>
+
+                <EditText
+                    android:id="@+id/et_request_profile"
+                    style="@style/profile_edit_style"
+                    android:hint="@string/hint_space_spilt"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_size_6"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:layout_marginRight="@dimen/margin_size_4"
+                android:background="@color/myGrayLight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:layout_marginBottom="@dimen/margin_size_12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:text="@string/liked_opposite_sex"/>
+
+                <EditText
+                    android:id="@+id/et_date_way_profile"
+                    style="@style/profile_edit_style"
+                    android:hint="@string/hint_space_spilt"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

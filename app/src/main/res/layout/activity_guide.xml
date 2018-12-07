@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zgy="http://schemas.android.com/apk/res-auto"
+    tools:context="com.quootta.mdate.ui.activity.GuideActivity">
+
+    <RelativeLayout
+        android:layout_above="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.quootta.mdate.ui.view.MyViewPager
+            android:id="@+id/vp_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.quootta.mdate.ui.view.MyViewPager>
+
+        <com.quootta.mdate.ui.view.IndicatorView
+            android:id="@+id/id_indicator"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            zgy:indicator_icon="@drawable/indicator_selector"
+            zgy:indicator_margin="5dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_guide_gray_button"
+            android:text="@string/signin"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_guide_yellow_button"
+            android:text="@string/login"/>
+    </LinearLayout>
+</RelativeLayout>

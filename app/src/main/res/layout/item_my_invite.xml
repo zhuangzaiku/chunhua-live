@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cv_my_invite_item"
+        android:layout_width="330dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/margin_size_4"
+        android:layout_marginBottom="@dimen/margin_size_4"
+        android:padding="0dp"
+        android:layout_gravity="center_horizontal"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardBackgroundColor="@color/myWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.quootta.mdate.ui.view.CircleImageView
+                android:id="@+id/iv_head_my_invite_item"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_size_10"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/test"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_head_my_invite_item"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name_item_my_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlack"
+                    android:layout_marginBottom="@dimen/margin_size_8"
+                    android:text="test"/>
+
+                <TextView
+                    android:id="@+id/tv_time_item_my_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myGray"
+                    android:textSize="@dimen/font_size_12"
+                    android:text="test"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_14"
+                android:layout_marginRight="@dimen/margin_size_8"
+                android:layout_alignParentRight="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_status_item_my_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_12"
+                    android:text="确认中"/>
+
+                <Button
+                    android:id="@+id/btn_enter_chat_item_my_invite"
+                    android:layout_width="70dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="@dimen/margin_size_6"
+                    android:textColor="@color/myWhite"
+                    android:text="@string/enter_chat"
+                    android:textSize="@dimen/font_size_12"
+                    android:background="@drawable/shape_button"/>
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_size_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_undo_item_my_invite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_size_8"
+                    android:text="未处理"/>
+
+                <TextView
+                    android:id="@+id/tv_checking_item_my_invite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_size_8"
+                    android:text="处理中"/>
+
+                <TextView
+                    android:id="@+id/tv_done_item_my_invite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_size_8"
+                    android:text="已过期"/>
+            </LinearLayout>-->
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

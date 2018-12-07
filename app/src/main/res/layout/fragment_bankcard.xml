@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.quootta.mdate.ui.fragment.BankcardFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundWhite"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_amount"/>
+
+        <EditText
+            android:id="@+id/et_amount_bankcard_fragment"
+            style="@style/WithdrawEditStyle"
+            android:hint="@string/withdraw_amount_hint"
+            android:inputType="number"
+            android:nextFocusDown="@+id/et_owner_name_bankcard_fragment"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_name"/>
+
+        <EditText
+            android:id="@+id/et_owner_name_bankcard_fragment"
+            style="@style/WithdrawEditStyle"
+            android:nextFocusDown="@+id/et_card_number_bankcard_fragment"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_bank_number"/>
+
+        <EditText
+            android:id="@+id/et_card_number_bankcard_fragment"
+            style="@style/WithdrawEditStyle"
+            android:inputType="number"
+            android:nextFocusDown="@+id/et_bank_name_bankcard_fragment"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_bank"/>
+
+        <EditText
+            android:id="@+id/et_bank_name_bankcard_fragment"
+            style="@style/WithdrawEditStyle"
+            android:nextFocusDown="@+id/et_bank_province_bankcard_fragment"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:visibility="gone"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_province"/>
+
+        <EditText
+            android:id="@+id/et_bank_province_bankcard_fragment"
+            style="@style/WithdrawEditStyle"
+            android:nextFocusDown="@+id/et_point_bankcard_fragment"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:visibility="gone"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_point"/>
+
+        <EditText
+            android:id="@+id/et_point_bankcard_fragment"
+            style="@style/WithdrawEditStyle"
+            android:nextFocusDown="@+id/et_password_bankcard_fragment"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_size_8"
+        android:paddingBottom="@dimen/padding_size_8"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+            android:text="@string/withdraw_password"/>
+
+        <EditText
+            android:id="@+id/et_password_bankcard_fragment"
+            style="@style/WithdrawEditStyle"
+            android:inputType="textPassword"
+            android:hint="@string/withdraw_password_hint"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myPink"
+        android:layout_marginTop="@dimen/margin_size_6"
+        android:layout_marginRight="@dimen/margin_size_4"
+        android:layout_gravity="right"
+        android:text="@string/tax_notify"/>
+
+    <Button
+        android:id="@+id/btn_ensure_bankcard_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/margin_size_60"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_button"
+        android:text="@string/ensure"/>
+
+</LinearLayout>

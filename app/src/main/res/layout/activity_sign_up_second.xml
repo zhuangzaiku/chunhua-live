@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".ui.activity.SignActivitys.SignUpSecondActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_first_sign_up_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_40"
+        android:layout_marginLeft="@dimen/margin_size_20"
+        android:layout_marginRight="@dimen/margin_size_20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_size_10"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_round_conner_layout">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/set_password"/>
+
+            <EditText
+                android:id="@+id/et_password_sign_up_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:hint="@string/hint_set_password"
+                android:textColorHint="@color/myGrayHint"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_size_16"
+            android:padding="@dimen/padding_size_10"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_round_conner_layout">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/confirm_password"/>
+
+            <EditText
+                android:id="@+id/et_confirm_password_sign_up_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:hint="@string/hint_confirm_password"
+                android:textColorHint="@color/myGrayHint"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next_step_second_sign_up_activity"
+            android:layout_width="@dimen/button_width_120"
+            android:layout_height="@dimen/button_height_40"
+            android:layout_marginTop="@dimen/margin_size_40"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/next_step"
+            android:background="@drawable/shape_button"/>
+    </LinearLayout>
+
+</LinearLayout>

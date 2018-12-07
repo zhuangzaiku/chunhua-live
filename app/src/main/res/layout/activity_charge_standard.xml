@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.quootta.mdate.ui.activity.ChargeStandardActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar"/>
+
+
+    <!--视频开关-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:paddingLeft="@dimen/padding_size_16"
+        android:layout_marginBottom="1dp"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:id="@+id/tv_video_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/video_switch"/>
+
+        <Switch
+            android:id="@+id/sw_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_video_label"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/iv_video_enter"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_down"/>
+
+        <TextView
+            android:id="@+id/tv_video_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_video_enter"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_size_10"/>
+
+
+        <ImageView
+            android:id="@+id/iv_ban_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_video_switch"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_ban"/>
+    </RelativeLayout>
+
+    <!--音频开关-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_size_16"
+        android:layout_marginBottom="1dp"
+        android:background="@color/backgroundWhite">
+
+        <TextView
+            android:id="@+id/tv_audio_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/audio_switch"/>
+
+        <Switch
+            android:id="@+id/sw_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_audio_label"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/iv_audio_enter"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_down"/>
+
+        <TextView
+            android:id="@+id/tv_audio_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_audio_enter"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_size_10"/>
+
+        <ImageView
+            android:id="@+id/iv_ban_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_audio_switch"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_ban"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_12"
+        android:layout_margin="@dimen/margin_size_8"
+        android:layout_gravity="right"
+        android:text="@string/tax_30_percent"/>
+</LinearLayout>

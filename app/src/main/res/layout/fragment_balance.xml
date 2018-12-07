@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/srl_balance"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_20"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@mipmap/big_circle"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_gold_amount_balance_fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_30"
+                        android:text="1325"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="金币总额"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_size_8"
+                android:layout_marginTop="@dimen/margin_size_20"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_charge_balance_fragment"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="@dimen/margin_size_20"
+                    android:background="@drawable/bg_button_balance"
+                    android:text="@string/charge"/>
+
+                <Button
+                    android:id="@+id/btn_withdraw_balance_fragment"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:layout_marginRight="@dimen/margin_size_10"
+                    android:background="@drawable/bg_button_balance"
+                    android:text="@string/withdraw"/>
+
+                <Button
+                    android:id="@+id/btn_bill_balance_fragment"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/margin_size_20"
+                    android:background="@drawable/bg_button_balance"
+                    android:text="@string/bill"/>
+            </LinearLayout>
+
+        <!--</LinearLayout>-->
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+</LinearLayout>

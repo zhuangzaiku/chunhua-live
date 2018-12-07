@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_background"
+    tools:context="com.quootta.mdate.ui.activity.LoginActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_login_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_size_16"
+        android:layout_marginRight="@dimen/margin_size_16"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_number_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:padding="@dimen/padding_size_12"
+            android:drawableLeft="@mipmap/phone"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/et_password_login_activity"
+            android:drawablePadding="8dp"
+            android:hint="@string/hint_number"
+            android:textColorHint="@color/myGrayLight"
+            android:background="@drawable/bg_edittext_transparent_login"/>
+
+        <EditText
+            android:id="@+id/et_password_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:padding="@dimen/padding_size_12"
+            android:drawableLeft="@mipmap/password"
+            android:drawablePadding="8dp"
+            android:imeOptions="actionDone"
+            android:hint="@string/hint_password"
+            android:password="true"
+            android:textColorHint="@color/myGrayLight"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:background="@drawable/bg_edittext_transparent_login"/>
+
+        <Button
+            android:id="@+id/btn_login_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_45"
+            android:text="@string/login"
+            android:textSize="@dimen/font_size_16"
+            android:textColor="@color/myWhite"
+            android:background="@drawable/shape_button"/>
+
+        <TextView
+            android:id="@+id/tv_forget_login_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:textColor="@color/myGrayLight"
+            android:layout_gravity="right"
+            android:text="@string/forget_password"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_size_60" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_join_login_activity"
+        android:layout_width="@dimen/button_width_120"
+        android:layout_height="@dimen/button_height_40"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_login_activity"
+        android:layout_marginTop="@dimen/margin_size_40"
+        android:text="@string/join_jianyue"
+        android:visibility="gone"
+        android:textSize="@dimen/font_size_16"
+        android:textColor="@color/myWhite"
+        android:background="@drawable/shape_button"/>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D2DD22</color>
+    <color name="colorPrimaryDark">#9BA319</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="province_line_border">#C7C7C7</color>
+
+    <color name="trueBlack">#000000</color>
+    <color name="myBlack">#444444</color>
+    <color name="myTextBlack">#444444</color>
+    <color name="myWhite">#FFFFFF</color>
+    <color name="myGray">#666666</color>
+    <color name="myGrayHint">#B1B1B1</color>
+    <color name="myGrayLight">#DFDCDC</color>
+    <color name="myPink">#FF99BB</color>
+    <color name="myGold">#F1BB00</color>
+    <color name="myGroup">#959595</color>
+    <color name="myGoldNumber">#d40000</color>
+
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transparentGray">#88323232</color>
+    <color name="transparentGrayLight">#88DFDCDC</color>
+
+
+    <color name="background">#F1F1F1</color>
+    <color name="backgroundWhite">#FFFFFF</color>
+    <color name="backgroundPic">#E1E1E1</color>
+
+    <color name="rankingYellow">#ddee33</color>
+    <color name="rankingDarkBull">#abb920</color>
+    <color name="rankingGray">#bdbdbd</color>
+    <color name="rankingBlack">#4d4d4d</color>
+<color name="rankingText">#8a8a8a</color>
+    <color name="rankingage">#999999</color>
+
+    <color name="itemLine">#ebebeb</color>
+
+    <color name="home_qq">#49c5ff</color>
+    <color name="home_qq_ba">#72d9ff</color>
+    <color name="home_text">#ffffff</color>
+    <color name="home_weixin">#6ab130</color>
+    <color name="home_weixin_ba">#7ad800</color>
+    <color name="home_weibo">#ff7171</color>
+    <color name="home_weibo_ba">#ff9292</color>
+
+    <!--绑定手机号-->
+    <color name="phone_bind_line">#d2d2d2</color>
+
+    <!--注册颜色-->
+    <color name="signup_line">#dcdcdc</color>
+    <color name="signup_line_bottom">#ff6f8a</color>
+    <color name="signup_text">#272636</color>
+    <color name="signup_button">#ff6f8a</color>
+
+
+    <color name="themePink">#FF6D88</color>
+    <color name="themePinkLight">#FFD3DB</color>
+    <color name="themeYellowDark">#FF6D88</color>
+    <color name="statusRed">#E56060</color>
+
+    <color name="giftYellow">#ffbd00</color>
+</resources>

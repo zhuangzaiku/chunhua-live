@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zgy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_size_6">
+
+    <com.quootta.mdate.ui.view.ChildViewPager
+        android:id="@+id/vp_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_height_size"
+        android:layout_alignParentTop="true" />
+
+    <com.quootta.mdate.ui.view.IndicatorView
+        android:id="@+id/id_indicator"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/vp_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        zgy:indicator_icon="@drawable/indicator_selector"
+        zgy:indicator_margin="5dp"/>
+<!--<LinearLayout-->
+    <!--android:id="@+id/ly_classify"-->
+    <!--android:layout_below="@id/vp_banner"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_marginTop="@dimen/margin_size_10"-->
+    <!--android:layout_marginBottom="@dimen/margin_size_5"-->
+    <!--&gt;-->
+<!--<LinearLayout-->
+    <!--android:id="@+id/classify_lovesinging"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+
+    <!--&gt;-->
+<!--<ImageView-->
+    <!--android:layout_width="@dimen/classify_image_width"-->
+    <!--android:layout_height="@dimen/classify_image_height"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:src="@drawable/lovesinging"-->
+    <!--/>-->
+  <!--<TextView-->
+      <!--android:layout_width="wrap_content"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:layout_gravity="center_horizontal"-->
+      <!--android:layout_marginTop="@dimen/margin_size_5"-->
+      <!--android:text="@string/classify_lovesinging"-->
+      <!--/>-->
+<!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/classify_seeklove"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--&gt;-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="@dimen/classify_image_width"-->
+            <!--android:layout_height="@dimen/classify_image_height"-->
+            <!--android:src="@drawable/seeklove"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:id="@+id/imageView" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/classify_seeklove"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="@dimen/margin_size_5"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/classify_singer"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--&gt;-->
+        <!--<ImageView-->
+            <!--android:layout_width="@dimen/classify_image_width"-->
+            <!--android:layout_height="@dimen/classify_image_height"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:src="@drawable/singer"-->
+
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/classify_singer"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="@dimen/margin_size_5"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/classify_truth"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+
+        <!--&gt;-->
+        <!--<ImageView-->
+            <!--android:layout_width="@dimen/classify_image_width"-->
+            <!--android:layout_height="@dimen/classify_image_height"-->
+            <!--android:src="@drawable/truth"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/classify_truth"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="@dimen/margin_size_5"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+<!--</LinearLayout>-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/re_classify"
+        android:layout_below="@id/vp_banner"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_size_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <fr.castorflex.android.verticalviewpager.VerticalViewPager
+        android:id="@+id/vp_board"
+        android:visibility="gone"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/re_classify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_height_size" />
+
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:background="#66000000"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gift_recycler"
+            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:layout_height="0dp">
+
+        </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:clickable="true"
+            >
+            <!--<TextView-->
+                <!--android:id="@+id/gold_recharge"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="金币充值:"-->
+                <!--android:textColor="@color/giftYellow"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/gold_limit"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="180000"-->
+                <!--android:textSize="15sp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_alignTop="@+id/gold_recharge"-->
+                <!--android:layout_toRightOf="@+id/gold_recharge"-->
+                <!--android:layout_toEndOf="@+id/gold_recharge" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/test"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@id/gold_limit"-->
+                <!--android:layout_alignTop="@id/gold_limit"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:text="11111"-->
+                <!--/>-->
+            <Button
+                android:id="@+id/give_gift"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/themePink"
+                android:layout_centerVertical="true"
+                android:text="@string/app_tips_text160"
+                android:textColor="#272632"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

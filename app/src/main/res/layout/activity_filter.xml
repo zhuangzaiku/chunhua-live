@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.quootta.mdate.ui.activity.FilterActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sex"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:layout_marginLeft="@dimen/margin_size_10"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_sex_filter"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="@dimen/margin_size_6"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_sex_all_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_size_6"
+            android:layout_marginRight="@dimen/margin_size_2"
+            android:layout_marginLeft="@dimen/margin_size_6"
+            android:background="@color/backgroundWhite"
+            android:gravity="center"
+            android:button="@null"
+            android:checked="true"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:text="@string/all_option"/>
+
+        <RadioButton
+            android:id="@+id/rb_sex_male_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_size_12"
+            android:paddingRight="@dimen/padding_size_12"
+            android:layout_marginRight="@dimen/margin_size_2"
+            android:layout_marginLeft="@dimen/margin_size_2"
+            android:background="@color/backgroundWhite"
+            android:gravity="center"
+            android:button="@null"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:drawableLeft="@drawable/selector_male"
+            android:text="@string/male"/>
+
+        <RadioButton
+            android:id="@+id/rb_sex_female_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_size_12"
+            android:paddingRight="@dimen/padding_size_12"
+            android:layout_marginRight="@dimen/margin_size_6"
+            android:layout_marginLeft="@dimen/margin_size_2"
+            android:background="@color/backgroundWhite"
+            android:gravity="center"
+            android:button="@null"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:drawableLeft="@drawable/selector_female"
+            android:text="@string/female"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_age"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:layout_marginLeft="@dimen/margin_size_10"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_age_filter"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="@dimen/margin_size_6"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_age_1_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/margin_size_2"
+            android:layout_marginLeft="@dimen/margin_size_6"
+            android:background="@color/backgroundWhite"
+            android:gravity="center"
+            android:button="@null"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:text="@string/age_below_18"/>
+
+        <RadioButton
+            android:id="@+id/rb_age_2_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/margin_size_2"
+            android:layout_marginLeft="@dimen/margin_size_2"
+            android:background="@color/backgroundWhite"
+            android:gravity="center"
+            android:button="@null"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:text="@string/age_18_to_23"/>
+
+        <RadioButton
+            android:id="@+id/rb_age_3_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/margin_size_2"
+            android:layout_marginLeft="@dimen/margin_size_2"
+            android:background="@color/backgroundWhite"
+            android:gravity="center"
+            android:button="@null"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:text="@string/age_23_to_30"/>
+
+        <RadioButton
+            android:id="@+id/rb_age_4_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/margin_size_6"
+            android:layout_marginLeft="@dimen/margin_size_2"
+            android:background="@color/backgroundWhite"
+            android:gravity="center"
+            android:button="@null"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:text="@string/age_above_30"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundWhite"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_size_6"
+                android:text="@string/last_login_time"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_size_10"
+                android:layout_marginRight="@dimen/margin_size_10"
+                android:background="@color/myGrayLight" />
+
+            <RadioGroup
+                android:id="@+id/rg_time_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_time_1_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size_12"
+                    android:gravity="center_horizontal"
+                    android:button="@null"
+                    android:textColor="@drawable/selector_text_bottom_radiobutton"
+                    android:text="@string/time_below_15min"/>
+
+                <RadioButton
+                    android:id="@+id/rb_time_2_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size_12"
+                    android:gravity="center_horizontal"
+                    android:button="@null"
+                    android:textColor="@drawable/selector_text_bottom_radiobutton"
+                    android:text="@string/time_below_1hour"/>
+
+                <RadioButton
+                    android:id="@+id/rb_time_3_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size_12"
+                    android:gravity="center_horizontal"
+                    android:button="@null"
+                    android:textColor="@drawable/selector_text_bottom_radiobutton"
+                    android:text="@string/time_below_1day"/>
+
+                <RadioButton
+                    android:id="@+id/rb_time_4_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size_12"
+                    android:gravity="center_horizontal"
+                    android:checked="true"
+                    android:button="@null"
+                    android:textColor="@drawable/selector_text_bottom_radiobutton"
+                    android:text="@string/all_option"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="@color/myGrayLight" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_size_6"
+                android:text="@string/distance"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_size_10"
+                android:layout_marginRight="@dimen/margin_size_10"
+                android:background="@color/myGrayLight" />
+
+            <RadioGroup
+                android:id="@+id/rg_distance_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_distance_1_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size_12"
+                    android:gravity="center_horizontal"
+                    android:button="@null"
+                    android:textColor="@drawable/selector_text_bottom_radiobutton"
+                    android:text="@string/distance_below_1km"/>
+
+                <RadioButton
+                    android:id="@+id/rb_distance_2_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size_12"
+                    android:gravity="center_horizontal"
+                    android:button="@null"
+                    android:textColor="@drawable/selector_text_bottom_radiobutton"
+                    android:text="@string/distance_below_3km"/>
+
+                <RadioButton
+                    android:id="@+id/rb_distance_3_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size_12"
+                    android:gravity="center_horizontal"
+                    android:button="@null"
+                    android:textColor="@drawable/selector_text_bottom_radiobutton"
+                    android:text="@string/distance_below_5km"/>
+
+                <RadioButton
+                    android:id="@+id/rb_distance_4_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_size_12"
+                    android:gravity="center_horizontal"
+                    android:button="@null"
+                    android:checked="true"
+                    android:textColor="@drawable/selector_text_bottom_radiobutton"
+                    android:text="@string/all_option"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

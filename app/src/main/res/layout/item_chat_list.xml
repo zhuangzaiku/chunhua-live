@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:id="@+id/ll_head_item_chat_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_8"
+        android:layout_marginBottom="@dimen/margin_size_6"
+        android:layout_marginLeft="@dimen/margin_size_8"
+        android:layout_marginRight="@dimen/margin_size_4"
+        android:layout_weight="1">
+        <com.quootta.mdate.ui.view.CircleImageView
+            android:id="@+id/iv_head_item_chat_list"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:border_color="@color/transparentGray"
+            app:border_width="0dp"
+            android:src="@mipmap/test"/>
+    </LinearLayout>
+
+    
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_6"
+        android:layout_marginBottom="@dimen/margin_size_6"
+        android:layout_weight="6">
+        
+        <TextView
+            android:id="@+id/tv_name_item_chat_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_size_2"
+            android:textColor="@color/myBlack"
+            android:textSize="@dimen/font_size_14"
+            android:text="江泽蛤"/>
+
+        <TextView
+            android:id="@+id/tv_time_item_chat_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_size_4"
+            android:layout_marginRight="@dimen/margin_size_6"
+            android:textSize="@dimen/font_size_12"
+            android:text="11:12"/>
+
+        <TextView
+            android:id="@+id/tv_content_item_chat_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_size_4"
+            android:layout_below="@id/tv_name_item_chat_list"
+            android:textColor="@color/myGray"
+            android:textSize="@dimen/font_size_12"
+            android:singleLine="true"
+            android:maxEms="16"
+            android:ellipsize="end"
+            android:text="我就念了两句诗：苟利国家生死以，岂因祸福而避之？"/>
+    </RelativeLayout>
+
+</LinearLayout>

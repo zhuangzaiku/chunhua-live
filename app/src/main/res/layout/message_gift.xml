@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="209dp"
+        android:layout_height="131dp"
+        android:background="@mipmap/give_gift"
+        android:id="@+id/give_background"
+
+        >
+        <ImageView
+            android:id="@+id/gift_give"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="4dp"
+            android:src="@mipmap/gift_car_in"
+            android:layout_alignParentLeft="true"
+
+            />
+        <ImageView
+            android:id="@+id/gift_get"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="4dp"
+            android:src="@mipmap/gift_car_in"
+            android:layout_alignParentRight="true"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+          <RelativeLayout
+              android:layout_weight="1"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              >
+              <TextView
+                  android:id="@+id/gift_gold_give"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="金币"
+
+                  android:textSize="@dimen/gift_text_size"
+                  android:textColor="@color/backgroundWhite"
+
+                  android:textStyle="bold"
+                  android:layout_marginBottom="@dimen/gift_text_margin"
+                  />
+              <TextView
+                  android:id="@+id/gift_gold_give_num"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="null"
+                  android:layout_marginLeft="3dp"
+                  android:textSize="@dimen/gift_text_size"
+                  android:textColor="@color/backgroundWhite"
+                  android:textStyle="bold"
+                  android:layout_alignTop="@+id/gift_gold_give"
+                  android:layout_toRightOf="@+id/gift_gold_give"
+                  />
+
+          </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/gift_charm_give"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="魅力值"
+                    android:textSize="@dimen/gift_text_size"
+                    android:textColor="@color/backgroundWhite"
+                    android:textStyle="bold"
+                    android:layout_marginRight="3dp"
+
+                     />
+
+                <TextView
+                    android:id="@+id/gift_charm_give_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="null"
+                    android:textSize="@dimen/gift_text_size"
+                    android:textColor="@color/backgroundWhite"
+                    android:textStyle="bold"
+                    android:paddingLeft="3dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/gift_charm_give"
+                    android:layout_toEndOf="@+id/gift_charm_give" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

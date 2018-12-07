@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
+    <string-array name="income_level">
+        <item>50万以下</item>
+        <item>50万-100万</item>
+        <item>100万-1000万</item>
+        <item>1000万-1亿</item>
+        <item>1亿-以上</item>
+    </string-array>
+
+    <string-array name="video_charge">
+        <item>50金币/分钟</item>
+        <item>100金币/分钟</item>
+        <item>150金币/分钟</item>
+        <item>200金币/分钟</item>
+        <item>300金币/分钟</item>
+        <item>500金币/分钟</item>
+        <!--<item>1000金币/分钟</item>-->
+        <!--<item>2000金币/分钟</item>-->
+    </string-array>
+
+    <string-array name="audio_charge">
+        <item>50金币/分钟</item>
+        <item>100金币/分钟</item>
+        <item>150金币/分钟</item>
+        <item>200金币/分钟</item>
+        <item>300金币/分钟</item>
+        <!--<item>500金币/分钟</item>-->
+        <!--<item>1000金币/分钟</item>-->
+        <!--<item>2000金币/分钟</item>-->
+    </string-array>
+
+    <string-array name="more_btn_item0">
+        <item>拉黑</item>
+        <item>举报</item>
+    </string-array>
+
+    <string-array name="more_btn_item1">
+        <item>拉黑</item>
+        <item>举报</item>
+        <item>关注</item>
+    </string-array>
+
+    <string-array name="more_btn_item2">
+        <item>拉黑</item>
+        <item>举报</item>
+        <item>取消关注</item>
+    </string-array>
+</resources>

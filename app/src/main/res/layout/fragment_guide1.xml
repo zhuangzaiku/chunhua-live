@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myWhite"
+    tools:context="com.quootta.mdate.ui.fragment.Guide1Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="374dp"
+           />
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/margin_size_60"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/font_slogan1"/>
+    </LinearLayout>
+
+
+</FrameLayout>

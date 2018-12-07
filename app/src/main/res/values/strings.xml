@@ -1,0 +1,501 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">>
+
+    <!--global-->
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="unknown">未知</string>
+    <string name="on">开</string>
+    <string name="off">关</string>
+
+    <!--Unit-->
+    <string name="year">岁</string>
+    <string name="km">km</string>
+    <string name="m">m</string>
+    <string name="coin">金币</string>
+    <string name="yuan">元</string>
+
+    <!--UpdateDialog-->
+    <string name="update_title">发现新版本</string>
+
+    <!--loginActivity-->
+    <string name="hint_number">请输入您的手机号码</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="signin">注册</string>
+    <string name="login">登录</string>
+    <string name="join_jianyue">加入春花聊天</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="str_phone_login">登录</string>
+    <string name="str_phone_register">注册</string>
+    <string name="str_lgin_tips">点击登录即代表同意</string>
+
+    <!--SignUpFirstActivity-->
+    <string name="phone_number_hint">请输入您的手机号码</string>
+    <string name="verification_code_hint">验证码</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="hint_input_request_code">请输入您的邀请码</string>
+    <string name="get_request_code">申请邀请码</string>
+    <string name="next_step">下一步</string>
+    <string name="hint_set_password">设置密码</string>
+    <string name="hint_confirm_password">确认密码</string>
+    <string name="privacy_notification_1">注册即代表您已经同意</string>
+    <string name="privacy_notification_2">使用条款和隐私政策</string>
+    <string name="sex">性别</string>
+    <string name="sex_notification">性别选择确定后不可更改</string>
+    <string name="name">用户名</string>
+    <string name="birthday">生日</string>
+    <string name="city">城市</string>
+
+    <!--InvitationRequestActivity-->
+    <string name="real_name">姓名</string>
+    <string name="hint_real_name">非昵称，仅为申请邀请码用途</string>
+    <string name="phone_number">手机号</string>
+    <string name="hint_phone_number">邀请码将以短消息发送</string>
+    <string name="job">职业</string>
+    <string name="year_income">年收入</string>
+    <string name="income_1">50万以下</string>
+    <string name="income_2">50万-100万</string>
+    <string name="income_3">100万-1000万</string>
+    <string name="income_4">1000万-1亿</string>
+    <string name="income_5">1亿-以上</string>
+    <string name="selfie_hd">高清自拍</string>
+    <string name="selfie_hd_annotation">（颜值是最快的通行证）</string>
+    <string name="driving_license">机动车行驶证</string>
+    <string name="driving_license_annotation">（豪车是最有效的加分项、可选，仅为审核用）</string>
+    <string name="submit_request">提交申请</string>
+
+
+    <!--TitleBar-->
+    <string name="ensure">确定</string>
+    <string name="mars">火星</string>
+    <string name="Withdraw">提现</string>
+    <!--MainActivity-->
+    <string name="app_name">春花聊天-私密视频交友</string>
+    <string name="app_original_name">春花聊天</string>
+    <string name="title">春花聊天</string>
+    <string name="popular">热门</string>
+    <string name="newest">最新</string>
+    <string name="online">在线</string>
+    <string name="offline">离线</string>
+    <string name="discover">发现</string>
+    <string name="chats">聊天</string>
+    <string name="me">我的</string>
+    <string name="list">排行榜</string>
+
+    <!--筛选activity-->
+    <string name="sex_colon">性别：</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="choose_age">年龄段选择：</string>
+    <string name="age_below_18">18岁以下</string>
+    <string name="age_18_to_23">18-23岁</string>
+    <string name="age_23_to_30">23-30岁</string>
+    <string name="age_above_30">30岁以上</string>
+    <string name="last_login_time">上次登录时间</string>
+    <string name="distance">与我相距</string>
+    <string name="time_below_15min">15分钟以内</string>
+    <string name="time_below_1hour">1小时以内</string>
+    <string name="time_below_1day">1天以内</string>
+    <string name="distance_below_1km">1km以内</string>
+    <string name="distance_below_3km">3km以内</string>
+    <string name="distance_below_5km">5km以内</string>
+    <string name="all_option">全部</string>
+
+    <!--聊天fragment-->
+    <string name="invite_me">对我表白</string>
+    <string name="invite_undo">未处理</string>
+    <string name="invite_accept">已接受</string>
+    <string name="invite_reject">已拒绝</string>
+    <string name="invite_cancel">已撤回</string>
+    <string name="my_invite">我的表白</string>
+    <string name="enter_chat">进入聊天</string>
+    <string name="confirm_delete_title">对话删除确认</string>
+    <string name="confirm_delete_content">确认删除这条对话吗？\n注：删除后无法恢复</string>
+    <string name="edit_profile">编辑</string>
+
+    <!--我的fragment-->
+    <string name="profile">个人资料</string>
+    <string name="my_album">我的相册</string>
+    <string name="my_balance">我的金库</string>
+    <string name="delete">删除</string>
+    <string name="sesame_credit">芝麻信用</string>
+    <string name="wallet">我的钱包</string>
+    <string name="show">相册</string>
+    <string name="friend">关注</string>
+    <string name="charge_standard">通话设置</string>
+    <string name="is_member">会员</string>
+    <string name="is_gift">礼物</string>
+    <string name="is_family">家族</string>
+    <string name="is_share">邀请</string>
+    <string name="security">账户安全</string>
+    <string name="is_member_power">会员特权</string>
+    <string name="setting">系统设置</string>
+    <string name="setting_personal">个人资料</string>
+    <string name="setting_friend">交友资料</string>
+    <string name="video_verify">视频认证</string>
+    <string name="balance">余额</string>
+    <string name="charge">充值</string>
+    <string name="withdraw">提现</string>
+    <string name="bill">账单</string>
+    <string name="is_sesame">您已完成芝麻信用认证</string>
+    <string name="is_video">您已完成视频认证</string>
+
+    <!--认证相关-->
+    <string name="sesame_verify">芝麻信用认证</string>
+    <string name="click_to_verify">点击认证</string>
+    <string name="red_spot">● REC</string>
+    <string name="verify_notify">提示：不支持上传本地视频，本视频不对外使用，只做认证使用。</string>
+    <string name="sesame_notify">绑定芝麻信用，让你更有魅力，也会获得更多权限。</string>
+    <string name="id_number">身份证号</string>
+    <string name="click_to_binding">一键绑定</string>
+
+
+    <!--设置activity-->
+    <string name="account_security">修改密码</string>
+    <string name="invisible_mode">隐身模式</string>
+    <string name="answer_switch">接听开关</string>
+    <string name="video_switch">视频开关</string>
+    <string name="audio_switch">语音开关</string>
+    <string name="about_us">关于我们</string>
+    <string name="jianyue_member">春花聊天会员</string>
+    <string name="version_update">版本更新</string>
+    <string name="current_version">当前版本：</string>
+    <string name="clear_cache">清空缓存</string>
+    <string name="feedback">意见反馈</string>
+    <string name="log_out">注销登录</string>
+    <string name="log_out_title">提示</string>
+    <string name="log_out_message">确定要注销登录吗？注销后您需要重新登录</string>
+    <string name="abandon_answer">禁止接听</string>
+
+    <!--个人详情activity-->
+    <string name="personal_sign">个人签名：</string>
+    <string name="verification">认证：</string>
+    <string name="video">视频价格：</string>
+    <string name="audio">语音价格：</string>
+    <string name="connection_rate">接通率：</string>
+    <string name="gold_per_min">金币/分钟</string>
+    <string name="height_colon">身高(cm)：</string>
+    <string name="job_colon">职业：</string>
+    <string name="weight">体重(kg)：</string>
+    <string name="measurements">三围：</string>
+    <string name="liked_date_way">喜欢的约会方式：</string>
+    <string name="advantage_field">我擅长的领域：</string>
+    <string name="interests">喜欢聊的话题：</string>
+    <string name="liked_opposite_sex">对异性要求：</string>
+    <string name="unlock">一键解锁</string>
+    <string name="unlock_title">解锁提示</string>
+    <string name="unlock_message">发个红包可以解锁更多姿势，可以约ta聊天以及约会哦</string>
+    <string name="video_chat">视频聊天</string>
+    <string name="voice_chat">语音聊天</string>
+    <string name="private_chat">私信</string>
+    <string name="report">举报</string>
+    <string name="block">拉黑</string>
+    <string name="Invitation_code">我的邀请码:</string>
+    <string name="sign_Invitation_code">邀请码</string>
+    <!--发起邀约-->
+    <string name="start_invite_title">表白</string>
+    <string name="hint_invite">红包代表我的心,希望能认识你~</string>
+    <string name="start_invite">红包表白</string>
+    <string name="swipe_to_more">下滑更多</string>
+
+    <string name="gift">礼物</string>
+
+
+    <!--邀约详情-->
+    <string name="invite_request">详情</string>
+    <string name="accept">接受</string>
+    <string name="refuse">拒绝</string>
+    <string name="withdraw_invite">撤回邀约</string>
+    <string name="status_undo">未处理</string>
+    <string name="status_doing">确认中</string>
+    <string name="status_accept">已接受</string>
+    <string name="status_reject">已拒绝</string>
+    <string name="status_cancel">已撤回</string>
+
+    <!--个人资料-->
+    <string name="hint_sign">有什么想对朋友说 有什么想对朋友说 有什么想对朋友说</string>
+    <string name="change_head_pic">更换头像</string>
+    <string name="finish_degree">完成度:</string>
+    <string name="nick_name">昵称：</string>
+    <string name="birthday_colon">生日：</string>
+    <string name="city_colon">城市：</string>
+    <string name="hobby">爱好：</string>
+    <string name="hint_space_spilt">多项请用空格隔开</string>
+    <string name="signature">个性签名：</string>
+    <!--充值-->
+    <string name="amount_sum">账户余额：</string>
+    <string name="choose_amount">选择充值金额</string>
+    <string name="rmb_charge">我要充值</string>
+    <string name="amount_60">600金币</string>
+    <string name="rmb_6">¥6.00</string>
+    <string name="amount_500">5000金币</string>
+    <string name="rmb_50">¥50.00</string>
+    <string name="amount_980">9800金币</string>
+    <string name="rmb_98">¥98.00</string>
+    <string name="amount_1980">19800金币</string>
+    <string name="rmb_198">¥198.00</string>
+    <string name="amount_5880">58800金币</string>
+    <string name="rmb_588">¥588.00</string>
+    <string name="amount_9980">99800金币</string>
+    <string name="rmb_998">¥998.00</string>
+    <string name="amount_19980">199800金币</string>
+    <string name="rmb_1998">¥1998.00</string>
+    <string name="amount_49980">499800金币</string>
+    <string name="rmb_4998">¥4998.00</string>
+    <string name="wechat_charge">微信支付</string>
+    <string name="alipay_charge">支付宝支付</string>
+
+    <!--提现-->
+    <string name="bank_card">银行卡</string>
+    <string name="alipay">支付宝</string>
+    <string name="withdraw_amount">提现金额：</string>
+    <string name="withdraw_name">开卡姓名：</string>
+    <string name="withdraw_bank_number">银行卡号：</string>
+    <string name="withdraw_alipay_number">支付宝账号：</string>
+    <string name="withdraw_payee_name">收款人姓名：</string>
+    <string name="withdraw_bank">开户银行：</string>
+    <string name="withdraw_province">开户省市：</string>
+    <string name="withdraw_point">开户支行：</string>
+    <string name="withdraw_password">登录密码：</string>
+    <string name="withdraw_amount_hint">最多可提取现金</string>
+    <string name="withdraw_password_hint">春花聊天登录密码</string>
+    <string name="tax_notify">本次提现不扣除手续费\n充值账户不能提现，仅热门用户可提现</string>
+    <string name="tax_30_percent">视频及语音赚取的金币将会扣除30%的平台使用费</string>
+
+    <!--排行榜-->
+    <string name="list_time">本周排行</string>
+    <string name="my_ranking">我的排名:</string>
+    <string name="my_money_num">我的土豪值:</string>
+    <string name="my_glamour_num">我的魅力值:</string>
+    <string name="ranking_name">昵称</string>
+    <string name="ranking_age">年龄</string>
+    <string name="ranking_num">100</string>
+    <string name="ranking_default">--</string>
+
+    <!--分类-->
+    <string name="classify_lovesinging">我爱唱歌</string>
+    <string name="classify_seeklove">情感空间</string>
+    <string name="classify_singer">悦耳声优</string>
+    <string name="classify_truth">真心话</string>
+    <!--账单-->
+    <string name="processing">处理中</string>
+    <string name="billString">账单</string>
+    <string name="ensuring">确认中</string>
+    <string name="finished">已完成</string>
+    <string name="canceled">已取消</string>
+    <string name="income">收入</string>
+    <string name="outgo">支出</string>
+    <string name="recharge">充值</string>
+    <string name="remain_not_enough">您的余额已不足哦，请充值</string>
+    <string name="you_are_not_vip">您还不是会员哦，请先开通会员</string>
+
+    <!--通知-->
+    <string name="notice">通知</string>
+
+
+    <!--账号安全-->
+    <string name="hint_enter_old_password">请输入旧密码</string>
+    <string name="hint_enter_new_password">请输入新密码</string>
+    <string name="hint_ensure_new_password">请确认新密码</string>
+
+    <!--收藏-->
+    <string name="notify">提示</string>
+    <string name="ensure_to_remove">确定要删除该好友吗？</string>
+
+
+    <!--关于我们-->
+    <string name="about_us_content">春花聊天，让约会变得简单，\n让青春能够骚动……</string>
+
+    <!--ProgressDialog-->
+    <string name="loading">加载中</string>
+
+    <!--PopupWindow-->
+    <string name="take_photo">拍照</string>
+    <string name="choose_photo">从相册选择照片</string>
+    <string name="choose_video">从相册选择视频</string>
+    <string name="avatar_update">设为封面</string>
+    <string name="delete_photo">删除</string>
+    <string name="look_photo">查看</string>
+    <string name="group_call">邂逅</string>
+
+    <!--登录-->
+    <string name="home_longin_text"><u>春花聊天用户协议</u></string>
+    <!--账户安全-->
+    <string name="account_bind_text">绑定</string>
+    <string name="account_security_me">账号安全</string>
+
+    <!--客服信息-->
+    <string name="service_qq">客服QQ：</string>
+    <string name="service_wechat">客服微信号：</string>
+    <string name="service_tel">电话：</string>
+    <string name="service_message">充值如遇问题请联系以下客服</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--tips-->
+    <string name="app_tips_text1">很抱歉 此功能暂停使用</string>
+    <string name="app_tips_text2">请重试</string>
+    <string name="app_tips_text3">请稍后重试</string>
+    <string name="app_tips_text4">您的网络不太稳定请%s秒后重试</string>
+    <string name="app_tips_text5">无法获得您的余额 请稍后重新尝试</string>
+    <string name="app_tips_text6">该用户暂时不接受语音聊天</string>
+    <string name="app_tips_text7">无法呼叫</string>
+    <string name="app_tips_text8">该用户暂时不接受视频聊天</string>
+    <string name="app_tips_text9">土豪值</string>
+    <string name="app_tips_text10">魅力值</string>
+    <string name="app_tips_text11">正在初始化数据...</string>
+    <string name="app_tips_text12">数据初始化失败</string>
+    <string name="app_tips_text13">解绑成功</string>
+    <string name="app_tips_text14">已绑定</string>
+    <string name="app_tips_text15">没有更多数据啦</string>
+    <string name="app_tips_text16">请允许春花聊天使用您的相机和声音，否则无法正常使用服务</string>
+    <string name="app_tips_text17">删除照片成功</string>
+    <string name="app_tips_text18">上传失败，请检查网络后重试</string>
+    <string name="app_tips_text19">上传中… </string>
+    <string name="app_tips_text20">压缩中</string>
+    <string name="app_tips_text21">修改密码成功</string>
+    <string name="app_tips_text22">请输入手机号</string>
+    <string name="app_tips_text23">绑定成功</string>
+    <string name="app_tips_text24">充值</string>
+    <string name="app_tips_text25">请不要重复点击充值</string>
+    <string name="app_tips_text26">一大波帅哥美女正在向你走来</string>
+    <string name="app_tips_text27">客服</string>
+    <string name="app_tips_text28">搜索用户</string>
+    <string name="app_tips_text29">请先输入内容</string>
+    <string name="app_tips_text30">找回密码</string>
+    <string name="app_tips_text31">请输入手机号</string>
+    <string name="app_tips_text32">两次密码输入不一致，请检查</string>
+    <string name="app_tips_text33">礼物</string>
+    <string name="app_tips_text34">请先选择您的礼物</string>
+    <string name="app_tips_text35">金币</string>
+    <string name="app_tips_text36">岁/</string>
+    <string name="app_tips_text37">聊天</string>
+    <string name="app_tips_text38">我的</string>
+    <string name="app_tips_text39">再按一次返回键退出程序</string>
+    <string name="app_tips_text40">修改密码</string>
+    <string name="app_tips_text41">修改成功后需要重新登录，确认修改密码吗？</string>
+    <string name="app_tips_text42">两次密码输入不一致</string>
+    <string name="app_tips_text43">您的余额已不足哦，请充值吧</string>
+    <string name="app_tips_text44">提示</string>
+    <string name="app_tips_text45">该用户的视频接听价格是%s，确定要进行视频聊天吗？</string>
+    <string name="app_tips_text46">提示</string>
+    <string name="app_tips_text47">您的网络现在不太稳定 请稍等一下</string>
+    <string name="app_tips_text48">现在不能上传视频</string>
+    <string name="app_tips_text49">图片选择失败，请重试</string>
+    <string name="app_tips_text50">火星</string>
+    <string name="app_tips_text51">请先填写您的昵称</string>
+    <string name="app_tips_text52">请输入您的出生日期</string>
+    <string name="app_tips_text53">请添加您的头像</string>
+    <string name="app_tips_text54">网络错误 请重新尝试</string>
+    <string name="app_tips_text55">您已经注册成功 请点击登录</string>
+    <string name="app_tips_text56">您的注册失败 请重新注册</string>
+    <string name="app_tips_text57">您最多只能添加7张照片</string>
+    <string name="app_tips_text58">您不能删除这个</string>
+    <string name="app_tips_text59">这个不能被查看</string>
+    <string name="app_tips_text60">这个不能设置为封面</string>
+    <string name="app_tips_text61">设置封面成功</string>
+    <string name="app_tips_text62">设置失败 请重新设置</string>
+    <string name="app_tips_text63">删除照片成功</string>
+    <string name="app_tips_text64">排行榜</string>
+    <string name="app_tips_text65">录制时间太短</string>
+    <string name="app_tips_text66">请输入举报内容</string>
+    <string name="app_tips_text67">请先填写您的手机号</string>
+    <string name="app_tips_text68">请先填写您的职业</string>
+    <string name="app_tips_text69">请先点击上传您的自拍</string>
+    <string name="app_tips_text70">请先选择您的自拍</string>
+    <string name="app_tips_text71">请求超时，请检查您的网络后重试</string>
+    <string name="app_tips_text72">申请加入</string>
+    <string name="app_tips_text73">正在审核</string>
+    <string name="app_tips_text74">退出</string>
+    <string name="app_tips_text75">请进行视频认证</string>
+    <string name="app_tips_text76">退出场景</string>
+    <string name="app_tips_text77">您确定退出这个场景吗?</string>
+    <string name="app_tips_text78">退出成功?</string>
+    <string name="app_tips_text79">您的设备尚未联网，请退出并在联网后重试</string>
+    <string name="app_tips_text80">请允许春花聊天获取权限，否则有可能无法正常使用服务</string>
+    <string name="app_tips_text81">您的金币余额不足，请充值</string>
+    <string name="app_tips_text82">您的余额不足，请充值</string>
+    <string name="app_tips_text83">该用户的%1$s接听价格是%2$s，确定要进行%3$s聊天吗？</string>
+    <string name="app_tips_text84">语音</string>
+    <string name="app_tips_text85">视频</string>
+    <string name="app_tips_text86">请允许春花聊天获取相机、声音和文件权限，否则无法正常视频录制功能</string>
+    <string name="app_tips_text87">录制成功，确定上传吗？</string>
+    <string name="app_tips_text88">录制失败</string>
+    <string name="app_tips_text89">确定充值吗？</string>
+    <string name="app_tips_text90">您的金币不足 请充值</string>
+    <string name="app_tips_text91">您必须首先绑定手机才能够提现 请在设置-账号安全 中绑定手机</string>
+    <string name="app_tips_text92">确认</string>
+    <string name="app_tips_text93">我关注的</string>
+    <string name="app_tips_text94">关注我的</string>
+    <string name="app_tips_text95">收到的礼物</string>
+    <string name="app_tips_text96">送出的礼物</string>
+    <string name="app_tips_text97">魅力榜</string>
+    <string name="app_tips_text98">土豪榜</string>
+    <string name="app_tips_text99">接通率%s</string>
+    <string name="app_tips_text100">请先选择性别</string>
+    <string name="app_tips_text101">热门</string>
+    <string name="app_tips_text102">最新</string>
+    <string name="app_tips_text103">同城</string>
+    <string name="app_tips_text104">本周排行</string>
+    <string name="app_tips_text105">上周排行</string>
+    <string name="app_tips_text106">我的魅力值:</string>
+    <string name="app_tips_text107">一大波帅哥美女正在向你走来~</string>
+    <string name="app_tips_text108">您当前正在通话中，无法修改价格</string>
+    <string name="app_tips_text109">我的土豪值:</string>
+    <string name="app_tips_text110">请先选择您的性别</string>
+    <string name="app_tips_text111">请先选择您的城市</string>
+    <string name="app_tips_text112">请先选择您的生日</string>
+    <string name="app_tips_text113">请先点击上传您的头像</string>
+    <string name="app_tips_text114">请设置密码</string>
+    <string name="app_tips_text115">您通话过程中剩余的金币不足以支付礼物的费用 如果您已经充值 请稍等一分钟</string>
+    <string name="app_tips_text116">您的金币余额不足 请充值</string>
+    <string name="app_tips_text117">请先选择一件礼物</string>
+    <string name="app_tips_text118">无法赠送</string>
+    <string name="app_tips_text119">送给你一个礼物希望你会喜欢</string>
+    <string name="app_tips_text120">礼物发送成功</string>
+    <string name="app_tips_text121">恭喜您今日首充成功 获得免费邂逅一次的机会</string>
+    <string name="app_tips_text122">本次群呼将向当前在线的100位用户打招呼</string>
+    <string name="app_tips_text123">我想打招呼的是</string>
+    <string name="app_tips_text124">帅哥</string>
+    <string name="app_tips_text125">美女</string>
+    <string name="app_tips_text126">本次邂逅语:</string>
+    <string name="app_tips_text127">免费邂逅</string>
+    <string name="app_tips_text128">1000金币发送群呼</string>
+    <string name="app_tips_text129">会员免费群呼</string>
+    <string name="app_tips_text130">请输入昵称</string>
+    <string name="app_tips_text131">请输入个性签名</string>
+    <string name="app_tips_text132">请选择身高</string>
+    <string name="app_tips_text133">请选择体重</string>
+    <string name="app_tips_text134">请输入职业</string>
+    <string name="app_tips_text135">收到礼物</string>
+    <string name="app_tips_text136">送出礼物</string>
+    <string name="app_tips_text137">请填写您对异性的要求</string>
+    <string name="app_tips_text138">请填写您喜欢的约会方式</string>
+    <string name="app_tips_text139">请填写您擅长的领域</string>
+    <string name="app_tips_text140">请填写您喜欢聊的话题</string>
+    <string name="app_tips_text141">请填写您的爱好</string>
+    <string name="app_tips_text142">有效期至</string>
+    <string name="app_tips_text143">群呼特权</string>
+    <string name="app_tips_text144">每天可免费群呼一次</string>
+    <string name="app_tips_text145">更多特权</string>
+    <string name="app_tips_text146">敬请期待</string>
+    <string name="app_tips_text147">开通会员</string>
+    <string name="app_tips_text148">金币:</string>
+    <string name="app_tips_text149">天</string>
+    <string name="app_tips_text150">金币</string>
+    <string name="app_tips_text151">续费</string>
+    <string name="app_tips_text152">省2600金</string>
+    <string name="app_tips_text153">省12000金</string>
+    <string name="app_tips_text154">省408000金</string>
+    <string name="app_tips_text155">手机号</string>
+    <string name="app_tips_text156">我想说...</string>
+    <string name="app_tips_text157">搜索</string>
+    <string name="app_tips_text158">输入您收到的验证码</string>
+    <string name="app_tips_text159">设置新密码（6-16位）</string>
+    <string name="app_tips_text160">赠送</string>
+    <string name="app_tips_text161">按住拍</string>
+    <string name="app_tips_text162">没有可不填</string>
+    <string name="app_tips_text163">该用户的语音接听价格是%s，确定要进行语音聊天吗？</string>
+    <string name="app_tips_text164">您的邀请链接已复制，将该链接发送给用户下载应用，\n注册时填写您的邀请码，您可获得该用户的充值奖励。</string>
+    <string name="app_tips_text165">送给您</string>
+</resources>

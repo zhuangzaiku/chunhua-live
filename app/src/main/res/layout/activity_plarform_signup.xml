@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#efefef"
+    android:id="@+id/platFrom_signup"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ff6f8a"
+        >
+        <!--回退键-->
+        <ImageView
+            android:id="@+id/platfrom_back"
+            android:layout_width="@dimen/toolbar_image_size"
+            android:layout_height="@dimen/toolbar_image_size"
+            android:padding="@dimen/padding_size_16"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_return"/>
+        <TextView
+            android:id="@+id/tv_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/font_size_18"
+            android:textColor="@color/myBlack"
+            android:text="@string/title"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="235dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    >
+                    <ImageView
+                        android:id="@+id/signup_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="fitXY"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#99ff6f8a"
+                        />
+
+
+
+
+                </RelativeLayout>
+                <com.quootta.mdate.ui.view.CircleImageView
+                    android:id="@+id/signup_photo"
+                    android:layout_width="119dp"
+                    android:layout_height="119dp"
+                    android:src="@mipmap/upload_pic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="77dp"
+                    app:border_color="@color/myWhite"
+                    app:border_width="2dp"
+                    />
+                <ImageView
+                    android:id="@+id/signup_camera"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/signup_camer"
+                    android:layout_alignBottom="@+id/signup_photo"
+                    android:layout_alignRight="@+id/signup_photo"
+                    android:layout_alignEnd="@+id/signup_photo" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:layout_marginRight="75dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别确认后不可修改"
+
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+                    <RelativeLayout
+                        android:id="@+id/signup_girl"
+                        android:layout_weight="10"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/signup_item_height"
+                        android:background="@drawable/shape_signup_itemline"
+                        >
+                        <ImageView
+                            android:id="@+id/signup_girl_state"
+                            android:layout_width="@dimen/signup_item_image"
+                            android:layout_height="@dimen/signup_item_image"
+                            android:src="@drawable/signup_girl_down"
+
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true" />
+                        <TextView
+                            android:paddingLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/signup_girl_state"
+                            android:layout_alignBottom="@+id/signup_girl_state"
+                            android:text="女"
+                            />
+                        <View
+                            android:id="@+id/signup_red1"
+                            android:layout_width="100dp"
+                            android:layout_height="2dp"
+                            android:background="@color/signup_line_bottom"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <View
+
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:background="@color/signup_line"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/signup_boy"
+                        android:layout_weight="10"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/signup_item_height"
+                        android:background="@drawable/shape_signup_itemlineright"
+                        >
+                        <ImageView
+                            android:id="@+id/signup_boy_state"
+                            android:layout_width="@dimen/signup_item_image"
+                            android:layout_height="@dimen/signup_item_image"
+                            android:src="@drawable/signup_boy_up"
+
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true" />
+                        <TextView
+                            android:paddingLeft="5dp"
+                            android:layout_toRightOf="@+id/signup_boy_state"
+                            android:layout_alignBottom="@+id/signup_boy_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="男"
+                            />
+                        <View
+                            android:id="@+id/signup_red2"
+                            android:visibility="invisible"
+                            android:layout_width="100dp"
+                            android:layout_height="2dp"
+                            android:background="@color/signup_line_bottom"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/signup_item_height"
+                        android:background="@drawable/shape_signup_itemline"
+
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/home_src"
+                            android:layout_height="@dimen/home_src"
+                            android:src="@drawable/signup_name_up"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            />
+                        <View
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:background="@color/signup_line"
+                            />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/signup_item_height"
+                        android:background="@drawable/shape_signup_itemlineright"
+                        android:gravity="center"
+                        >
+                        <EditText
+                            android:id="@+id/signup_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="请输入您的用户名"
+                            android:background="@null"
+                            android:textColorHint="#dcdcdc"
+
+                            android:textSize="15sp"
+                            android:textColor="#272636"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/signup_item_height"
+                        android:background="@drawable/shape_signup_itemline"
+
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/home_src"
+                            android:layout_height="@dimen/home_src"
+                            android:src="@drawable/signup_birthday_up"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            />
+                        <View
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:background="@color/signup_line"
+                            />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/signup_data_click"
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/signup_item_height"
+                        android:background="@drawable/shape_signup_itemlineright"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:id="@+id/signup_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="请输入您的出生日期"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:textColorHint="#dcdcdc"
+                            android:textSize="15sp"
+                            android:textColor="#272636"
+                            />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_signup_itemline"
+
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sign_Invitation_code"
+                            android:layout_centerInParent="true"
+                            android:textColor="#a7a7a7"
+                            />
+                        <View
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:background="@color/signup_line"
+                            />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/Invitation"
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/signup_item_height"
+                        android:background="@drawable/shape_signup_itemlineright"
+                        android:gravity="center"
+                        >
+                        <EditText
+                            android:id="@+id/Invitation_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="没有可不填"
+                            android:background="@null"
+                            android:maxLength="10"
+                            android:gravity="center_vertical"
+                            android:textColorHint="#dcdcdc"
+                            android:textSize="15sp"
+                            android:textColor="#272636"
+                            />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/signup_register"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/shape_signup_button"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注册"
+                        android:textSize="17sp"
+                        android:textColor="@color/myWhite"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

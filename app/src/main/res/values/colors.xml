@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#FF5722</color>
+    <color name="colorAccent">#FFCCBC</color>
+
+    <color name="province_line_border">#C7C7C7</color>
+
+    <color name="trueBlack">#000000</color>
+    <color name="myBlack">#444444</color>
+    <color name="myTextBlack">#444444</color>
+    <color name="myWhite">#FFFFFF</color>
+    <color name="myGray">#666666</color>
+    <color name="myGrayHint">#B1B1B1</color>
+    <color name="myGrayLight">#DFDCDC</color>
+    <color name="myPink">#FF7E55</color>
+    <color name="myGold">#F1BB00</color>
+    <color name="myGroup">#959595</color>
+    <color name="myGoldNumber">#d40000</color>
+    <color name="FloatingActionButtonColor">#F15066</color>
+    <color name="FloatingActionButtonColorEnd">#b2b2b2</color>
+    <color name="picPink">#FFA488</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transparentGray">#CC323232</color>
+    <color name="transparentGrayLight">#88DFDCDC</color>
+
+    <color name="xiehouBlack">#333333</color>
+
+    <color name="background">#F1F1F1</color>
+    <color name="backgroundWhite">#FFFFFF</color>
+    <color name="backgroundPic">#E1E1E1</color>
+    <color name="textWhite">#FFCBBA</color>
+
+    <color name="rankingYellow">#ddee33</color>
+    <color name="rankingDarkBull">#abb920</color>
+    <color name="rankingGray">#bdbdbd</color>
+    <color name="rankingBlack">#4d4d4d</color>
+    <color name="rankingText">#8a8a8a</color>
+    <color name="rankingage">#999999</color>
+
+    <color name="itemLine">#ebebeb</color>
+
+    <color name="home_qq">#49c5ff</color>
+    <color name="home_qq_ba">#72d9ff</color>
+    <color name="home_text">#ffffff</color>
+    <color name="home_weixin">#6ab130</color>
+    <color name="home_weixin_ba">#7ad800</color>
+    <color name="home_weibo">#ff7171</color>
+    <color name="home_weibo_ba">#ff9292</color>
+    <!--MeFragment-->
+    <color name="text_gray">#a7a7a7</color>
+    <!--绑定手机号-->
+    <color name="phone_bind_line">#d2d2d2</color>
+
+    <!--注册颜色-->
+    <color name="signup_line">#dcdcdc</color>
+    <color name="signup_line_bottom">#FF7373</color>
+    <color name="signup_text">#272636</color>
+    <color name="signup_button">#FF5554</color>
+
+
+    <color name="themePink">#E64A19</color>
+    <color name="themePinkLight">#FF7373</color>
+    <color name="themeYellowDark">#E64A19</color>
+    <color name="statusRed">#E56060</color>
+
+    <color name="giftYellow">#ffbd00</color>
+    <color name="setting_gray">#efefef</color>
+    <color name="setting_background">#eeeeee</color>
+    <color name="setting_username">#564c4d</color>
+    <color name="setting_signature">#5b5957</color>
+    <color name="setting_textGray">#848484</color>
+    <color name="friend_signature">#858585</color>
+    <color name="friend_age">#5c5c5c</color>
+    <color name="friend_board">#dddddd</color>
+    <color name="tablayout_board">#E64A19</color>
+
+    <color name="hot_textcolor">#333031</color>
+</resources>

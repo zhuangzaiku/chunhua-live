@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/giftToast_rela"
+        android:layout_width="250sp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp">
+
+        <RelativeLayout
+
+            android:id="@+id/rl_left"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/gift_toast_background">
+
+            <com.quootta.mdate.ui.view.CircleImageView
+
+                android:id="@+id/giftToast_user_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/gift_car_in"
+                app:border_color="#ffffffff"
+                app:border_width="0dp" />
+
+            <TextView
+                android:id="@+id/giftToast_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@+id/giftToast_user_image"
+                android:text="11111"
+                android:textColor="@color/backgroundWhite" />
+
+            <TextView
+                android:id="@+id/giftToast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/giftToast_user_name"
+                android:layout_below="@+id/giftToast_user_name"
+                android:text="@string/app_tips_text165"
+                android:textColor="@color/backgroundWhite" />
+
+            <TextView
+                android:id="@+id/giftToast_gift_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/giftToast_text"
+                android:layout_toRightOf="@+id/giftToast_text"
+                android:text="玫瑰"
+                android:textColor="@color/backgroundWhite" />
+
+            <ImageView
+                android:id="@+id/giftToast_gift_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/giftToast_gift_name"
+                android:src="@mipmap/gift_car_in" />
+
+
+        </RelativeLayout>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/giftToast_gift_image"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:src="@mipmap/gift_car_in" />-->
+    </RelativeLayout>
+
+
+</LinearLayout>

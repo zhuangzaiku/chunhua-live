@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="100sp"
+    android:layout_width="match_parent"
+    android:padding="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/themePinkLight"
+    >
+    <ImageView
+        android:id="@+id/iv_board_label"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:src="@mipmap/ic_charm"/>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginRight="5dp"
+        android:layout_height="match_parent">
+
+        <com.quootta.mdate.ui.view.RoundNetImageView
+            android:id="@+id/iv_pic1"
+
+            android:scaleType="centerCrop"
+            android:padding="1dp"
+            android:layout_height="92dp"
+            android:layout_width="92dp"
+            app:ml_radius="10dp"
+            app:ml_border_color="@color/myWhite"
+            app:ml_border_width="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginRight="5dp"
+        android:layout_height="match_parent">
+        <com.quootta.mdate.ui.view.RoundNetImageView
+            android:id="@+id/iv_pic2"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:padding="1dp"
+            android:layout_centerVertical="true"
+            android:layout_height="92dp"
+            android:layout_width="92dp"
+            app:ml_radius="10dp"
+            app:ml_border_color="@color/myWhite"
+            app:ml_border_width="1dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginRight="5dp"
+        android:layout_height="match_parent">
+        <com.quootta.mdate.ui.view.RoundNetImageView
+            android:id="@+id/iv_pic3"
+            android:scaleType="centerCrop"
+            android:padding="1dp"
+            android:layout_centerInParent="true"
+            android:layout_height="92dp"
+            android:layout_width="92dp"
+
+            app:ml_radius="10dp"
+            app:ml_border_color="@color/myWhite"
+            app:ml_border_width="1dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+
+

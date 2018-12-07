@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <RadioGroup
+            android:id="@+id/rg_chats"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/margin_size_50"
+            android:layout_marginRight="@dimen/margin_size_50"
+            android:layout_marginTop="@dimen/margin_size_12"
+            android:layout_marginBottom="@dimen/margin_size_12"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_chat_chats_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:checked="true"
+                android:button="@null"
+                android:background="@drawable/selector_background_left_radiobutton"
+                android:paddingLeft="0dp"
+                android:text="@string/chats"
+                android:textColor="@drawable/selector_text_chat_radiobutton"
+                android:textSize="@dimen/font_size_12"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/rb_invite_me_chats_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/selector_background_middle_radiobutton"
+                android:paddingLeft="0dp"
+                android:text="@string/invite_me"
+                android:textColor="@drawable/selector_text_chat_radiobutton"
+                android:textSize="@dimen/font_size_12"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/rb_my_invite_chats_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:button="@null"
+                android:background="@drawable/selector_background_right_radiobutton"
+                android:paddingLeft="0dp"
+                android:text="@string/my_invite"
+                android:textColor="@drawable/selector_text_chat_radiobutton"
+                android:textSize="@dimen/font_size_12"
+                android:layout_weight="1"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <com.quootta.mdate.ui.view.MyViewPager
+        android:id="@+id/vp_chats_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+    </com.quootta.mdate.ui.view.MyViewPager>
+
+
+</LinearLayout>

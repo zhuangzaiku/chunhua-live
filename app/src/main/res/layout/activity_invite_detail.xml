@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundWhite"
+    android:orientation="vertical"
+    tools:context="com.quootta.mdate.ui.activity.InviteDetailActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="330dp">
+
+                <ImageView
+                    android:id="@+id/iv_show_invite_detail_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:background="@color/myBlack"
+                    android:src="@mipmap/test"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/padding_size_6"
+                    android:paddingBottom="@dimen/padding_size_6"
+                    android:background="@color/transparentGray"
+                    android:layout_gravity="bottom">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_size_6"
+                        android:layout_marginBottom="@dimen/margin_size_6"
+                        android:layout_marginLeft="@dimen/margin_size_8"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_name_invite_detail_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/myWhite"
+                            android:textSize="@dimen/font_size_10"
+                            android:text="test"/>
+
+                        <TextView
+                            android:id="@+id/tv_measurements_invite_detail_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_size_10"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/myWhite"
+                            android:textSize="@dimen/font_size_10"
+                            android:text="test"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/margin_size_6"
+                        android:layout_marginBottom="@dimen/margin_size_6"
+                        android:layout_marginRight="@dimen/margin_size_8"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="@dimen/margin_size_4"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/location" />
+
+                        <TextView
+                            android:id="@+id/tv_distance_invite_detail_activity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/myWhite"
+                            android:textSize="@dimen/font_size_10"
+                            android:text="test"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:text="@string/invite_request"/>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                card_view:cardCornerRadius="6dp"
+                card_view:cardBackgroundColor="@color/myWhite"
+                android:layout_marginTop="@dimen/margin_size_8"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:layout_marginRight="@dimen/margin_size_8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.quootta.mdate.ui.view.CircleImageView
+                        android:id="@+id/iv_head_invite_detail_activity"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_size_8"
+                        android:layout_marginRight="@dimen/margin_size_8"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/test"/>
+
+                    <TextView
+                        android:id="@+id/tv_msg_invite_detail_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/margin_size_6"
+                        android:textSize="@dimen/font_size_14"
+                        android:text="test"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.quootta.mdate.ui.view.CircleImageView
+                    android:id="@+id/iv_gift_invite_detail_activity"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:border_color="@color/themePink"
+                    app:border_width="2dp"
+                    android:src="@mipmap/test"/>
+
+<!--                <TextView
+                    android:id="@+id/tv_gift_name_invite_detail_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_size_6"
+                    android:text=""/>-->
+
+                <TextView
+                    android:id="@+id/tv_gift_gold_invite_detail_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_size_6"
+                    android:textColor="@color/myGold"
+                    android:text=""/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_size_12"
+                android:layout_marginBottom="@dimen/margin_size_12">
+
+                <LinearLayout
+                    android:id="@+id/ll_invite_me_invite_detail_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_accept_invite_detail_activity"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/shape_button"
+                        android:layout_marginRight="@dimen/margin_size_6"
+                        android:textSize="@dimen/font_size_16"
+                        android:text="@string/accept"/>
+
+
+                    <Button
+                        android:id="@+id/btn_refuse_invite_detail_activity"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/shape_button"
+                        android:layout_marginLeft="@dimen/margin_size_6"
+                        android:textSize="@dimen/font_size_16"
+                        android:text="@string/refuse"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_my_invite_invite_detail_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btn_withdraw_invite_detail_activity"
+                        android:layout_width="160dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/shape_button"
+                        android:layout_marginLeft="@dimen/margin_size_6"
+                        android:textSize="@dimen/font_size_16"
+                        android:text="@string/withdraw_invite"/>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

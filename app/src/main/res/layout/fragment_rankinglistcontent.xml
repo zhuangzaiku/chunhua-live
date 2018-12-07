@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <RelativeLayout
+            android:id="@+id/ranking_open_popu"
+            android:clickable="true"
+
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/margin_size_8"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ranking_image_pull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ranking_pull3"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/ranking_changeTime"
+                android:layout_toRightOf="@+id/ranking_image_pull"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_time"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/rankingBlack"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_ranking"
+                android:textColor="@color/rankingGray"
+                />
+            <TextView
+                android:id="@+id/ranking_myranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ranking_default"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/rankingBlack"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/ranking_my_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_money_num"
+                android:textColor="@color/rankingGray"
+                />
+            <TextView
+                android:id="@+id/ranking_my_num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ranking_default"
+                android:textSize="@dimen/font_size_14"
+                android:textColor="@color/rankingBlack"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listRecy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

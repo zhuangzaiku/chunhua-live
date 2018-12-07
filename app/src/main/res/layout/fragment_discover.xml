@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundWhite"
+    android:layout_marginTop="@dimen/margin_size_4"
+    android:layout_marginBottom="@dimen/margin_size_4"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab_group_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@mipmap/group_send"
+        fab:fab_colorNormal="@color/FloatingActionButtonColor"
+        fab:fab_colorPressed="@color/FloatingActionButtonColorEnd"
+        fab:fab_colorRipple="@color/myGrayLight" />
+
+    <RelativeLayout
+        android:id="@+id/rl_null_discover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/backgroundPic">
+
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="@dimen/margin_size_80"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/home_show_loading"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_size_50"
+                android:text="暂无用户，请重新选择筛选条件 : )"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_discover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_discover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

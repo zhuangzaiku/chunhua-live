@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_request_invitation_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.activity.RequestInvitationActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_size_16"
+            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_marginBottom="@dimen/margin_size_16"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_16"
+                android:textColor="@color/myBlack"
+                android:textSize="@dimen/font_size_16"
+                android:text="春花聊天是一个高颜值的约会平台，为了保证用户的质量，春花聊天实行邀请注册，必须有邀请码可以注册。认真填写如下事项有助于快速获得邀请码。"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_size_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/myBlack"
+                    android:text="@string/real_name"/>
+
+                <EditText
+                    android:id="@+id/et_name_request_invitation_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_size_6"
+                    android:layout_weight="5"
+                    android:layout_marginLeft="@dimen/margin_size_8"
+                    android:background="@drawable/bg_edittext_login"
+                    android:hint="@string/hint_real_name"
+                    android:textColorHint="@color/myGrayHint"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_size_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/myBlack"
+                    android:text="@string/phone_number"/>
+
+                <EditText
+                    android:id="@+id/et_number_request_invitation_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_size_6"
+                    android:layout_weight="5"
+                    android:layout_marginLeft="@dimen/margin_size_8"
+                    android:background="@drawable/bg_edittext_login"
+                    android:inputType="phone"
+                    android:hint="@string/hint_phone_number"
+                    android:textColorHint="@color/myGrayHint"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_size_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/myBlack"
+                    android:text="@string/sex"/>
+                
+                <RadioGroup
+                    android:id="@+id/rg_sex_sign_up_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_male_sign_up_activity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/selector_gender_radiogroup"
+                        android:drawablePadding="@dimen/padding_size_4"
+                        android:text="@string/male"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_female_sign_up_activity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_gender_radiogroup"
+                        android:drawablePadding="@dimen/padding_size_4"
+                        android:layout_marginLeft="@dimen/margin_size_30"
+                        android:text="@string/female"/>
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_size_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/myBlack"
+                    android:text="@string/job"/>
+
+                <EditText
+                    android:id="@+id/et_job_request_invitation_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_size_6"
+                    android:layout_weight="5"
+                    android:layout_marginLeft="@dimen/margin_size_8"
+                    android:background="@drawable/bg_edittext_login"
+                    android:textColorHint="@color/myGrayHint"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_size_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/myBlack"
+                    android:text="@string/year_income"/>
+
+                <Spinner
+                    android:id="@+id/sp_income_request_invitation_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:entries="@array/income_level"
+                    android:layout_weight="5"
+                    android:layout_marginLeft="@dimen/margin_size_8"
+                    android:background="@drawable/bg_edittext_login"
+                    android:inputType="phone"
+                    android:hint="@string/hint_number"
+                    android:textColorHint="@color/myGrayHint"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_size_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/myBlack"
+                    android:text="@string/selfie_hd"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:layout_marginLeft="@dimen/margin_size_8"
+                    android:text="@string/selfie_hd_annotation"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_selfie_request_invitation_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <ImageView
+                    android:id="@+id/iv_selfie_request_invitation_activity"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:visibility="gone"/>
+                <include
+                    android:id="@+id/include_selfie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/item_upload_pic" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_size_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_size_16"
+                    android:textColor="@color/myBlack"
+                    android:text="@string/driving_license"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:layout_marginLeft="@dimen/margin_size_8"
+                    android:text="@string/driving_license_annotation"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_driver_request_invitation_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <ImageView
+                    android:id="@+id/iv_driver_request_invitation_activity"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:visibility="gone"/>
+                <include
+                    android:id="@+id/include_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/item_upload_pic" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_submit_request_invitation_activity"
+                android:layout_width="160dp"
+                android:layout_height="@dimen/button_height_40"
+                android:layout_marginTop="@dimen/margin_size_20"
+                android:layout_marginBottom="@dimen/margin_size_20"
+                android:background="@drawable/shape_button"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/submit_request"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_last_sign_up_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".ui.activity.SignActivitys.SignUpSecondActivity">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_20"
+        android:layout_marginLeft="@dimen/margin_size_20"
+        android:layout_marginRight="@dimen/margin_size_20"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_head_sign_up_activity"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/upload_pic"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_40"
+            android:padding="@dimen/padding_size_10"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_round_conner_layout">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/margin_size_2"
+                android:src="@mipmap/users"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_16"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:background="@null"
+                android:text="@string/sex"/>
+
+            <RadioGroup
+                android:id="@+id/rg_sex_sign_up_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_60"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_male_sign_up_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_gender_radiogroup"
+                    android:drawablePadding="@dimen/padding_size_4"
+                    android:text="@string/male"/>
+
+                <RadioButton
+                    android:id="@+id/rb_female_sign_up_activity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_gender_radiogroup"
+                    android:drawablePadding="@dimen/padding_size_4"
+                    android:layout_marginLeft="@dimen/margin_size_30"
+                    android:text="@string/female"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myPink"
+            android:layout_marginTop="@dimen/margin_size_2"
+            android:text="@string/sex_notification" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:padding="@dimen/padding_size_10"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_round_conner_layout">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_user"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_16"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:background="@null"
+                android:text="@string/name"/>
+
+            <EditText
+                android:id="@+id/et_name_sign_up_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:background="@null"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_city_sign_up_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:padding="@dimen/padding_size_10"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_round_conner_layout">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_city"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_16"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:background="@null"
+                android:text="@string/city"/>
+
+            <TextView
+                android:id="@+id/tv_city_sign_up_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_birthday_sign_up_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:padding="@dimen/padding_size_10"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_round_conner_layout">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_birthday"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_16"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:background="@null"
+                android:text="@string/birthday"/>
+
+            <TextView
+                android:id="@+id/tv_birthday_sign_up_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_Invitation_code_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:padding="@dimen/padding_size_10"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_round_conner_layout">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/invitation"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_16"
+                android:layout_marginLeft="@dimen/margin_size_8"
+                android:background="@null"
+                android:text="@string/sign_Invitation_code"/>
+
+            <EditText
+                android:id="@+id/tv_Invitation_code_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_4"
+                android:maxLength="10"
+                android:hint="@string/app_tips_text162"
+                android:paddingLeft="3dp"
+                android:textSize="@dimen/font_size_16"
+                android:textColorHint="#bbbbbb"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_ensure_sign_up_activity"
+            android:layout_width="@dimen/button_width_120"
+            android:layout_height="@dimen/button_height_40"
+            android:layout_marginTop="@dimen/margin_size_30"
+            android:layout_marginBottom="@dimen/margin_size_10"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/ensure"
+            android:background="@drawable/shape_button"/>
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rel_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/themePink"
+        android:visibility="visible"
+        android:elevation="2dp"
+        >
+
+
+    <ImageView
+        android:id="@+id/iv_back_title_bar"
+        android:layout_width="@dimen/toolbar_image_size"
+        android:layout_height="@dimen/toolbar_image_size"
+        android:padding="@dimen/padding_size_16"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_return"/>
+
+    <!--标题-->
+    <TextView
+        android:id="@+id/tv_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/font_size_18"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/myWhite"
+        android:text="@string/title"/>
+
+    <!--发现页的text area-->
+    <RelativeLayout
+        android:id="@+id/rl_text_area_title_bar"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingBottom="6dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_popular_title_bar"
+            android:text="@string/popular"
+            android:layout_alignParentLeft="true"
+            style="@style/TitleTextStyle" />
+
+        <TextView
+            android:id="@+id/tv_city_title_bar"
+            android:text="@string/title"
+            android:layout_centerHorizontal="true"
+            style="@style/TitleTextStyle" />
+
+        <TextView
+            android:id="@+id/tv_newest_title_bar"
+            android:text="@string/newest"
+            android:layout_alignParentRight="true"
+            style="@style/TitleTextStyle" />
+
+        <ImageView
+            android:id="@+id/iv_drop_down_title_bar"
+            android:layout_width="22dp"
+            android:layout_height="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/drop_down_home"/>
+
+        <View
+            android:id="@+id/v_pink_indicator"
+            android:layout_alignParentBottom="true"
+            android:layout_width="32dp"
+            android:layout_height="2dp"
+            android:background="@color/myPink" />
+    </RelativeLayout>
+
+    <!--个人资料页的姓名和在线状态-->
+    <RelativeLayout
+        android:id="@+id/rl_status_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_name_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_18"
+            android:textColor="@color/myWhite"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/tv_status_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_name_title_bar"
+            android:layout_marginTop="@dimen/margin_size_4"
+            android:textSize="@dimen/font_size_10"
+            android:textColor="@color/myWhite"
+            android:text="@string/online"/>
+    </RelativeLayout>
+
+    <!--消息通知-->
+    <ImageView
+        android:id="@+id/iv_system_message_title_bar"
+        android:layout_width="@dimen/toolbar_image_size"
+        android:layout_height="@dimen/toolbar_image_size"
+        android:padding="@dimen/padding_size_14"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/system_message_home"/>
+
+    <!--更多-->
+    <ImageView
+        android:id="@+id/iv_more_title_bar"
+        android:layout_width="@dimen/toolbar_image_size"
+        android:layout_height="@dimen/toolbar_image_size"
+        android:padding="@dimen/padding_size_14"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_more"/>
+
+    <!--更多-->
+    <ImageView
+        android:id="@+id/iv_share_title_bar"
+        android:layout_width="@dimen/toolbar_image_size"
+        android:layout_height="@dimen/toolbar_image_size"
+        android:padding="@dimen/padding_size_16"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_share"/>
+        <TextView
+            android:id="@+id/tv_Withdraw_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toolbar_image_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/margin_size_6"
+            android:visibility="invisible"
+            android:textSize="@dimen/font_size_16"
+            android:textColor="@color/myWhite"
+            android:text="@string/withdraw"/>
+
+    <!--确认-->
+    <TextView
+        android:id="@+id/tv_ensure_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/toolbar_image_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/margin_size_6"
+        android:visibility="invisible"
+        android:textSize="@dimen/font_size_16"
+        android:textColor="@color/myWhite"
+        android:text="@string/ensure"/>
+        <!--申请加入-->
+        <TextView
+            android:id="@+id/tv_join_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toolbar_join_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/margin_size_6"
+            android:visibility="invisible"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/myWhite"
+            android:text="@string/ensure"/>
+    </RelativeLayout>
+</RelativeLayout>

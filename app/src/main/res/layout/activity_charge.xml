@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_charge_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.quootta.mdate.ui.activity.ChargeActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_title_bar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bill"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/backgroundWhite"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_size_20"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_charge_activity"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                    <TextView
+                        android:id="@+id/tv_title_charge_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_size_4"
+                        android:textColor="@color/xiehouBlack"
+                        android:textSize="@dimen/font_size_15"
+
+                        android:text="@string/amount_sum"/>
+
+                   <TextView
+                       android:id="@+id/bill_charge"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerVertical="true"
+                       android:layout_toRightOf="@id/tv_title_charge_activity"
+                       android:textColor="@color/xiehouBlack"
+
+                       android:textSize="@dimen/font_size_15"
+                       android:text="--"
+                       />
+
+                    <ImageView
+                        android:id="@+id/bill_travel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/travel_to"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bill"
+                        android:textColor="@color/xiehouBlack"
+                        android:textSize="@dimen/font_size_15"
+                        android:layout_toLeftOf="@id/bill_travel"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="11dp"
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+
+                android:background="@color/backgroundWhite"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="100dp">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/bill_weixin"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/pay_weixin_blue"
+                        />
+                </RelativeLayout>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/margin_size_6"
+                    android:layout_marginLeft="@dimen/margin_size_4"
+                    android:layout_marginRight="@dimen/margin_size_4"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/myGrayLight" />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/bill_zhifubao"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/pay_zhifubao_gray"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:background="@color/backgroundWhite">
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="@dimen/margin_size_8"-->
+                    <!--android:textColor="@color/myGray"-->
+                    <!--android:text="@string/choose_amount"/>-->
+
+
+                <RelativeLayout style="@style/ChargeGoldLayout">
+
+
+                    <Button
+                        android:id="@+id/btn_gold1_charge_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="false"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_button_pink"
+                        android:focusable="true"
+                        android:text="@string/rmb_charge"
+                        android:textColor="@color/myWhite" />
+                </RelativeLayout>
+
+
+               <!-- <RelativeLayout style="@style/ChargeGoldLayout">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/xiehouBlack"
+                        android:text="@string/amount_60"/>
+
+                    <Button
+                        android:id="@+id/btn_gold1_charge_activity"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:background="@drawable/shape_charge_button"
+                        android:textColor="@color/myWhite"
+                        android:text="@string/rmb_6"/>
+                </RelativeLayout>-->
+
+                <!--<View
+                    style="@style/DividerStyle" />
+
+                <RelativeLayout
+                    style="@style/ChargeGoldLayout">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/xiehouBlack"
+                        android:text="@string/amount_500"/>
+
+                    <Button
+                        android:id="@+id/btn_gold2_charge_activity"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:background="@drawable/shape_charge_button"
+                        android:textColor="@color/myWhite"
+                        android:text="@string/rmb_50"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/DividerStyle" />
+
+                <RelativeLayout
+                    style="@style/ChargeGoldLayout">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/xiehouBlack"
+                        android:text="@string/amount_980"/>
+
+                    <Button
+                        android:id="@+id/btn_gold3_charge_activity"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:background="@drawable/shape_charge_button"
+                        android:textColor="@color/myWhite"
+                        android:text="@string/rmb_98"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/DividerStyle" />
+
+                <RelativeLayout
+                    style="@style/ChargeGoldLayout">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/xiehouBlack"
+                        android:layout_centerVertical="true"
+                        android:text="@string/amount_1980"/>
+
+                    <Button
+                        android:id="@+id/btn_gold4_charge_activity"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:background="@drawable/shape_charge_button"
+                        android:textColor="@color/myWhite"
+                        android:text="@string/rmb_198"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/DividerStyle" />
+
+                <RelativeLayout
+                    style="@style/ChargeGoldLayout">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/xiehouBlack"
+                        android:layout_centerVertical="true"
+                        android:text="@string/amount_5880"/>
+
+                    <Button
+                        android:id="@+id/btn_gold5_charge_activity"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:background="@drawable/shape_charge_button"
+                        android:textColor="@color/myWhite"
+                        android:text="@string/rmb_588"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/DividerStyle" />
+
+                <RelativeLayout
+                    style="@style/ChargeGoldLayout">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/xiehouBlack"
+                        android:text="@string/amount_9980"/>
+
+                    <Button
+                        android:id="@+id/btn_gold6_charge_activity"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:background="@drawable/shape_charge_button"
+                        android:textColor="@color/myWhite"
+                        android:text="@string/rmb_998"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/DividerStyle" />
+
+                <RelativeLayout
+                    style="@style/ChargeGoldLayout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/xiehouBlack"
+                        android:layout_centerVertical="true"
+                        android:text="@string/amount_19980"/>
+
+                    <Button
+                        android:id="@+id/btn_gold7_charge_activity"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:background="@drawable/shape_charge_button"
+                        android:textColor="@color/myWhite"
+                        android:text="@string/rmb_1998"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/DividerStyle" />
+
+                <RelativeLayout
+                    style="@style/ChargeGoldLayout">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/xiehouBlack"
+                        android:text="@string/amount_49980"/>
+
+                    <Button
+                        android:id="@+id/btn_gold8_charge_activity"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:background="@drawable/shape_charge_button"
+                        android:textColor="@color/myWhite"
+                        android:text="@string/rmb_4998"/>
+                </RelativeLayout>-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:paddingBottom="@dimen/padding_size_4"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_size_35"
+                    android:layout_marginBottom="@dimen/margin_size_35"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_wechat_charge_activity"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginRight="@dimen/margin_size_25"
+                        android:background="@drawable/bg_button_balance"
+                        android:paddingTop="@dimen/padding_size_20"
+                        android:drawableTop="@mipmap/wechat_icon"
+                        android:drawablePadding="-20dp"
+                        android:text="@string/wechat_charge"/>
+
+                    <Button
+                        android:id="@+id/btn_alipay_charge_activity"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="@dimen/margin_size_25"
+                        android:background="@drawable/bg_button_balance"
+                        android:paddingTop="@dimen/padding_size_20"
+                        android:drawableTop="@mipmap/alipay"
+                        android:drawablePadding="-20dp"
+                        android:text="@string/alipay_charge"/>
+                </LinearLayout>-->
+
+            </LinearLayout>
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="70dp"
+                >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_message"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_15"
+
+                    />
+                <TextView
+                    android:layout_marginTop="@dimen/margin_size_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/service_qq"
+                    android:textSize="@dimen/font_size_15"
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_wechat"
+                    android:visibility="gone"
+                    android:textSize="@dimen/font_size_15"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_tel"
+                    android:textSize="@dimen/font_size_15"
+                    />
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

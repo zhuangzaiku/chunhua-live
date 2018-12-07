@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background">
+
+    <LinearLayout
+        android:id="@+id/home_login_qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/home_login_weixin"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="50dp">
+
+        <RelativeLayout
+            android:layout_width="@dimen/home_login_src_width"
+            android:layout_height="@dimen/home_login_height"
+
+            android:background="@drawable/shape_home_qq"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/home_src"
+                android:layout_height="@dimen/home_src"
+                android:src="@drawable/home_qq" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/home_login_width"
+            android:layout_height="@dimen/home_login_height"
+            android:background="@drawable/shape_home_qq_ba"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ登录"
+                android:textColor="@color/home_text"
+                android:textSize="@dimen/home_text"
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_login_weixin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/home_login_weibo"
+        android:layout_alignRight="@+id/home_login_qq"
+        android:visibility="gone"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="@dimen/home_login_src_width"
+            android:layout_height="@dimen/home_login_height"
+            android:background="@drawable/shape_home_weixin"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/home_src"
+                android:layout_height="@dimen/home_src"
+                android:src="@drawable/home_weixin" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/home_login_width"
+            android:layout_height="@dimen/home_login_height"
+            android:background="@drawable/shape_home_weixin_ba"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信登录"
+                android:textColor="@color/home_text"
+                android:textSize="@dimen/home_text"
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_login_weibo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/home_login_phone"
+        android:layout_alignRight="@+id/home_login_weixin"
+        android:visibility="gone"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="@dimen/home_login_src_width"
+            android:layout_height="@dimen/home_login_height"
+            android:background="@drawable/shape_home_weibo"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/home_src"
+                android:layout_height="@dimen/home_src"
+                android:src="@drawable/home_weibo" />
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="@dimen/home_login_width"
+            android:layout_height="@dimen/home_login_height"
+            android:background="@drawable/shape_home_weibo_ba"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微博登录"
+                android:textColor="@color/home_text"
+                android:textSize="@dimen/home_text"
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_login_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/home_login_deal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:layout_marginTop="17.5dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/home_phonelogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:text="@string/str_phone_login"
+            android:textColor="@color/home_text"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/home_text" />
+
+        <TextView
+            android:id="@+id/home_phoneregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/str_phone_register"
+            android:textColor="@color/home_text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_login_deal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_lgin_tips"
+            android:textColor="@color/home_text"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/home_user_deal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_longin_text"
+            android:textColor="@color/home_text"
+            android:textSize="10sp" />
+    </LinearLayout>
+</RelativeLayout>

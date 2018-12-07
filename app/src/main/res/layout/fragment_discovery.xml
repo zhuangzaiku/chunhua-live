@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.quootta.mdate.ui.fragment.DiscoveryFragment"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/themePink"
+        app:tabTextColor="@color/textWhite"
+        app:tabSelectedTextColor="@color/myWhite"
+        app:tabIndicatorColor="@color/myWhite"
+
+        app:tabIndicatorHeight="0dp"
+
+
+        >
+    </android.support.design.widget.TabLayout>
+
+    <com.quootta.mdate.ui.view.MyViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.quootta.mdate.ui.view.MyViewPager>
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/rel_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/themePink"
+        android:visibility="visible"
+        android:elevation="2dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/account_alter_back"
+            android:layout_width="@dimen/toolbar_image_size"
+            android:layout_height="@dimen/toolbar_image_size"
+            android:padding="@dimen/padding_size_16"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_return"/>
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/account_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/font_size_18"
+            android:textColor="@color/myBlack"
+            android:text="@string/account_security"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#fcfcfc"
+        >
+        <ImageView
+            android:id="@+id/account_alter_user_src"
+            android:layout_width="@dimen/account_item_src"
+            android:layout_height="@dimen/account_item_src"
+            android:src="@drawable/phonebind_phone"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+        <EditText
+            android:id="@+id/account_alter_user_text"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_centerVertical="true"
+            android:hint="@string/hint_number"
+            android:layout_toRightOf="@+id/account_alter_user_src"
+            />
+        <Button
+            android:id="@+id/account_alter_get_code"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/themePink"
+            android:gravity="center"
+            android:text="@string/get_verification_code"
+            android:textColor="#fcfcfc"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/phone_bind_line"
+            android:layout_marginLeft="75dp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fcfcfc"
+        >
+        <ImageView
+            android:id="@+id/account_alter_mes_src"
+            android:layout_width="@dimen/account_item_src"
+            android:layout_height="@dimen/account_item_src"
+            android:src="@drawable/phonebind_mes"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+        <EditText
+            android:id="@+id/account_alter_mes_text"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_centerVertical="true"
+            android:hint="@string/app_tips_text158"
+            android:layout_toRightOf="@+id/account_alter_mes_src"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/phone_bind_line"
+            android:layout_marginLeft="75dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fcfcfc"
+        >
+        <ImageView
+            android:id="@+id/account_alter_pas_src"
+            android:layout_width="@dimen/account_item_src"
+            android:layout_height="@dimen/account_item_src"
+            android:src="@drawable/phonebind_password"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+        <EditText
+            android:id="@+id/account_alter_pas_text"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_centerVertical="true"
+            android:hint="@string/app_tips_text159"
+            android:password="true"
+            android:inputType="textPassword"
+            android:layout_toRightOf="@+id/account_alter_pas_src"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/account_alter_bind"
+        android:layout_marginTop="15dp"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:background="@color/rankingYellow"
+        android:layout_gravity="center_horizontal"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="@string/account_security"
+            />
+    </RelativeLayout>
+</LinearLayout>

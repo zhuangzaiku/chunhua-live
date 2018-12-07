@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="2dp"
+    android:orientation="vertical"
+    android:background="@color/myWhite">
+    <View
+        android:id="@+id/view_spilt"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/myGrayLight"/>
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_below="@id/view_spilt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_2"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_discover"
+            android:background="@null"
+            android:paddingLeft="0dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/padding_size_4"
+            android:paddingTop="@dimen/padding_size_4"
+            android:text="@string/discover"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:textSize="@dimen/font_size_10" />
+
+        <RadioButton
+            android:id="@+id/rb_chats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_chats"
+            android:background="@null"
+            android:paddingLeft="0dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_size_4"
+            android:paddingTop="@dimen/padding_size_4"
+            android:text="@string/chats"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:textSize="@dimen/font_size_10" />
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/rb_list"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_weight="1"-->
+            <!--android:button="@null"-->
+            <!--android:drawableTop="@drawable/selector_list"-->
+            <!--android:background="@null"-->
+            <!--android:paddingLeft="0dp"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="@dimen/padding_size_4"-->
+            <!--android:paddingTop="@dimen/padding_size_4"-->
+            <!--android:text="@string/list"-->
+            <!--android:textColor="@drawable/selector_text_bottom_radiobutton"-->
+            <!--android:textSize="@dimen/font_size_10" />-->
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_me"
+            android:background="@null"
+            android:paddingLeft="0dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_size_4"
+            android:paddingTop="@dimen/padding_size_4"
+            android:text="@string/me"
+            android:textColor="@drawable/selector_text_bottom_radiobutton"
+            android:textSize="@dimen/font_size_10" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/view_space"
+        android:layout_width="40dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="@dimen/margin_size_4"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+</RelativeLayout>

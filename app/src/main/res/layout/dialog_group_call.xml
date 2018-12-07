@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin_size_20"
+        android:background="@drawable/bg_invite_dating_layout"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_close" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_45"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/group_call"
+                android:textColor="@color/myWhite"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/img_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_margin="@dimen/margin_size_4"
+
+                android:background="@mipmap/ic_close" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/firstText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/app_tips_text121"
+            android:textColor="#ef9b16"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/app_tips_text122"
+            android:textColor="@color/xiehouBlack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/app_tips_text123"
+            android:textColor="@color/xiehouBlack" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/boy_btn"
+                android:layout_width="102dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_borde_rounded"
+                android:text="@string/app_tips_text124"
+                android:textColor="@color/myGroup"
+                android:textSize="@dimen/margin_size_16" />
+
+            <Button
+                android:id="@+id/girl_btn"
+                android:layout_width="102dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/bg_borde_rounded"
+                android:text="@string/app_tips_text125"
+                android:textColor="@color/myGroup"
+
+                android:textSize="@dimen/margin_size_16" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_14"
+
+            android:layout_marginTop="18dp"
+            android:text="@string/app_tips_text126"
+            android:textColor="@color/xiehouBlack"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/call_gorup_text"
+            android:layout_width="220dp"
+
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="9dp"
+            android:background="#eee"
+            android:focusable="false"
+            android:text="邂逅语 邂逅语 邂逅语"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/call_free_btn"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/font_size_20"
+                android:layout_marginRight="@dimen/font_size_20"
+                android:background="@color/colorPrimary"
+                android:text="@string/app_tips_text127"
+
+                android:textColor="#ffff"
+                android:textSize="14dp" />
+
+            <Button
+
+                android:id="@+id/cash_btn"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/font_size_20"
+                android:layout_marginRight="@dimen/font_size_20"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/app_tips_text128"
+                android:textColor="#ffff"
+
+                android:textSize="14dp" />
+
+
+            <Button
+                android:id="@+id/free_btn"
+                android:layout_width="match_parent"
+
+                android:layout_height="32dp"
+                android:layout_above="@id/cash_btn"
+                android:layout_marginLeft="@dimen/font_size_20"
+                android:layout_marginRight="@dimen/font_size_20"
+                android:background="@color/colorPrimary"
+                android:text="@string/app_tips_text129"
+                android:textColor="#ffff"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <com.quootta.mdate.ui.view.VideoRecorderView
+        android:id="@+id/videoRecorderView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_size_10"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:id="@+id/shoot_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_movie_add_shoot"
+        android:text="按住拍"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_size_40"
+        android:textColor="#ECEBF1"/>
+</RelativeLayout>

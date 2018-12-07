@@ -1,0 +1,107 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--Button尺寸-->
+    <dimen name="button_height_40">40dp</dimen>
+    <dimen name="button_width_120">120dp</dimen>
+
+    <!--splash尺寸-->
+    <dimen name="splash_logo_size">100dp</dimen>
+
+    <!--字体尺寸-->
+    <dimen name="font_size_10">10sp</dimen>
+    <dimen name="font_size_11">11sp</dimen>
+    <dimen name="font_size_12">12sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_26">26sp</dimen>
+    <dimen name="font_size_30">30sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+
+    <!--margin尺寸-->
+    <dimen name="margin_size_1">1dp</dimen>
+    <dimen name="margin_size_2">2dp</dimen>
+    <dimen name="margin_size_4">4dp</dimen>
+    <dimen name="margin_size_5">5dp</dimen>
+    <dimen name="margin_size_6">6dp</dimen>
+    <dimen name="margin_size_8">8dp</dimen>
+    <dimen name="margin_size_10">10dp</dimen>
+    <dimen name="margin_size_12">12dp</dimen>
+    <dimen name="margin_size_14">14dp</dimen>
+    <dimen name="margin_size_16">16dp</dimen>
+    <dimen name="margin_size_20">20dp</dimen>
+    <dimen name="margin_size_25">25dp</dimen>
+    <dimen name="margin_size_30">30dp</dimen>
+    <dimen name="margin_size_35">35dp</dimen>
+    <dimen name="margin_size_40">40dp</dimen>
+    <dimen name="margin_size_45">45dp</dimen>
+    <dimen name="margin_size_50">50dp</dimen>
+    <dimen name="margin_size_60">60dp</dimen>
+    <dimen name="margin_size_80">80dp</dimen>
+    <dimen name="margin_size_90">90dp</dimen>
+    <dimen name="margin_size_100">100dp</dimen>
+    <dimen name="margin_size_120">120dp</dimen>
+    <dimen name="margin_size_365">365dp</dimen>
+    <dimen name="margin_size_377">377dp</dimen>
+
+    <!--padding尺寸-->
+    <dimen name="padding_size_1">1dp</dimen>
+    <dimen name="padding_size_2">2dp</dimen>
+    <dimen name="padding_size_4">4dp</dimen>
+    <dimen name="padding_size_5">5dp</dimen>
+    <dimen name="padding_size_6">6dp</dimen>
+    <dimen name="padding_size_8">8dp</dimen>
+    <dimen name="padding_size_10">10dp</dimen>
+    <dimen name="padding_size_12">12dp</dimen>
+    <dimen name="padding_size_14">14dp</dimen>
+    <dimen name="padding_size_16">16dp</dimen>
+    <dimen name="padding_size_20">20dp</dimen>
+    <dimen name="padding_size_25">25dp</dimen>
+    <dimen name="padding_size_30">30dp</dimen>
+    <dimen name="padding_size_35">35dp</dimen>
+    <dimen name="padding_size_40">40dp</dimen>
+    <dimen name="padding_size_45">45dp</dimen>
+    <dimen name="padding_size_50">50dp</dimen>
+    <dimen name="padding_size_60">60dp</dimen>
+    <dimen name="padding_size_80">80dp</dimen>
+
+    <!--排行榜图片框线宽-->
+    <dimen name="ranking_border_width">3dp</dimen>
+
+    <!--顶栏尺寸-->
+    <dimen name="toolbar_height">48dp</dimen>
+    <!--顶栏图标尺寸-->
+    <dimen name="toolbar_image_size">48dp</dimen>
+    <!--顶栏加入场景尺寸-->
+    <dimen name="toolbar_join_height">60dp</dimen>
+
+    <!--Banner尺寸-->
+    <dimen name="banner_height_size">100dp</dimen>
+<!--MeFragment-->
+    <dimen name="Meitem_height">44dp</dimen>
+
+    <!--home登录页尺寸-->
+    <dimen name="home_login_height">45dp</dimen>
+    <dimen name="home_login_width">200dp</dimen>
+    <dimen name="home_login_src_width">50dp</dimen>
+    <!--home登录页图片 文字大小-->
+    <dimen name="home_src">17dp</dimen>
+    <dimen name="home_text">16sp</dimen>
+    <!--注册-->
+    <dimen name="signup_item_height">45dp</dimen>
+    <dimen name="signup_item_image">15dp</dimen>
+    <!--账号安全-->
+    <dimen name="account_item_src">20dp</dimen>
+    <!--礼物-->
+    <dimen name="gift_text_size">10sp</dimen>
+    <dimen name="gift_text_margin">4dp</dimen>
+    <!--首页分类-->
+    <dimen name="classify_image_height">70dp</dimen>
+    <dimen name="classify_image_width">70dp</dimen>
+</resources>
