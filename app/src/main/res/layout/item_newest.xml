@@ -34,7 +34,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="13dp"
-                android:src="@mipmap/ic_gender_female_selected" />
+                android:src="@mipmap/ic_female" />
         </RelativeLayout>
 
         <TextView

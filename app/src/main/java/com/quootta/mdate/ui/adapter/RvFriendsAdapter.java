@@ -95,9 +95,9 @@ public class RvFriendsAdapter extends RecyclerView.Adapter<RvFavoriteHolder> {
 
         if (userList.get(position).gender!=null){
             if (userList.get(position).gender.equals("male")){
-                holder.tv_gender.setImageResource(R.drawable.ranking_sexb);
+                holder.tv_gender.setImageResource(R.mipmap.ic_male);
             }else {
-                holder.tv_gender.setImageResource(R.drawable.rankingsexg);
+                holder.tv_gender.setImageResource(R.mipmap.ic_female);
 
             }
         }

@@ -152,10 +152,10 @@ public class RvNewestAdapter extends BaseRecyclerAdapter<UserList.users, RvNewes
 
         switch (user.gender) {
             case "male":
-                viewHolder.ivGender.setImageResource(R.drawable.signup_boy_down);
+                viewHolder.ivGender.setImageResource(R.mipmap.ic_male);
                 break;
             case "female":
-                viewHolder.ivGender.setImageResource(R.drawable.signup_girl_down);
+                viewHolder.ivGender.setImageResource(R.mipmap.ic_female);
                 break;
         }
 
