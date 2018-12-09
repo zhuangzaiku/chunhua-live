@@ -16,7 +16,7 @@
         android:id="@+id/rg_main"
         android:layout_below="@id/view_spilt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="77dp"
         android:layout_marginTop="@dimen/margin_size_2"
         android:orientation="horizontal">
 
@@ -28,12 +28,11 @@
             android:layout_weight="1"
             android:button="@null"
             android:checked="true"
+            android:drawablePadding="2dp"
             android:drawableTop="@drawable/selector_discover"
             android:background="@null"
             android:paddingLeft="0dp"
             android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/padding_size_4"
-            android:paddingTop="@dimen/padding_size_4"
             android:text="@string/discover"
             android:textColor="@drawable/selector_text_bottom_radiobutton"
             android:textSize="@dimen/font_size_10" />
@@ -45,6 +44,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:button="@null"
+            android:drawablePadding="2dp"
             android:drawableTop="@drawable/selector_chats"
             android:background="@null"
             android:paddingLeft="0dp"
@@ -55,23 +55,6 @@
             android:textColor="@drawable/selector_text_bottom_radiobutton"
             android:textSize="@dimen/font_size_10" />
 
-        <!--<RadioButton-->
-            <!--android:id="@+id/rb_list"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:layout_weight="1"-->
-            <!--android:button="@null"-->
-            <!--android:drawableTop="@drawable/selector_list"-->
-            <!--android:background="@null"-->
-            <!--android:paddingLeft="0dp"-->
-            <!--android:gravity="center"-->
-            <!--android:paddingBottom="@dimen/padding_size_4"-->
-            <!--android:paddingTop="@dimen/padding_size_4"-->
-            <!--android:text="@string/list"-->
-            <!--android:textColor="@drawable/selector_text_bottom_radiobutton"-->
-            <!--android:textSize="@dimen/font_size_10" />-->
-
         <RadioButton
             android:id="@+id/rb_me"
             android:layout_width="wrap_content"
@@ -79,6 +62,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:button="@null"
+            android:drawablePadding="2dp"
             android:drawableTop="@drawable/selector_me"
             android:background="@null"
             android:paddingLeft="0dp"

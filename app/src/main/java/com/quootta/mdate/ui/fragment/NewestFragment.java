@@ -305,7 +305,7 @@ public class NewestFragment extends BaseFragment {
     private void initRecyclerView(UserList list) {
         //绑定Adapter
         newestAdapter = new RvNewestAdapter(baseContext, userList.users);
-        gridLayoutManager = new GridLayoutManager(baseContext, 3);
+        gridLayoutManager = new GridLayoutManager(baseContext, 2);
         rvNewest.setLayoutManager(gridLayoutManager);
         rvNewest.setAdapter(newestAdapter);
 
@@ -313,26 +313,26 @@ public class NewestFragment extends BaseFragment {
 
         //传入Banner数据
 
-        if (callImgsList!=null && callImgsList.size() >0 ) {
-            View header =  LayoutInflater.from(baseContext).inflate(R.layout.banner_newest, rvNewest, false);
-            newestAdapter.setHeaderView(header);
-            newestAdapter.setBannerList(callImgsList);
-            newestAdapter.setOnBannerItemClickListener(new RvNewestAdapter.OnBannerItemClickListener() {
-                @Override
-                public void onItemClick(int position, int index) {
-                    Intent intent = new Intent(baseContext, PersonalDetailsActivity.class);
-                    switch (position) {
-                        case 0:
-                            intent.putExtra("user_id", callList.to.get(index)._id);
-                            break;
-                        case 1:
-                            intent.putExtra("user_id", callList.from.get(index)._id);
-                            break;
-                    }
-                    startActivity(intent);
-                }
-            });
-        }
+//        if (callImgsList!=null && callImgsList.size() >0 ) {
+//            View header =  LayoutInflater.from(baseContext).inflate(R.layout.banner_newest, rvNewest, false);
+//            newestAdapter.setHeaderView(header);
+//            newestAdapter.setBannerList(callImgsList);
+//            newestAdapter.setOnBannerItemClickListener(new RvNewestAdapter.OnBannerItemClickListener() {
+//                @Override
+//                public void onItemClick(int position, int index) {
+//                    Intent intent = new Intent(baseContext, PersonalDetailsActivity.class);
+//                    switch (position) {
+//                        case 0:
+//                            intent.putExtra("user_id", callList.to.get(index)._id);
+//                            break;
+//                        case 1:
+//                            intent.putExtra("user_id", callList.from.get(index)._id);
+//                            break;
+//                    }
+//                    startActivity(intent);
+//                }
+//            });
+//        }
 
         newestAdapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

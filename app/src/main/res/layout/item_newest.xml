@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
-    android:layout_margin="2dp"
-    app:cardCornerRadius="6dp"
-    android:background="@color/background">
+    android:layout_height="149dp"
+    android:layout_margin="7dp"
+    android:background="@color/background"
+    app:cardCornerRadius="6dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,49 +14,41 @@
         <com.android.volley.toolbox.NetworkImageView
             android:id="@+id/iv_show"
             android:layout_width="match_parent"
-            android:scaleType="centerCrop"
-            android:layout_height="140dp"/>
+            android:layout_height="180dp"
+            android:scaleType="centerCrop" />
 
-        <View
+        <RelativeLayout
             android:id="@+id/view_trans"
-            android:layout_alignBottom="@id/iv_show"
             android:layout_width="match_parent"
             android:layout_height="24dp"
-            android:background="@color/transparentGray">
-        </View>
+            android:layout_alignBottom="@id/iv_show"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/shape_button">
 
+            <ImageView
+                android:id="@+id/iv_gender_label"
+                android:layout_width="9dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:src="@mipmap/ic_gender_female_selected" />
+        </RelativeLayout>
 
         <TextView
-            android:id="@+id/tv_age"
-            android:layout_alignBottom="@id/iv_show"
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:paddingLeft="5dp"
-            android:textColor="@color/myWhite"
-            android:textSize="12sp" />
-
-        <ImageView
-            android:id="@+id/iv_gender_label"
-            android:layout_alignBottom="@id/view_trans"
-            android:layout_alignParentLeft="true"
-            android:paddingLeft="4dp"
-            android:layout_width="12dp"
-            android:layout_height="24dp"
-            android:src="@drawable/sugnup_boy_down"/>
-
-        <TextView
-            android:id="@+id/tv_city"
             android:layout_alignBottom="@id/iv_show"
-            android:layout_alignRight="@id/iv_show"
-            android:layout_marginRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:gravity="center_vertical"
+            android:layout_marginLeft="17dp"
+            android:layout_marginBottom="7dp"
+            android:ellipsize="end"
+            android:gravity="center"
             android:lines="1"
             android:maxEms="5"
-            android:textSize="10sp"
-            android:textColor="@color/myWhite"/>
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/font_size_10" />
     </RelativeLayout>
 </android.support.v7.widget.CardView>

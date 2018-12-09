@@ -159,14 +159,8 @@ public class RvNewestAdapter extends BaseRecyclerAdapter<UserList.users, RvNewes
                 break;
         }
 
-        viewHolder.tvAge.setText(user.age);
-        if (user.city == null ) user.city = " ";
-        String[] cityArray = user.city.split(" ");
-        if (cityArray.length<2){
-            viewHolder.tvCity.setText(context.getString(R.string.app_tips_text50));
-        }else {
-            viewHolder.tvCity.setText(cityArray[1]);
-        }
+        viewHolder.tvName.setText(user.nick_name);
+
     }
 
     @Override
@@ -186,12 +180,10 @@ public class RvNewestAdapter extends BaseRecyclerAdapter<UserList.users, RvNewes
 
         @Bind(R.id.iv_show)
         NetworkImageView ivShow;
-        @Bind(R.id.tv_age)
-        TextView tvAge;
         @Bind(R.id.iv_gender_label)
         ImageView ivGender;
-        @Bind(R.id.tv_city)
-        TextView tvCity;
+        @Bind(R.id.tv_name)
+        TextView tvName;
 
         VerticalViewPager vpList;
 

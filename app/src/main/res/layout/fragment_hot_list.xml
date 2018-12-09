@@ -8,7 +8,10 @@
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/srl_discover"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="7dp">
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_hot"
 
@@ -33,7 +36,7 @@
         android:id="@+id/fab_group_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|center"
         android:layout_margin="16dp"
         android:src="@mipmap/group_send"
         fab:fab_colorNormal="@color/FloatingActionButtonColor"

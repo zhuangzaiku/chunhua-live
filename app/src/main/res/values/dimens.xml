@@ -20,6 +20,7 @@
 
     <dimen name="font_size_8">8sp</dimen>
     <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_17">17sp</dimen>
     <dimen name="font_size_18">18sp</dimen>
     <dimen name="font_size_20">20sp</dimen>
     <dimen name="font_size_26">26sp</dimen>
@@ -88,7 +89,7 @@
     <dimen name="toolbar_join_height">60dp</dimen>
 
     <!--Banner尺寸-->
-    <dimen name="banner_height_size">100dp</dimen>
+    <dimen name="banner_height_size">149dp</dimen>
 <!--MeFragment-->
     <dimen name="Meitem_height">44dp</dimen>
 

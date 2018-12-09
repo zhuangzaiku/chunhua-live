@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="212dp"
-    android:layout_margin="2dp"
+    android:layout_height="149dp"
+    android:layout_margin="7dp"
     app:cardCornerRadius="6dp"
     android:background="@color/background">
 
@@ -18,13 +18,25 @@
             android:scaleType="centerCrop"
             android:layout_height="180dp"/>
 
-        <View
+        <RelativeLayout
             android:id="@+id/view_trans"
             android:layout_alignBottom="@id/iv_show"
             android:layout_width="match_parent"
             android:layout_height="24dp"
-            android:background="@color/transparentGray">
-        </View>
+            android:background="@drawable/shape_button"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="6dp">
+
+            <ImageView
+                android:id="@+id/iv_gender_label"
+                android:layout_width="9dp"
+                android:layout_height="12dp"
+                android:src="@mipmap/ic_gender_female_selected"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/ll_head_city"
@@ -45,6 +57,7 @@
                 android:scaleType="centerCrop"
                 android:layout_marginTop="5dp"
                 app:border_width="1dp"
+                android:visibility="gone"
                 app:border_color="@color/myWhite"
                 android:layout_marginBottom="1dp"/>
 
@@ -63,9 +76,6 @@
 
         <TextView
             android:id="@+id/tv_name"
-
-            android:layout_toRightOf="@+id/ll_head_city"
-            android:layout_toEndOf="@+id/ll_head_city"
             android:layout_alignBottom="@id/iv_show"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
@@ -73,8 +83,12 @@
             android:gravity="center"
             android:maxEms="5"
             android:ellipsize="end"
-            android:textSize="12sp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="17dp"
+            android:textSize="@dimen/font_size_10"
             android:textColor="@color/myWhite" />
+
+
 
 
 <RelativeLayout
@@ -95,15 +109,7 @@
         <!--android:layout_toLeftOf="@+id/tv_city"-->
         <!--android:layout_alignBottom="@id/tv_city"-->
         <!--/>-->
-    <ImageView
-        android:id="@+id/iv_gender_label"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:src="@drawable/sugnup_boy_down"
-        android:paddingBottom="2dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+
 
     <TextView
         android:id="@+id/tv_age"
@@ -114,10 +120,7 @@
         android:textColor="@color/hot_textcolor"
         android:text="18"
         android:layout_marginLeft="4dp"
-        android:textSize="13sp"
-        android:layout_alignBottom="@+id/iv_gender_label"
-        android:layout_toRightOf="@+id/iv_gender_label"
-        android:layout_toEndOf="@+id/iv_gender_label" />
+        android:textSize="13sp"/>
     <TextView
         android:id="@+id/tv_city"
         android:layout_width="wrap_content"
@@ -159,6 +162,7 @@
             android:layout_width="26dp"
             android:layout_height="26dp"
             android:layout_margin="6dp"
+            android:visibility="gone"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:src="@drawable/selector_favorite"/>

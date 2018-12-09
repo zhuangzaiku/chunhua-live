@@ -9,6 +9,9 @@
     <com.quootta.mdate.ui.view.ChildViewPager
         android:id="@+id/vp_banner"
         android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
         android:layout_height="@dimen/banner_height_size"
         android:layout_alignParentTop="true" />
 

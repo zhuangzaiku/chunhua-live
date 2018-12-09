@@ -77,10 +77,11 @@
     <string name="newest">最新</string>
     <string name="online">在线</string>
     <string name="offline">离线</string>
-    <string name="discover">发现</string>
-    <string name="chats">聊天</string>
+    <string name="discover">推荐</string>
+    <string name="chats">消息</string>
     <string name="me">我的</string>
     <string name="list">排行榜</string>
+    <string name="meet_up">\n偶遇</string>
 
     <!--筛选activity-->
     <string name="sex_colon">性别：</string>
@@ -434,8 +435,8 @@
     <string name="app_tips_text98">土豪榜</string>
     <string name="app_tips_text99">接通率%s</string>
     <string name="app_tips_text100">请先选择性别</string>
-    <string name="app_tips_text101">热门</string>
-    <string name="app_tips_text102">最新</string>
+    <string name="app_tips_text101">推荐</string>
+    <string name="app_tips_text102">新人</string>
     <string name="app_tips_text103">同城</string>
     <string name="app_tips_text104">本周排行</string>
     <string name="app_tips_text105">上周排行</string>
