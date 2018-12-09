@@ -13,12 +13,14 @@ import com.quootta.mdate.R;
 import com.quootta.mdate.base.BaseApp;
 import com.quootta.mdate.base.BaseFragment;
 import com.quootta.mdate.engine.account.PhoneNumberRequest;
+import com.quootta.mdate.engine.account.SignPasswordRequest;
 import com.quootta.mdate.engine.account.VerificationRequest;
 import com.quootta.mdate.helper.CountDownButtonHelper;
 import com.quootta.mdate.myListener.VolleyListener;
 import com.quootta.mdate.ui.activity.SignActivity;
 import com.quootta.mdate.utils.ActivityUtil;
 import com.quootta.mdate.utils.LogUtil;
+import com.quootta.mdate.utils.SecretUtil;
 import com.quootta.mdate.utils.ToastUtil;
 import com.android.volley.RequestQueue;
 
@@ -35,12 +37,14 @@ import butterknife.Bind;
  */
 public class SignUpFirstFragment extends BaseFragment implements View.OnClickListener{
 
-    @Bind(R.id.iv_back_title_bar)ImageView iv_back;
-    @Bind(R.id.tv_title_bar)TextView tv_title;
+    @Bind(R.id.imgBack)ImageView iv_back;
+    @Bind(R.id.tvTitle)TextView tv_title;
     @Bind(R.id.et_number_sign_up_activity)EditText et_number;
     @Bind(R.id.et_verification_sign_up_activity)EditText et_verification;
     @Bind(R.id.btn_verification_sign_up_activity)Button btn_verification;
     @Bind(R.id.btn_next_step_sign_up_activity)Button btn_next_step;
+
+    @Bind(R.id.et_pwd_sign_up_activity)EditText et_password;
 
     private RequestQueue requestQueue;
     private SharedPreferences pref;
@@ -73,7 +77,7 @@ public class SignUpFirstFragment extends BaseFragment implements View.OnClickLis
     @Override
     protected void initData(View view) {
         baseContext=view.getContext();
-        initTitle();
+//        initTitle();
     }
 
     private void initTitle() {
@@ -85,7 +89,7 @@ public class SignUpFirstFragment extends BaseFragment implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.iv_back_title_bar:
+            case R.id.imgBack:
                 ActivityUtil.finishActivty();
                 break;
 
@@ -120,25 +124,52 @@ public class SignUpFirstFragment extends BaseFragment implements View.OnClickLis
                     @Override
                     protected void onSuccess(JSONObject response) {
                         LogUtil.d("SignUpFirstActivity", "Response:" + response);
-                        try {
-                            ToastUtil.showToast(response.getString("msg").toString());
-
-//                            Intent secondIntent = new Intent(baseContext, SignUpSecondActivity.class);
-//                           secondIntent.putExtra("number",et_number.getText().toString().trim());
-//                            startActivity(secondIntent);
-                            SingUpSecondFragment singUpSecondFragment=new SingUpSecondFragment();
-                            Bundle bundle=new Bundle();
-                            bundle.putString("number",et_number.getText().toString().trim());
-                            singUpSecondFragment.setArguments(bundle);
-                            ((SignActivity)getActivity()).changeFragment(singUpSecondFragment);
-
-//                            ActivityUtil.finishActivty();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+                        requestPassword(et_number.getText().toString().trim());
                     }
                 });
         requestQueue.add(phoneNumberRequest);
+    }
+
+    private void requestPassword(final String number) {
+        Map<String, String> paramsMap = new HashMap<>();
+        final String password = et_password.getText().toString().trim();
+//        String passwordConfirm = et_confirm_password.getText().toString().trim();
+        if(password.equals("")){
+            ToastUtil.showToast(getString(R.string.app_tips_text114));
+        }
+//        if(passwordConfirm.equals("")){
+//            ToastUtil.showToast(getString(R.string.app_tips_text114));
+//        }
+        if (!password.isEmpty()) {
+//        if (password.equals(passwordConfirm) && !password.isEmpty() && !passwordConfirm.isEmpty() ) {
+            paramsMap.put("password", SecretUtil.bytesToMD5(password));
+            SignPasswordRequest signPasswordRequest = new SignPasswordRequest(paramsMap,
+                    new VolleyListener() {
+                        @Override
+                        protected void onSuccess(JSONObject response) {
+                            LogUtil.d("SignUpSecondActivity", "Response:" + response);
+                            try {
+                                ToastUtil.showToast(response.getString("msg").toString());
+//                                Intent secondIntent = new Intent(baseContext, SignUpLastActivity.class);
+//                                secondIntent.putExtra("number", number);
+//                                secondIntent.putExtra("pwd", SecretUtil.bytesToMD5(password));
+//                                startActivity(secondIntent);
+                                SignUpLastFragment lastFragment=new SignUpLastFragment();
+                                Bundle bundle=new Bundle();
+                                bundle.putString("number", number);
+                                bundle.putString("pwd", SecretUtil.bytesToMD5(password));
+                                lastFragment.setArguments(bundle);
+
+                                ((SignActivity)getActivity()).changeFragment(lastFragment);
+//                                ActivityUtil.finishActivty();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+            requestQueue.add(signPasswordRequest);
+        }
+
     }
 
     private void requestVerification() {

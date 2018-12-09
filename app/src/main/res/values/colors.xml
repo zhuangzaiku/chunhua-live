@@ -77,4 +77,10 @@
     <color name="tablayout_board">#E64A19</color>
 
     <color name="hot_textcolor">#333031</color>
+
+    <color name="color_9b9b9b">#9b9b9b</color>
+    <color name="color_b9b9b9">#b9b9b9</color>
+    <color name="color_cbcbcb">#cbcbcb</color>
+    <color name="color_ec76a2">#ec76a2</color>
+    <color name="color_939393">#939393</color>
 </resources>

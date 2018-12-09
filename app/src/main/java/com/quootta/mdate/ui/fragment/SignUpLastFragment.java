@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -37,6 +38,7 @@ import com.quootta.mdate.domain.UserChatInfoList;
 import com.quootta.mdate.helper.ConnectRongHelper;
 import com.quootta.mdate.task.AddressInitTask;
 import com.quootta.mdate.ui.activity.MainActivity;
+import com.quootta.mdate.ui.activity.UserDealActivity;
 import com.quootta.mdate.ui.dialog.MyProgressDialog;
 import com.quootta.mdate.ui.popupWindow.SelectPicPopupWindow;
 import com.quootta.mdate.utils.ActivityUtil;
@@ -70,8 +72,8 @@ import okhttp3.Call;
  * Created by Ryon on 2016/7/18/0018.
  */
 public class SignUpLastFragment extends BaseFragment implements View.OnClickListener {
-    @Bind(R.id.iv_back_title_bar)ImageView iv_back;
-    @Bind(R.id.tv_title_bar)TextView tv_title;
+    @Bind(R.id.imgBack)ImageView iv_back;
+    @Bind(R.id.tvTitle)TextView tv_title;
     @Bind(R.id.iv_head_sign_up_activity)ImageView iv_head;
     @Bind(R.id.et_name_sign_up_activity)EditText et_name;
     @Bind(R.id.rg_sex_sign_up_activity)RadioGroup rg_sex;
@@ -81,6 +83,9 @@ public class SignUpLastFragment extends BaseFragment implements View.OnClickList
     @Bind(R.id.tv_birthday_sign_up_activity)TextView tv_birthday;
     @Bind(R.id.btn_ensure_sign_up_activity)Button btn_ensure;
     @Bind(R.id.tv_Invitation_code_activity)EditText Invitation_code;
+
+    @Bind(R.id.home_user_deal)
+    TextView homeUserDeal;
 
     private SelectPicPopupWindow menuWindow;
     private SharedPreferences cookiePreferences;
@@ -146,19 +151,24 @@ public class SignUpLastFragment extends BaseFragment implements View.OnClickList
         btn_ensure.setOnClickListener(this);
         ll_city.setOnClickListener(this);
         ll_birthday.setOnClickListener(this);
-
+        homeUserDeal.setOnClickListener(this);
 
         rg_sex.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.rb_male_sign_up_activity:
+
+                        ((RadioButton)group.findViewById(R.id.rb_female_sign_up_activity)).setTextColor(getResources().getColor(R.color.color_939393));
                         gender = "male";
                         break;
                     case R.id.rb_female_sign_up_activity:
                         gender = "female";
+                        ((RadioButton)group.findViewById(R.id.rb_male_sign_up_activity)).setTextColor(getResources().getColor(R.color.color_939393));
                         break;
                 }
+
+                ((RadioButton)group.findViewById(checkedId)).setTextColor(getResources().getColor(R.color.myWhite));
             }
         });
     }
@@ -177,7 +187,7 @@ public class SignUpLastFragment extends BaseFragment implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.iv_back_title_bar:
+            case R.id.imgBack:
                 ActivityUtil.finishActivty();
                 break;
             case R.id.iv_head_sign_up_activity:
@@ -202,6 +212,10 @@ public class SignUpLastFragment extends BaseFragment implements View.OnClickList
                 break;
             case R.id.ll_birthday_sign_up_activity:
                 onYearMonthPicker();
+                break;
+            case R.id.home_user_deal:
+                Intent userIntent=new Intent(getActivity(),UserDealActivity.class);
+                startActivity(userIntent);
                 break;
         }
 

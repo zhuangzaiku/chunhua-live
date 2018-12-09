@@ -35,10 +35,6 @@ public class OtherLoginActivity extends BaseActivity {
     TextView homePhoneregister;
     @Bind(R.id.home_login_phone)
     LinearLayout homeLoginPhone;
-    @Bind(R.id.home_user_deal)
-    TextView homeUserDeal;
-    @Bind(R.id.home_login_deal)
-    LinearLayout homeLoginDeal;
 
     private MyProgressDialog myProgressDialog;
     private SharedPreferences pref;
@@ -85,7 +81,7 @@ public class OtherLoginActivity extends BaseActivity {
 
 
 
-    @OnClick({R.id.home_login_qq, R.id.home_login_weixin, R.id.home_login_weibo, R.id.home_phonelogin, R.id.home_phoneregister, R.id.home_login_phone, R.id.home_user_deal, R.id.home_login_deal})
+    @OnClick({R.id.home_login_qq, R.id.home_login_weixin, R.id.home_login_weibo, R.id.home_phonelogin, R.id.home_phoneregister, R.id.home_login_phone})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.home_login_qq:
@@ -107,12 +103,6 @@ public class OtherLoginActivity extends BaseActivity {
             case R.id.home_phoneregister:
                 Intent gisterIntent=new Intent(this,SignActivity.class);
                 startActivity(gisterIntent);
-                break;
-            case R.id.home_user_deal:
-                Intent userIntent=new Intent(this,UserDealActivity.class);
-                startActivity(userIntent);
-                break;
-            case R.id.home_login_deal:
                 break;
         }
     }

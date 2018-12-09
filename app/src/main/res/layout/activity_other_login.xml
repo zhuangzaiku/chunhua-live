@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/home_background">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/home_login_qq"
@@ -121,61 +120,48 @@
         </RelativeLayout>
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="205.5dp"
+        android:layout_height="239dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="152.5dp"
+        android:id="@+id/imgSlogan"
+        android:src="@mipmap/ic_slogan"/>
+
     <LinearLayout
         android:id="@+id/home_login_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/home_login_deal"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp"
-        android:layout_marginTop="17.5dp"
+        android:layout_marginTop="80.5dp"
+        android:layout_below="@+id/imgSlogan"
+        android:orientation="vertical"
         android:gravity="center">
 
-        <TextView
-            android:id="@+id/home_phonelogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:text="@string/str_phone_login"
-            android:textColor="@color/home_text"
-            android:textSize="16sp" />
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="20dp"
-            android:background="@color/home_text" />
 
         <TextView
             android:id="@+id/home_phoneregister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_width="155.5dp"
+            android:layout_height="33.5dp"
+            android:gravity="center"
+            android:background="@mipmap/bg_btn_register"
             android:text="@string/str_phone_register"
             android:textColor="@color/home_text"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/home_login_deal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp">
+            android:textSize="@dimen/font_size_14" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/str_lgin_tips"
-            android:textColor="@color/home_text"
-            android:textSize="10sp" />
+            android:id="@+id/home_phonelogin"
+            android:layout_width="157.5dp"
+            android:layout_height="35.5dp"
+            android:gravity="center"
+            android:layout_marginTop="23dp"
+            android:background="@mipmap/bg_btn_login"
+            android:text="@string/str_phone_login"
+            android:textColor="@color/color_9b9b9b"
+            android:textSize="@dimen/font_size_14" />
 
-        <TextView
-            android:id="@+id/home_user_deal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/home_longin_text"
-            android:textColor="@color/home_text"
-            android:textSize="10sp" />
+
     </LinearLayout>
+
+
 </RelativeLayout>

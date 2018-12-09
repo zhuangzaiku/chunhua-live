@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/login_background"
     tools:context="com.quootta.mdate.ui.activity.LoginActivity">
 
 
+    <include layout="@layout/layout_common_header"/>
     <LinearLayout
         android:id="@+id/ll_login_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_size_16"
-        android:layout_marginRight="@dimen/margin_size_16"
+        android:layout_marginLeft="@dimen/margin_size_24"
+        android:layout_marginRight="@dimen/margin_size_24"
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
@@ -22,13 +22,18 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:padding="@dimen/padding_size_12"
-            android:drawableLeft="@mipmap/phone"
             android:imeOptions="actionNext"
             android:nextFocusForward="@+id/et_password_login_activity"
-            android:drawablePadding="8dp"
             android:hint="@string/hint_number"
-            android:textColorHint="@color/myGrayLight"
-            android:background="@drawable/bg_edittext_transparent_login"/>
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_size_12"
+            android:textColorHint="@color/myGrayLight"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_b9b9b9"/>
 
         <EditText
             android:id="@+id/et_password_login_activity"
@@ -36,22 +41,27 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:padding="@dimen/padding_size_12"
-            android:drawableLeft="@mipmap/password"
             android:drawablePadding="8dp"
+            android:background="@null"
             android:imeOptions="actionDone"
             android:hint="@string/hint_password"
+            android:gravity="center_horizontal"
             android:password="true"
+            android:textSize="@dimen/font_size_12"
             android:textColorHint="@color/myGrayLight"
-            android:layout_marginTop="@dimen/margin_size_10"
-            android:background="@drawable/bg_edittext_transparent_login"/>
+            android:layout_marginTop="@dimen/margin_size_10"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_b9b9b9"/>
 
         <Button
             android:id="@+id/btn_login_activity"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="34dp"
             android:layout_marginTop="@dimen/margin_size_45"
             android:text="@string/login"
-            android:textSize="@dimen/font_size_16"
+            android:textSize="@dimen/font_size_14"
             android:textColor="@color/myWhite"
             android:background="@drawable/shape_button"/>
 
@@ -59,9 +69,10 @@
             android:id="@+id/tv_forget_login_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_size_10"
-            android:textColor="@color/myGrayLight"
-            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/margin_size_22"
+            android:textSize="@dimen/font_size_12"
+            android:textColor="@color/color_cbcbcb"
+            android:layout_gravity="center_horizontal"
             android:text="@string/forget_password"/>
 
         <View
@@ -79,7 +90,7 @@
         android:layout_marginTop="@dimen/margin_size_40"
         android:text="@string/join_jianyue"
         android:visibility="gone"
-        android:textSize="@dimen/font_size_16"
+        android:textSize="@dimen/font_size_14"
         android:textColor="@color/myWhite"
         android:background="@drawable/shape_button"/>
 
