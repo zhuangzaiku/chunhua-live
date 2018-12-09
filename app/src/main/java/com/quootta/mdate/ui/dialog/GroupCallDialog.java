@@ -131,19 +131,13 @@ public class GroupCallDialog extends Dialog {
 
                 if (InfoDetail.gender.equals("female")){
                     gourp_text.setText(groupTextData.getData().getText().getMale());
-
-                    btnBoy.setBackgroundColor(Color.parseColor("#6abffb"));
-                    btnBoy.setTextColor(Color.parseColor("#ffffff"));
-                    btnGirl.setTextColor(Color.parseColor("#444444"));
-                    btnGirl.setBackgroundResource(R.drawable.bg_borde_rounded);
+                    btnBoy.setBackgroundResource(R.mipmap.ic_group_call_male_nor);
+                    btnGirl.setBackgroundResource(R.mipmap.ic_group_call_female_selected);
                     gender = "male";
                 }else {
                     gourp_text.setText(groupTextData.getData().getText().getFemale());
-
-                    btnGirl.setBackgroundColor(Color.parseColor("#ff8aff"));
-                    btnGirl.setTextColor(Color.parseColor("#ffffff"));
-                    btnBoy.setTextColor(Color.parseColor("#444444"));
-                    btnBoy.setBackgroundResource(R.drawable.bg_borde_rounded);
+                    btnBoy.setBackgroundResource(R.mipmap.ic_group_call_male_selected);
+                    btnGirl.setBackgroundResource(R.mipmap.ic_group_call_female_nor);
                     gender = "female";
                 }
 
@@ -173,10 +167,8 @@ public class GroupCallDialog extends Dialog {
                     public void onClick(View v) {
                         if (groupTextData != null) {
                             gourp_text.setText(groupTextData.getData().getText().getMale());
-                            btnBoy.setBackgroundColor(Color.parseColor("#6abffb"));
-                            btnBoy.setTextColor(Color.parseColor("#ffffff"));
-                            btnGirl.setTextColor(Color.parseColor("#444444"));
-                            btnGirl.setBackgroundResource(R.drawable.bg_borde_rounded);
+                            btnBoy.setBackgroundResource(R.mipmap.ic_group_call_male_selected);
+                            btnGirl.setBackgroundResource(R.mipmap.ic_group_call_female_nor);
                             gender = "male";
                         }
                     }
@@ -189,10 +181,8 @@ public class GroupCallDialog extends Dialog {
                     public void onClick(View v) {
                         if (groupTextData != null) {
                             gourp_text.setText(groupTextData.getData().getText().getFemale());
-                            btnGirl.setBackgroundColor(Color.parseColor("#ff8aff"));
-                            btnGirl.setTextColor(Color.parseColor("#ffffff"));
-                            btnBoy.setTextColor(Color.parseColor("#444444"));
-                            btnBoy.setBackgroundResource(R.drawable.bg_borde_rounded);
+                            btnBoy.setBackgroundResource(R.mipmap.ic_group_call_male_nor);
+                            btnGirl.setBackgroundResource(R.mipmap.ic_group_call_female_selected);
                             gender = "female";
                         }
                     }
