@@ -29,7 +29,7 @@ import cn.qqtheme.framework.picker.OptionPicker;
 public class ChargeStandardActivity extends BaseActivity {
 
     @Bind(R.id.tv_title_bar)
-    TextView tvTitle;
+    TextView tv_title_bar;
     @Bind(R.id.iv_back_title_bar)
     ImageView ivBack;
     @Bind(R.id.sw_video)
@@ -96,7 +96,7 @@ public class ChargeStandardActivity extends BaseActivity {
     }
 
     private void initTitle() {
-        tvTitle.setText(R.string.charge_standard);
+        tv_title_bar.setText(R.string.charge_standard);
         ivBack.setVisibility(View.VISIBLE);
     }
 

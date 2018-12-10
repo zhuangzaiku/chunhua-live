@@ -72,8 +72,8 @@ import okhttp3.Call;
  * Created by Ryon on 2016/7/18/0018.
  */
 public class SignUpLastFragment extends BaseFragment implements View.OnClickListener {
-    @Bind(R.id.imgBack)ImageView iv_back;
-    @Bind(R.id.tvTitle)TextView tv_title;
+    @Bind(R.id.iv_back_title_bar)ImageView iv_back;
+    @Bind(R.id.tv_title_bar)TextView tv_title;
     @Bind(R.id.iv_head_sign_up_activity)ImageView iv_head;
     @Bind(R.id.et_name_sign_up_activity)EditText et_name;
     @Bind(R.id.rg_sex_sign_up_activity)RadioGroup rg_sex;
@@ -187,7 +187,7 @@ public class SignUpLastFragment extends BaseFragment implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.imgBack:
+            case R.id.iv_back_title_bar:
                 ActivityUtil.finishActivty();
                 break;
             case R.id.iv_head_sign_up_activity:

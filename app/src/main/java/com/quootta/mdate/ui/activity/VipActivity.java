@@ -37,7 +37,7 @@ public class VipActivity extends BaseActivity implements View.OnClickListener {
     @Bind(R.id.iv_back_title_bar)
     ImageView ivBack;
     @Bind(R.id.tv_title_bar)
-    TextView tvTitle;
+    TextView tv_title_bar;
     @Bind(R.id.tv_gold)
     TextView tvGold;
     @Bind(R.id.btn_30)
@@ -103,7 +103,7 @@ public class VipActivity extends BaseActivity implements View.OnClickListener {
 
 
     private void initTitle() {
-        tvTitle.setText(getString(R.string.is_member));
+        tv_title_bar.setText(getString(R.string.is_member));
         ivBack.setVisibility(View.VISIBLE);
     }
 

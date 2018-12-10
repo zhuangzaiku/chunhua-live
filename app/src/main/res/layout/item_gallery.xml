@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:jianyue="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="81dp"
-    android:layout_height="81dp"
-    android:layout_marginRight="7dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
- >
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:layout_marginRight="11dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_gallery_upload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_profile_add_photo_bg"
+        android:padding="@dimen/padding_size_16"
+        android:src="@mipmap/ic_profile_add_photo"
+        android:visibility="gone" />
 
     <com.quootta.mdate.ui.view.RoundRectNetworkImageView
         android:id="@+id/iv_gallery_item"
@@ -15,31 +21,26 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
 
+        android:src="@mipmap/personal_details_loading_page2"
         jianyue:borderRadius="10dp"
-        jianyue:type="round"
-        android:src="@mipmap/personal_details_loading_page2"/>
+        jianyue:type="round" />
 
-<ImageView
-    android:id="@+id/iv_gallery_upload"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:src="@mipmap/upload_pic"
-    android:visibility="gone"
-    />
+
+
     <ImageView
         android:id="@+id/iv_play_gallery"
-        android:visibility="gone"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_centerInParent="true"
-        android:src="@mipmap/play_token"/>
+        android:src="@mipmap/ic_profile_add_photo"
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/iv_cover_item"
         android:layout_width="38dp"
         android:layout_height="38dp"
-        android:src="@mipmap/setting_cover"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:visibility="gone"
-        />
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/setting_cover"
+        android:visibility="gone" />
 </RelativeLayout>

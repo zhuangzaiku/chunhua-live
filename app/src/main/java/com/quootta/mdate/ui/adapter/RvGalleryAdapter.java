@@ -66,11 +66,11 @@ public class RvGalleryAdapter extends RecyclerView.Adapter<GalleryViewHolder> {
         }else {
 
             //显示封面图标
-            if (albums.get(position).is_cover_img){
-                holder.cover_item.setVisibility(View.VISIBLE);
-            }else {
-                holder.cover_item.setVisibility(View.GONE);
-            }
+//            if (albums.get(position).is_cover_img){
+//                holder.cover_item.setVisibility(View.VISIBLE);
+//            }else {
+//                holder.cover_item.setVisibility(View.GONE);
+//            }
 
 
             switch (albums.get(position).res_type) {

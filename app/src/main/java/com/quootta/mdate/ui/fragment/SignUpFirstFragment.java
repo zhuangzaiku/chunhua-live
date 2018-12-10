@@ -37,8 +37,8 @@ import butterknife.Bind;
  */
 public class SignUpFirstFragment extends BaseFragment implements View.OnClickListener{
 
-    @Bind(R.id.imgBack)ImageView iv_back;
-    @Bind(R.id.tvTitle)TextView tv_title;
+    @Bind(R.id.iv_back_title_bar)ImageView iv_back;
+    @Bind(R.id.tv_title_bar)TextView tv_title;
     @Bind(R.id.et_number_sign_up_activity)EditText et_number;
     @Bind(R.id.et_verification_sign_up_activity)EditText et_verification;
     @Bind(R.id.btn_verification_sign_up_activity)Button btn_verification;
@@ -89,7 +89,7 @@ public class SignUpFirstFragment extends BaseFragment implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.imgBack:
+            case R.id.iv_back_title_bar:
                 ActivityUtil.finishActivty();
                 break;
 

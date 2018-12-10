@@ -24,7 +24,7 @@ import butterknife.Bind;
 public class BannerActivity extends BaseActivity {
 
     @Bind(R.id.tv_title_bar)
-    TextView tvTitle;
+    TextView tv_title_bar;
 
     @Bind(R.id.iv_share_title_bar)
     ImageView ivShare;
@@ -74,8 +74,8 @@ public class BannerActivity extends BaseActivity {
     }
 
     private void initTitle() {
-        tvTitle.setText("");
-        tvTitle.setTextSize(16);
+        tv_title_bar.setText("");
+        tv_title_bar.setTextSize(16);
         ivShare.setVisibility(View.VISIBLE);
         ivBack.setVisibility(View.VISIBLE);
     }
@@ -95,7 +95,7 @@ public class BannerActivity extends BaseActivity {
             @Override
             public void onReceivedTitle(WebView view, String title) {
                 super.onReceivedTitle(view, title);
-                tvTitle.setText(title);
+                tv_title_bar.setText(title);
             }
         });
         webView.setWebViewClient(new WebViewClient() {
@@ -171,7 +171,7 @@ public class BannerActivity extends BaseActivity {
 //                    switch (id) {
 //                        case 1://微信好友
 ////
-//                            if (tvTitle.getText() !=null) {
+//                            if (tv_title_bar.getText() !=null) {
 //                            }
 //                            new ShareAction(BannerActivity.this).setPlatform(SHARE_MEDIA.WEIXIN).setCallback(umShareListener)
 //                                    .withMedia(image)
@@ -182,7 +182,7 @@ public class BannerActivity extends BaseActivity {
 //                            break;
 //                        case 2://朋友圈
 //                            platform=SHARE_MEDIA.WEIXIN_CIRCLE;
-//                            if (tvTitle.getText() !=null) {
+//                            if (tv_title_bar.getText() !=null) {
 //                            }
 //                            new ShareAction(BannerActivity.this).setPlatform(SHARE_MEDIA.WEIXIN_CIRCLE).setCallback(umShareListener)
 //                                    .withMedia(image)
@@ -193,7 +193,7 @@ public class BannerActivity extends BaseActivity {
 //                            break;
 //                        case 3:
 //                            platform=SHARE_MEDIA.QQ;
-//                            if (tvTitle.getText()!=null){
+//                            if (tv_title_bar.getText()!=null){
 //
 //                            }
 //                            new ShareAction(BannerActivity.this).setPlatform(SHARE_MEDIA.QQ).setCallback(umShareListener)
@@ -205,7 +205,7 @@ public class BannerActivity extends BaseActivity {
 //                            break;
 //                        case 4:
 //                            platform=SHARE_MEDIA.QZONE;
-//                            if (tvTitle.getText()!=null){
+//                            if (tv_title_bar.getText()!=null){
 //
 //                            }
 //                            new ShareAction(BannerActivity.this).setPlatform(SHARE_MEDIA.QZONE).setCallback(umShareListener)

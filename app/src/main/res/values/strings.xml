@@ -112,7 +112,7 @@
     <string name="enter_chat">进入聊天</string>
     <string name="confirm_delete_title">对话删除确认</string>
     <string name="confirm_delete_content">确认删除这条对话吗？\n注：删除后无法恢复</string>
-    <string name="edit_profile">编辑</string>
+    <string name="edit_profile">编辑资料</string>
 
     <!--我的fragment-->
     <string name="profile">个人资料</string>
@@ -220,12 +220,13 @@
     <string name="hint_sign">有什么想对朋友说 有什么想对朋友说 有什么想对朋友说</string>
     <string name="change_head_pic">更换头像</string>
     <string name="finish_degree">完成度:</string>
-    <string name="nick_name">昵称：</string>
-    <string name="birthday_colon">生日：</string>
-    <string name="city_colon">城市：</string>
-    <string name="hobby">爱好：</string>
+    <string name="nick_name">昵称</string>
+    <string name="birthday_colon">生日</string>
+    <string name="city_colon">城市</string>
+    <string name="hobby">爱好</string>
     <string name="hint_space_spilt">多项请用空格隔开</string>
-    <string name="signature">个性签名：</string>
+    <string name="signature">个性签名</string>
+    <string name="save">保存</string>
     <!--充值-->
     <string name="amount_sum">账户余额：</string>
     <string name="choose_amount">选择充值金额</string>

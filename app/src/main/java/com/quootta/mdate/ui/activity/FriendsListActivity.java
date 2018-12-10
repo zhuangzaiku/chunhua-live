@@ -37,8 +37,8 @@ import butterknife.Bind;
 
 public class FriendsListActivity extends BaseActivity {
 
-    @Bind(R.id.tvTitle)TextView tv_title;
-    @Bind(R.id.imgBack)ImageView iv_back;
+    @Bind(R.id.tv_title_bar)TextView tv_title;
+    @Bind(R.id.iv_back_title_bar)ImageView iv_back;
 //    @Bind(R.id.srl_favorite)SwipeRefreshLayout srl_favorite;
 //    @Bind(R.id.rl_favorite_list) RecyclerView rv_favorite_list;
 

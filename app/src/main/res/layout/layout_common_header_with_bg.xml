@@ -11,7 +11,7 @@
     android:visibility="visible">
 
     <ImageView
-        android:id="@+id/imgBack"
+        android:id="@+id/iv_back_title_bar"
         android:layout_width="@dimen/toolbar_image_size"
         android:layout_height="@dimen/toolbar_image_size"
         android:layout_centerVertical="true"
@@ -20,7 +20,7 @@
 
     <!--标题-->
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tv_title_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

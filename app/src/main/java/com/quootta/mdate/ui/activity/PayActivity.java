@@ -28,7 +28,7 @@ import butterknife.Bind;
 public class PayActivity extends BaseActivity {
 
     @Bind(R.id.tv_title_bar)
-    TextView tvTitle;
+    TextView tv_title_bar;
 
     @Bind(R.id.iv_share_title_bar)
     ImageView ivShare;
@@ -67,8 +67,8 @@ public class PayActivity extends BaseActivity {
     }
 
     private void initTitle() {
-        tvTitle.setText("Pay");
-        tvTitle.setTextSize(16);
+        tv_title_bar.setText("Pay");
+        tv_title_bar.setTextSize(16);
 //        ivShare.setVisibility(View.VISIBLE);
         ivBack.setVisibility(View.VISIBLE);
     }
@@ -91,7 +91,7 @@ public class PayActivity extends BaseActivity {
             @Override
             public void onReceivedTitle(WebView view, String title) {
                 super.onReceivedTitle(view, title);
-                tvTitle.setText(title);
+                tv_title_bar.setText(title);
             }
         });
         webView.setWebViewClient(new WebViewClient() {

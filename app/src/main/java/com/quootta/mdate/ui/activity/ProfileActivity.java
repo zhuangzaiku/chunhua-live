@@ -16,6 +16,8 @@ import android.os.Environment;
 import android.provider.OpenableColumns;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -23,10 +25,12 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.quootta.mdate.R;
@@ -85,15 +89,11 @@ import okhttp3.Call;
 
 public class ProfileActivity extends BaseActivity implements View.OnClickListener{
 
-    //    @Bind(R.id.iv_back_title_bar)ImageView iv_back;
-    @Bind(R.id.collapsing_toolbar_layout)
-    CollapsingToolbarLayout collapsingToolbarLayout;
-    @Bind(R.id.toolbar)
-    Toolbar toolbar;
+    @Bind(R.id.iv_back_title_bar)ImageView iv_back;
+
+    @Bind(R.id.tv_title_bar)TextView tvTitle;
     @Bind(R.id.rl_profile)
     RelativeLayout rl_profile;
-    @Bind(R.id.iv_profile)
-    ImageView iv_profile;
     @Bind(R.id.iv_head_profile)CircleImageView iv_head;
     //    @Bind(R.id.tv_ensure_title_bar)TextView tv_ensure;
 //    @Bind(R.id.tv_change_head_pic_profile)TextView tv_change_head;
@@ -119,6 +119,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     @Bind(R.id.et_interests)EditText etInterests;
     @Bind(R.id.rv_gallery)RecyclerView rvGallery;
     @Bind(R.id.rl_gallery)RelativeLayout rlGallery;
+    @Bind(R.id.btnProfileSave)Button btnProfileSave;
 
     private String avatar;
     private RequestQueue requestQueue;
@@ -224,32 +225,27 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         });
         rvGallery.setAdapter(galleryAdapter);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(baseContext,4);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(baseContext);
+        linearLayoutManager.setOrientation(OrientationHelper.HORIZONTAL);
 
-        rvGallery.setLayoutManager(gridLayoutManager);
+        rvGallery.setLayoutManager(linearLayoutManager);
     }
 
 
 
 
     private void initTitle() {
-        collapsingToolbarLayout.setTitle("");
-        collapsingToolbarLayout.setTitleEnabled(false);
-        //toolbar.setTitle(getString(R.string.profile));
-        toolbar.setTitle("");
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        if(avatar != null) {
+            rl_profile.setBackgroundColor(getResources().getColor(R.color.myWhite));
+        }
+
+        tvTitle.setText(R.string.edit_profile);
+        iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ActivityUtil.finishActivty();
+                finish();
             }
         });
-
-        if(avatar != null) {
-            Glide.with(baseContext).load(avatar).into(iv_profile);
-//            rl_profile.setBackgroundDrawable(new BitmapDrawable(BlurUtil.doBlur(avatar, 60, false)));
-        }
 
 //        Drawable drawable1 = getResources().getDrawable(R.mipmap.signature);
 //        drawable1.setBounds(0, 0, 50, 50);//第一0是距左边距离，第二0是距上边距离，40分别是长宽
@@ -290,6 +286,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
 //        iv_back.setOnClickListener(this);
 //        tv_ensure.setOnClickListener(this);
         iv_head.setOnClickListener(this);
+        btnProfileSave.setOnClickListener(this);
 //        tv_change_head.setOnClickListener(this);
         et_birthday.setOnClickListener(this);
         et_city.setOnClickListener(this);
@@ -338,6 +335,9 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.et_weight_profile:
                 onNumberPicker(TYPE_WEIGHT);
+                break;
+            case R.id.btnProfileSave:
+                requestProfileUpdate();
                 break;
         }
     }
