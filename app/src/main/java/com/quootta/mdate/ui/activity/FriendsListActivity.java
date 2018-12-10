@@ -198,7 +198,7 @@ public class FriendsListActivity extends BaseActivity {
 //    }
 
     private void initTitleBar() {
-        tv_title.setText(getString(R.string.friend));
+        tv_title.setText(getString(R.string.friend_list));
         iv_back.setVisibility(View.VISIBLE);
     }
 

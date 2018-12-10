@@ -89,7 +89,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_size_40"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/font_size_16"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_494949"
             android:text="@string/account_security"/>
 
 
@@ -206,6 +207,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
+        android:visibility="gone"
         android:layout_marginTop="-15dp"
         android:background="@mipmap/bg_setting_item">
 

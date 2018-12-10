@@ -35,7 +35,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     ImageView iv_back;
     @Bind(R.id.tv_title_bar)
     TextView tv_title;
-    // @Bind(R.id.rl_security_setting_activity)RelativeLayout rl_security;
+    @Bind(R.id.rl_security_setting_activity)RelativeLayout rl_security;
     @Bind(R.id.rl_about_us_setting_activity)
     RelativeLayout rl_about_us;
     @Bind(R.id.rl_update_setting_activity)
@@ -109,7 +109,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void setListener() {
         iv_back.setOnClickListener(this);
-        //   rl_security.setOnClickListener(this);
+        rl_security.setOnClickListener(this);
         ivSecurity.setOnClickListener(this);
         rl_about_us.setOnClickListener(this);
         rl_update.setOnClickListener(this);
@@ -221,10 +221,10 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
             case R.id.iv_back_title_bar:
                 ActivityUtil.finishActivty();
                 break;
-//            case R.id.rl_security_setting_activity:
-//                Intent pwdIntent = new Intent(SettingActivity.this, PasswordResetActivity.class);
-//                startActivity(pwdIntent);
-//                break;
+            case R.id.rl_security_setting_activity:
+                Intent pwdIntent = new Intent(SettingActivity.this, PasswordResetActivity.class);
+                startActivity(pwdIntent);
+                break;
             case R.id.iv_security:
                  Intent securityIntent=new Intent(SettingActivity.this,AccountSecurityActivity.class);
                  startActivity(securityIntent);
