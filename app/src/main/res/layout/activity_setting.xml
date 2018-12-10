@@ -60,10 +60,8 @@
             android:id="@+id/switch_setting_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/tv_switch_setting_activity"
-            android:layout_toStartOf="@+id/tv_switch_setting_activity"
-            android:layout_marginRight="@dimen/margin_size_8"
-            android:layout_marginEnd="@dimen/margin_size_8"
+            android:layout_marginRight="@dimen/margin_size_26"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true" />
 
         <TextView
