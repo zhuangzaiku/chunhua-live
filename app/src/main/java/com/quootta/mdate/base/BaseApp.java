@@ -98,8 +98,8 @@ public class BaseApp extends Application{
     private static int balnace;//每分钟扣除费用的余额
 
     private static String isVisual;//可见状态
-    private static Boolean isAudioEnable;//是否接受语音请求
-    private static Boolean isVideoEnable;//是否接受视频请求
+    private static Boolean isAudioEnable = false;//是否接受语音请求
+    private static Boolean isVideoEnable = false;//是否接受视频请求
     private static int audioPrice;//音频价格
     private static int videoPrice;//视频价格
 

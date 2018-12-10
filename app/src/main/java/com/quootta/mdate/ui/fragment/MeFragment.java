@@ -6,8 +6,10 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.quootta.mdate.R;
@@ -15,9 +17,11 @@ import com.quootta.mdate.base.BaseApp;
 import com.quootta.mdate.base.BaseFragment;
 import com.quootta.mdate.constant.LocalUrl;
 import com.quootta.mdate.domain.AlbumList;
+import com.quootta.mdate.domain.ChargeStandard;
 import com.quootta.mdate.domain.InfoDetail;
 import com.quootta.mdate.domain.InfoDetailNonStatic;
 import com.quootta.mdate.engine.media.BalanceRequest;
+import com.quootta.mdate.engine.myCenter.AnswerStatusRequest;
 import com.quootta.mdate.engine.myCenter.InfoDetailRequest;
 import com.quootta.mdate.myListener.VolleyListener;
 import com.quootta.mdate.ui.activity.BannerActivity;
@@ -32,6 +36,7 @@ import com.quootta.mdate.ui.activity.VipActivity;
 import com.quootta.mdate.ui.adapter.RvGalleryAdapter;
 import com.quootta.mdate.ui.dialog.MyProgressDialog;
 import com.quootta.mdate.ui.dialog.ShareDialog;
+import com.quootta.mdate.ui.view.CircleImageView;
 import com.quootta.mdate.utils.GsonUtil;
 import com.quootta.mdate.utils.LogUtil;
 import com.quootta.mdate.utils.ToastUtil;
@@ -51,6 +56,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import butterknife.Bind;
+import cn.qqtheme.framework.picker.OptionPicker;
 import io.rong.calllib.RongCallClient;
 import io.rong.calllib.RongCallSession;
 
@@ -63,8 +69,9 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
 
     @Bind(R.id.iv_head_me_fragment) ImageView iv_head;
     @Bind(R.id.tv_name_me_fragment) TextView tv_name;
+    @Bind(R.id.tvId) TextView tvId;
     //    @Bind(R.id.tv_connection_rate) TextView tvConn;
-    @Bind(R.id.rl_edit_profile) RelativeLayout rlEditProfile;
+//    @Bind(R.id.rl_edit_profile) RelativeLayout rlEditProfile;
     //    @Bind(R.id.iv_sesame_credit_me_fragment) ImageView ivSesameCreditMeFragment;
 //    @Bind(R.id.rl_sesame_credit) RelativeLayout rlSesameCredit;
 //    @Bind(R.id.iv_video_verify_me_fragment) ImageView ivVideoVerifyMeFragment;
@@ -88,6 +95,20 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
 //    @Bind(R.id.me_gender) ImageView meGender;
     @Bind(R.id.me_wallet) RelativeLayout wallet;
     @Bind(R.id.rl_videoVerify) RelativeLayout videoVerify;
+    @Bind(R.id.ivEditProfile) ImageView ivEditProfile;
+
+
+    @Bind(R.id.sw_video)
+    Switch swVideo;
+    @Bind(R.id.sw_audio)
+    Switch swAudio;
+
+    private Map<String , String> statusMap;
+    private int audioPrice;
+    private int videoPrice;
+
+    private final int TYPE_VIDEO = 0;
+    private final int TYPE_AUDIO = 1;
 
     public final int CHARGE_VIP = 3;
     public final int EDIT_PROFILE = 2;
@@ -113,6 +134,9 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
         requestQueue = BaseApp.getRequestQueue();
         imageLoader = BaseApp.getImageLoader();
 
+        statusMap = new HashMap<String , String>();
+        audioPrice = BaseApp.getAudioPrice();
+        videoPrice = BaseApp.getVideoPrice();
 
     }
 
@@ -137,6 +161,23 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
         requestBaseInfoDetail();
         //展示图片的接口
         requestAlbum();
+
+        initContent();
+    }
+
+    private void initContent() {
+
+        if (BaseApp.getIsVideoEnable()){
+            swVideo.setChecked(true);
+        } else {
+            swVideo.setChecked(false);
+        }
+
+        if(BaseApp.getIsAudioEnable()) {
+            swAudio.setChecked(true);
+        } else {
+            swAudio.setChecked(false);
+        }
     }
 
     //更新用户信息
@@ -291,6 +332,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
 //        }
 
         tv_name.setText(InfoDetail.nick_name);
+        tvId.setText(getResources().getString(R.string.user_id_str, InfoDetail._id));
 
         //认证 不再使用
 //        if (Boolean.parseBoolean(InfoDetail.is_verified_zhima)) {
@@ -368,7 +410,8 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
      */
     @Override
     protected void setListener() {
-        rlEditProfile.setOnClickListener(this);
+        ivEditProfile.setOnClickListener(this);
+        iv_head.setOnClickListener(this);
 //        rlSesameCredit.setOnClickListener(this);
 //        rlVideoVerify.setOnClickListener(this);
 //        rlBalance.setOnClickListener(this);
@@ -386,12 +429,130 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
         rlFamily.setOnClickListener(this);
         wallet.setOnClickListener(this);
         videoVerify.setOnClickListener(this);
+
+        swAudio.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                statusMap.put("video_pay", BaseApp.getVideoPrice() + "");
+                statusMap.put("audio_pay", BaseApp.getAudioPrice() + "");
+                statusMap.put("video_enable", BaseApp.getIsVideoEnable() + "");
+                statusMap.put("audio_enable", isChecked + "");
+                requestAnswerStatus(TYPE_AUDIO, statusMap, null);
+            }
+        });
+
+        swVideo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                statusMap.put("video_pay", BaseApp.getVideoPrice() + "");
+                statusMap.put("audio_pay", BaseApp.getAudioPrice() + "");
+                statusMap.put("video_enable", isChecked + "");
+                statusMap.put("audio_enable", BaseApp.getIsAudioEnable() + "");
+                requestAnswerStatus(TYPE_VIDEO, statusMap, null);
+            }
+        });
+
+    }
+
+    private void onPricePicker(int type) {
+        OptionPicker picker = null;
+        switch (type) {
+            case TYPE_VIDEO:
+                picker = new OptionPicker(getActivity(), getResources().getStringArray(R.array.video_charge));
+                picker.setOnOptionPickListener(new OptionPicker.OnOptionPickListener() {
+                    @Override
+                    public void onOptionPicked(String option) {
+                        videoPrice = Integer.parseInt(option.replace(getString(R.string.gold_per_min), ""));
+                        statusMap.put("video_pay", videoPrice + "");
+                        statusMap.put("audio_pay", BaseApp.getAudioPrice() + "");
+                        statusMap.put("video_enable", BaseApp.getIsVideoEnable() + "");
+                        statusMap.put("audio_enable", BaseApp.getIsAudioEnable() + "");
+
+                        requestAnswerStatus(TYPE_VIDEO, statusMap, option);
+                    }
+                });
+                break;
+            case TYPE_AUDIO:
+                picker = new OptionPicker(getActivity(), getResources().getStringArray(R.array.audio_charge));
+                picker.setOnOptionPickListener(new OptionPicker.OnOptionPickListener() {
+                    @Override
+                    public void onOptionPicked(String option) {
+                        audioPrice = Integer.parseInt(option.replace(getString(R.string.gold_per_min), ""));
+                        statusMap.put("video_pay", BaseApp.getVideoPrice() + "");
+                        statusMap.put("audio_pay", audioPrice + "");
+                        statusMap.put("video_enable", swVideo.isChecked() + "");
+                        statusMap.put("audio_enable", swAudio.isChecked() + "");
+
+                        requestAnswerStatus(TYPE_AUDIO, statusMap, option);
+                    }
+                });
+                break;
+            default:
+                break;
+        }
+        picker.setOffset(2);
+        picker.setTextSize(20);
+        picker.show();
+    }
+
+    private void requestAnswerStatus(final int type, final Map<String , String> statusMap, final String option) {
+        AnswerStatusRequest answerStatusRequest = new AnswerStatusRequest(statusMap, new VolleyListener() {
+            @Override
+            protected void onSuccess(JSONObject response) {
+                ChargeStandard chargeStandard = null;
+                try {
+                    chargeStandard = GsonUtil.parse(response.getString("data"), ChargeStandard.class);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                switch (type) {
+                    case TYPE_VIDEO:
+                        //成功后同步本地属性值
+                        BaseApp.setIsVideoEnable(Boolean.parseBoolean(chargeStandard.video_enable));
+                        BaseApp.setVideoPrice(Integer.parseInt(chargeStandard.video_pay));
+
+                        break;
+                    case TYPE_AUDIO:
+                        //成功后同步本地属性值
+                        BaseApp.setIsAudioEnable(Boolean.parseBoolean(chargeStandard.audio_enable));
+                        BaseApp.setAudioPrice(Integer.parseInt(chargeStandard.audio_pay));
+
+                        break;
+                }
+
+                try {
+                    ToastUtil.showToast(response.getString("msg"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            protected void onFail(JSONObject response) {
+                super.onFail(response);
+                try {
+                    ToastUtil.showToast(response.getString("msg"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                videoPrice = BaseApp.getVideoPrice();
+                swVideo.setChecked(BaseApp.getIsVideoEnable());
+                swVideo.setSelected(BaseApp.getIsVideoEnable());
+
+                audioPrice = BaseApp.getAudioPrice();
+                swAudio.setChecked(BaseApp.getIsVideoEnable());
+                swAudio.setSelected(BaseApp.getIsVideoEnable());
+            }
+        });
+        requestQueue.add(answerStatusRequest);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.rl_edit_profile:
+            case R.id.ivEditProfile:
+            case R.id.iv_head_me_fragment:
 //                new ProfileTask().execute();
 //                new ImageCompressTask(baseContext, avatar, new ImageCompressTask.OnCompressFinishListener() {
 //                    @Override

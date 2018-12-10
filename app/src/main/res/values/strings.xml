@@ -128,6 +128,7 @@
     <string name="is_gift">礼物</string>
     <string name="is_family">家族</string>
     <string name="is_share">邀请</string>
+    <string name="share_reward">邀请奖励</string>
     <string name="security">账户安全</string>
     <string name="is_member_power">会员特权</string>
     <string name="setting">系统设置</string>
@@ -155,8 +156,8 @@
     <string name="account_security">修改密码</string>
     <string name="invisible_mode">隐身模式</string>
     <string name="answer_switch">接听开关</string>
-    <string name="video_switch">视频开关</string>
-    <string name="audio_switch">语音开关</string>
+    <string name="video_switch">视频接听</string>
+    <string name="audio_switch">语音接听</string>
     <string name="about_us">关于我们</string>
     <string name="jianyue_member">春花聊天会员</string>
     <string name="version_update">版本更新</string>
@@ -170,6 +171,7 @@
 
     <!--个人详情activity-->
     <string name="personal_sign">个人签名：</string>
+    <string name="user_id_str">ID：%s</string>
     <string name="verification">认证：</string>
     <string name="video">视频价格：</string>
     <string name="audio">语音价格：</string>
@@ -193,6 +195,7 @@
     <string name="block">拉黑</string>
     <string name="Invitation_code">我的邀请码:</string>
     <string name="sign_Invitation_code">邀请码</string>
+    <string name="free">免费</string>
     <!--发起邀约-->
     <string name="start_invite_title">表白</string>
     <string name="hint_invite">红包代表我的心,希望能认识你~</string>
