@@ -131,7 +131,7 @@
     <string name="share_reward">邀请奖励</string>
     <string name="security">账户安全</string>
     <string name="is_member_power">会员特权</string>
-    <string name="setting">系统设置</string>
+    <string name="setting">设置</string>
     <string name="setting_personal">个人资料</string>
     <string name="setting_friend">交友资料</string>
     <string name="video_verify">视频认证</string>
@@ -154,7 +154,7 @@
 
     <!--设置activity-->
     <string name="account_security">修改密码</string>
-    <string name="invisible_mode">隐身模式</string>
+    <string name="invisible_mode">一键隐身</string>
     <string name="answer_switch">接听开关</string>
     <string name="video_switch">视频接听</string>
     <string name="audio_switch">语音接听</string>
@@ -162,9 +162,9 @@
     <string name="jianyue_member">春花聊天会员</string>
     <string name="version_update">版本更新</string>
     <string name="current_version">当前版本：</string>
-    <string name="clear_cache">清空缓存</string>
-    <string name="feedback">意见反馈</string>
-    <string name="log_out">注销登录</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="feedback">反馈意见</string>
+    <string name="log_out">退出当前账号</string>
     <string name="log_out_title">提示</string>
     <string name="log_out_message">确定要注销登录吗？注销后您需要重新登录</string>
     <string name="abandon_answer">禁止接听</string>

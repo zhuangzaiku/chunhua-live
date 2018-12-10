@@ -4,20 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background"
+    android:background="@color/myWhite"
     tools:context="com.quootta.mdate.ui.activity.SettingActivity">
 
     <include
         android:id="@+id/include_title_bar"
-        layout="@layout/title_bar" />
+        layout="@layout/layout_common_header_with_bg" />
+
     <!--账号安全-->
     <RelativeLayout
         android:id="@+id/iv_security"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_size_20"
+        android:visibility="gone"
         android:layout_marginBottom="1dp"
-        android:background="@color/backgroundWhite">
+        android:background="@mipmap/bg_setting_item">
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,47 +38,22 @@
             android:layout_alignParentRight="true"
             android:src="@mipmap/icon_down"/>
     </RelativeLayout>
-    <!--<RelativeLayout-->
-
-        <!--android:id="@+id/rl_security_setting_activity"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="@dimen/margin_size_20"-->
-        <!--android:layout_marginBottom="1dp"-->
-        <!--android:background="@color/backgroundWhite">-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="@dimen/margin_size_16"-->
-            <!--android:layout_marginTop="@dimen/margin_size_10"-->
-            <!--android:layout_marginBottom="@dimen/margin_size_10"-->
-            <!--android:textSize="@dimen/font_size_16"-->
-            <!--android:text="@string/account_security"/>-->
-
-        <!--<ImageView-->
-            <!--android:layout_width="16dp"-->
-            <!--android:layout_height="16dp"-->
-            <!--android:layout_marginRight="@dimen/margin_size_16"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:src="@mipmap/icon_down"/>-->
-    <!--</RelativeLayout>-->
 
     <!--隐身模式-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
-        android:background="@color/backgroundWhite">
+        android:layout_marginTop="9dp"
+        android:background="@mipmap/bg_setting_item">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_size_16"
-            android:layout_marginTop="@dimen/margin_size_10"
-            android:layout_marginBottom="@dimen/margin_size_10"
-            android:textSize="@dimen/font_size_16"
+            android:layout_marginLeft="@dimen/margin_size_40"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_494949"
             android:text="@string/invisible_mode"/>
 
         <Switch
@@ -93,17 +70,45 @@
             android:id="@+id/tv_switch_setting_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/margin_size_10"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
+
+    <RelativeLayout
+        android:id="@+id/rl_security_setting_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="-15dp"
+        android:background="@mipmap/bg_setting_item">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_40"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_16"
+            android:text="@string/account_security"/>
+
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="19dp"
+            android:layout_marginRight="@dimen/margin_size_32"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_arrow_right"/>
+    </RelativeLayout>
     <!--接听开关-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/backgroundWhite">
+        android:visibility="gone"
+        android:background="@mipmap/bg_setting_item">
 
         <TextView
             android:layout_width="wrap_content"
@@ -142,7 +147,7 @@
         android:visibility="gone"
         android:layout_marginTop="@dimen/margin_size_20"
         android:layout_marginBottom="1dp"
-        android:background="@color/backgroundWhite">
+        android:background="@mipmap/bg_setting_item">
 
         <TextView
             android:layout_width="wrap_content"
@@ -166,9 +171,10 @@
         android:id="@+id/rl_update_setting_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_marginTop="@dimen/margin_size_20"
         android:layout_marginBottom="1dp"
-        android:background="@color/backgroundWhite">
+        android:background="@mipmap/bg_setting_item">
 
         <TextView
             android:layout_width="wrap_content"
@@ -197,20 +203,21 @@
             android:text="@string/current_version"/>
     </RelativeLayout>
 
-    <!--<RelativeLayout
+    <RelativeLayout
         android:id="@+id/rl_clear_cache_setting_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
-        android:background="@color/backgroundWhite">
+        android:layout_marginTop="-15dp"
+        android:background="@mipmap/bg_setting_item">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_size_16"
-            android:layout_marginTop="@dimen/margin_size_10"
-            android:layout_marginBottom="@dimen/margin_size_10"
-            android:textSize="@dimen/font_size_16"
+            android:layout_marginLeft="@dimen/margin_size_40"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_494949"
             android:text="@string/clear_cache"/>
 
         <TextView
@@ -219,8 +226,17 @@
             android:layout_marginRight="@dimen/margin_size_16"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
+            android:visibility="gone"
             android:text="10.32M"/>
-    </RelativeLayout>-->
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="19dp"
+            android:layout_marginRight="@dimen/margin_size_32"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_arrow_right"/>
+    </RelativeLayout>
 
 
 
@@ -228,32 +244,35 @@
         android:id="@+id/rl_feed_back_setting_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/backgroundWhite">
+        android:layout_marginTop="-15dp"
+        android:background="@mipmap/bg_setting_item">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_size_16"
-            android:layout_marginTop="@dimen/margin_size_10"
-            android:layout_marginBottom="@dimen/margin_size_10"
-            android:textSize="@dimen/font_size_16"
+            android:layout_marginLeft="@dimen/margin_size_40"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/color_494949"
             android:text="@string/feedback"/>
 
         <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginRight="@dimen/margin_size_16"
+            android:layout_width="12dp"
+            android:layout_height="19dp"
+            android:layout_marginRight="@dimen/margin_size_32"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:src="@mipmap/icon_down"/>
+            android:src="@mipmap/ic_arrow_right"/>
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_log_out_setting_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_size_20"
-        android:background="@color/backgroundWhite">
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_button">
 
         <TextView
             android:layout_width="wrap_content"
@@ -261,16 +280,11 @@
             android:layout_marginLeft="@dimen/margin_size_16"
             android:layout_marginTop="@dimen/margin_size_10"
             android:layout_marginBottom="@dimen/margin_size_10"
-            android:textSize="@dimen/font_size_16"
+            android:layout_centerInParent="true"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/font_size_14"
             android:text="@string/log_out"/>
 
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginRight="@dimen/margin_size_16"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:src="@mipmap/icon_down"/>
     </RelativeLayout>
 
 </LinearLayout>
