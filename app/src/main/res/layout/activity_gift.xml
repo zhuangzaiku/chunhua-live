@@ -7,9 +7,7 @@
     >
     <include
         android:id="@+id/include_title_bar"
-        layout="@layout/title_bar"
-
-        />
+        layout="@layout/layout_common_header_with_bg" />
     <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"

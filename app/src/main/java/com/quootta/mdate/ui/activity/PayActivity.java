@@ -30,8 +30,8 @@ public class PayActivity extends BaseActivity {
     @Bind(R.id.tv_title_bar)
     TextView tv_title_bar;
 
-    @Bind(R.id.iv_share_title_bar)
-    ImageView ivShare;
+//    @Bind(R.id.iv_share_title_bar)
+//    ImageView ivShare;
 
     @Bind(R.id.iv_back_title_bar)
     ImageView ivBack;
@@ -145,15 +145,15 @@ public class PayActivity extends BaseActivity {
             }
         });
 
-        ivShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //打开分享面板(定制界面，不使用友盟默认)
-
-            }
-
-
-        });
+//        ivShare.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //打开分享面板(定制界面，不使用友盟默认)
+//
+//            }
+//
+//
+//        });
     }
 
 

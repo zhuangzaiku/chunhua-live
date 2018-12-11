@@ -479,6 +479,9 @@
         <activity android:name="com.quootta.mdate.ui.activity.RankingActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name="com.quootta.mdate.ui.activity.InviteActivity"
+            android:screenOrientation="portrait"/>
+
         <activity android:name="com.quootta.mdate.ui.popupWindow.GiftPopuWindow" android:theme="@style/MyDialogStyleBottom">
             <intent-filter>
                 <action android:name="com.quootta.mdate.GiftPopuWindow" />

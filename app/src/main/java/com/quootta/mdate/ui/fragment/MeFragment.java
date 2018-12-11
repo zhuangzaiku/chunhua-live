@@ -29,6 +29,7 @@ import com.quootta.mdate.ui.activity.ChargeActivity;
 import com.quootta.mdate.ui.activity.ChargeStandardActivity;
 import com.quootta.mdate.ui.activity.FriendsListActivity;
 import com.quootta.mdate.ui.activity.GiftActivity;
+import com.quootta.mdate.ui.activity.InviteActivity;
 import com.quootta.mdate.ui.activity.ProfileActivity;
 import com.quootta.mdate.ui.activity.SettingActivity;
 import com.quootta.mdate.ui.activity.VideoVerifyActivity;
@@ -615,7 +616,11 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
                 break;
             case R.id.rl_share:
                 if (infoDetailNonStatic!=null){
-                    Meshare();
+//                    Meshare();
+                    Intent intent = new Intent(baseContext, InviteActivity.class);
+                    intent.putExtra("thumbUrl", infoDetailNonStatic.getShare().getThumbnail());
+                    intent.putExtra("shareUrl", infoDetailNonStatic.getShare().getShare_url());
+                    startActivity(intent);
                 }
                 break;
             case R.id.me_wallet:

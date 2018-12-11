@@ -339,6 +339,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--邀请奖励-->
+    <string name="invite_reward">邀请奖励</string>
+    <string name="invite_rule">奖励规则</string>
+    <string name="invite_number">累计邀请</string>
+    <string name="invite_total_reward">累计奖励</string>
+    <string name="invite_number_0">0</string>
+    <string name="share">分享</string>
+
     <!--tips-->
     <string name="app_tips_text1">很抱歉 此功能暂停使用</string>
     <string name="app_tips_text2">请重试</string>
