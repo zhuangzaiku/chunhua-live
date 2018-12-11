@@ -9,4 +9,5 @@
     android:gravity="center_vertical|left"
     android:textColorLink="#2972ab"
     android:maxWidth="235dp"
+    android:minHeight="45dp"
     android:paddingLeft="9dp" />

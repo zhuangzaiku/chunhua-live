@@ -10,12 +10,14 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:maxWidth="230dp"
-        android:minWidth="52dp">
+        android:minWidth="52dp"
+        android:minHeight="45dp">
 
         <ImageView
             android:id="@id/rc_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="45dp"
             android:layout_marginLeft="16dp"
             android:scaleType="fitStart" />
 
