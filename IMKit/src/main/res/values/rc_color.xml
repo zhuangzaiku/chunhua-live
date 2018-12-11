@@ -35,5 +35,6 @@
     <color name="rc_ad_file_list_select_file_text_state">#ffffff</color>
 
     <color name="rc_read_receipt_status">#96c4ec</color>
+    <color name="color_ec76a2">#ec76a2</color>
 
 </resources>

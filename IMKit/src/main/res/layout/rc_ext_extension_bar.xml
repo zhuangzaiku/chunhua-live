@@ -2,7 +2,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="53dp"
+    android:background="@color/color_ec76a2"
     android:minHeight="48dp">
 
     <LinearLayout
@@ -41,8 +42,8 @@
 
             <ImageView
                 android:id="@+id/rc_voice_toggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
@@ -62,9 +63,8 @@
         <!-- 扩展栏 “+号” 布局-->
         <LinearLayout
             android:id="@+id/rc_plugin_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_marginRight="6dp"
             android:orientation="horizontal">
 

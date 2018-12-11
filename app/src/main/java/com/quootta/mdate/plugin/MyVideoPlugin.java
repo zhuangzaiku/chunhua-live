@@ -65,12 +65,12 @@ public class MyVideoPlugin implements IPluginModule {
     private static final int RESU_OK=11;
     @Override
     public Drawable obtainDrawable(Context context) {
-        return context.getResources().getDrawable(io.rong.callkit.R.drawable.rc_ic_video_selector);
+        return context.getResources().getDrawable(R.drawable.rc_voip_icon_input_video);
     }
 
     @Override
     public String obtainTitle(Context context) {
-        return context.getString(io.rong.callkit.R.string.rc_voip_video);
+        return "";
     }
 
     @Override

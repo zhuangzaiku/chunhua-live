@@ -3,11 +3,15 @@ package com.quootta.mdate.ui.activity;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.quootta.mdate.R;
@@ -22,6 +26,7 @@ import com.quootta.mdate.utils.GsonUtil;
 import com.quootta.mdate.utils.LogUtil;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.quootta.mdate.utils.UIUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -69,6 +74,7 @@ public class ChatActivity extends FragmentActivity {
         Intent intent = getIntent();
         getIntentDate(intent);
         initTitle();
+        setListenerToRootView();
 
 
         // 获取packagemanager的实例
@@ -181,5 +187,34 @@ public class ChatActivity extends FragmentActivity {
                 .appendQueryParameter("targetId", mTargetId).build();
 
         fragment.setUri(uri);
+    }
+
+
+    private void setListenerToRootView() {
+        final View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                boolean mKeyboardUp = isKeyboardShown(rootView);
+                RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) pop_gift.getLayoutParams();
+                if (mKeyboardUp) {
+                    // LogUtils.d(TAG, "键盘弹出..");
+                    lp.bottomMargin = UIUtil.dip2px(200);
+                } else {
+                    lp.bottomMargin = UIUtil.dip2px(60);
+                    //LogUtils.d(TAG, "键盘收起..");
+                }
+                pop_gift.setLayoutParams(lp);
+            }
+        });
+    }
+
+    private boolean isKeyboardShown(View rootView) {
+        final int softKeyboardHeight = 100;
+        Rect r = new Rect();
+        rootView.getWindowVisibleDisplayFrame(r);
+        DisplayMetrics dm = rootView.getResources().getDisplayMetrics();
+        int heightDiff = rootView.getBottom() - r.bottom;
+        return heightDiff > softKeyboardHeight * dm.density;
     }
 }

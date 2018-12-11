@@ -24,10 +24,10 @@ public class MyExtensionModule extends DefaultExtensionModule {
 //            }
 //        }
         List<IPluginModule> pluginModules=new ArrayList<>();
-        pluginModules.add(new ImagePlugin());
-        pluginModules.add(new MyAudioPlugin());
         pluginModules.add(new MyVideoPlugin());
-        pluginModules.add(new MyGiftPlugin());
+        pluginModules.add(new MyAudioPlugin());
+        pluginModules.add(new MyImagePlugin());
+        pluginModules.add(new MyCameraPlugin());
        // pluginModules.add(new FilePlugin());
 
         return pluginModules;

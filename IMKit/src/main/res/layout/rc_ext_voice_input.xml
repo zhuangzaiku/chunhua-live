@@ -8,5 +8,5 @@
     android:layout_marginRight="10dp"
     android:background="@drawable/rc_voice_input_selector"
     android:text="@string/rc_audio_input"
-    android:textColor="#737373"
+    android:textColor="#494949"
     android:textSize="16sp"/>

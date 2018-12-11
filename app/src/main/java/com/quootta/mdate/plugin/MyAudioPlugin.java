@@ -72,7 +72,7 @@ public class MyAudioPlugin implements IPluginModule {
      */
     @Override
     public Drawable obtainDrawable(Context context) {
-        return context.getResources().getDrawable(R.drawable.rc_ic_phone_selector);
+        return context.getResources().getDrawable(R.drawable.rc_ic_phone_normal);
     }
 
     /**
@@ -82,7 +82,7 @@ public class MyAudioPlugin implements IPluginModule {
      */
     @Override
     public String obtainTitle(Context context) {
-        return context.getString(R.string.rc_voip_audio);
+        return "";
     }
 
     @Override
