@@ -204,6 +204,9 @@
     <string name="swipe_to_more">下滑更多</string>
 
     <string name="gift">礼物</string>
+    <string name="send_gift">赠送礼物</string>
+    <string name="account_remain_money">当前账号余额：</string>
+    <string name="go_charge">去充值</string>
 
 
     <!--邀约详情-->

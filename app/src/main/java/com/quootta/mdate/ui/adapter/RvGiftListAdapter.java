@@ -69,7 +69,7 @@ public class RvGiftListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
 
         ((GiftListViewHolder)holder).giftGoldNum.setText(mList.get(position).getCost()+"");
-        ((GiftListViewHolder)holder).giftCharmNum.setText(mList.get(position).getCharm()+"");
+        ((GiftListViewHolder)holder).giftCharm.setText(mList.get(position).getName()+"");
 
         if (mList.get(position).isSelect){
             //((GiftListViewHolder) holder).itemGift.setBackgroundColor(Color.parseColor("#88DFDCDC"));
@@ -78,7 +78,7 @@ public class RvGiftListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             ((GiftListViewHolder) holder).giftGold.setTextColor(Color.rgb(239,132,245));
         }else {
             ((GiftListViewHolder) holder).giftImage.setBackgroundColor(Color.parseColor("#00000000"));
-            ((GiftListViewHolder) holder).giftCharm.setTextColor(Color.rgb(255,255,255));
+            ((GiftListViewHolder) holder).giftCharm.setTextColor(context.getResources().getColor(R.color.color_494949));
             ((GiftListViewHolder) holder).giftGold.setTextColor(Color.rgb(255,255,255));
         }
 
@@ -121,7 +121,6 @@ public class RvGiftListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         ImageView giftImage;
 
         TextView giftGoldNum;
-        TextView giftCharmNum;
         RelativeLayout itemGift;
         TextView giftGold;
         TextView giftCharm;
@@ -130,7 +129,6 @@ public class RvGiftListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             super(itemView);
 
             giftImage= (ImageView) itemView.findViewById(R.id.gift_image);
-            giftCharmNum= (TextView) itemView.findViewById(R.id.gift_charm_num);
             giftGoldNum= (TextView) itemView.findViewById(R.id.gift_gold_num);
             itemGift= (RelativeLayout) itemView.findViewById(R.id.item_gift);
             giftGold= (TextView) itemView.findViewById(R.id.gift_gold);

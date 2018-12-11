@@ -3,73 +3,114 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:orientation="vertical"
     >
 
     <LinearLayout
         android:id="@+id/pop_layout"
         android:layout_width="match_parent"
-        android:layout_height="255dp"
-        android:background="#66000000"
+        android:layout_height="463dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:background="@mipmap/bg_send_gift_pop"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
         >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/font_size_14"
+            android:layout_marginTop="41dp"
+            android:textColor="@color/color_494949"
+            android:text="@string/send_gift"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="14dp"
+            android:background="@color/color_939393"
+            android:layout_marginLeft="39dp"
+            android:layout_marginRight="39dp"
+            android:layout_height="0.5dp"/>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/gift_recycler"
             android:layout_width="wrap_content"
-            android:layout_weight="5"
-            android:layout_height="0dp">
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_height="244dp">
 
         </android.support.v7.widget.RecyclerView>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
-
+            android:layout_marginLeft="39dp"
+            android:layout_marginRight="39dp"
             android:clickable="true"
             >
-            <!--<TextView-->
-                <!--android:id="@+id/gold_recharge"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="金币充值:"-->
-                <!--android:textColor="@color/giftYellow"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:layout_marginLeft="10dp"-->
-                <!--/>-->
-            <!--<TextView-->
-                <!--android:id="@+id/gold_limit"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="180000"-->
-                <!--android:textSize="15sp"-->
-                <!--android:layout_marginLeft="5dp"-->
-                <!--android:layout_alignTop="@+id/gold_recharge"-->
-                <!--android:layout_toRightOf="@+id/gold_recharge"-->
-                <!--android:layout_toEndOf="@+id/gold_recharge" />-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llMoney"
+                android:layout_centerHorizontal="true">
 
-            <!--<TextView-->
-                <!--android:id="@+id/test"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_toRightOf="@id/gold_limit"-->
-                <!--android:layout_alignTop="@id/gold_limit"-->
-                <!--android:paddingLeft="20dp"-->
-                <!--android:text="11111"-->
-                <!--/>-->
-            <Button
-                android:id="@+id/give_gift"
-                android:layout_width="75dp"
-                android:layout_height="35dp"
-                android:layout_alignParentRight="true"
-                android:background="@color/themePink"
-                android:layout_centerVertical="true"
-                android:text="@string/app_tips_text160"
-                android:textColor="#272632"
-                />
+                <TextView
+                    android:id="@+id/gold_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_remain_money"
+                    android:textColor="@color/color_494949"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/font_size_12"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/gold_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="180000"
+                    android:textSize="@dimen/font_size_10"
+                    android:layout_marginLeft="11dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/color_939393"
+                    android:layout_alignTop="@+id/gold_recharge"
+                    android:layout_toRightOf="@+id/gold_recharge"
+                    android:layout_toEndOf="@+id/gold_recharge" />
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:src="@mipmap/ic_vip_money"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llMoney"
+                android:layout_marginTop="21dp">
+                <Button
+                    android:id="@+id/btnCharge"
+                    android:layout_width="110dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/shape_button"
+                    android:text="@string/go_charge"
+                    android:textColor="@color/myWhite"
+                    android:layout_marginRight="44dp"
+                    />
+                <Button
+                    android:id="@+id/give_gift"
+                    android:layout_width="110dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/shape_button"
+                    android:text="@string/app_tips_text160"
+                    android:textColor="@color/myWhite"
+                    />
+            </LinearLayout>
+
         </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>

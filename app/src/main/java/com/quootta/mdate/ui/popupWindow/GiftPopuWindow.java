@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.quootta.mdate.R;
 import com.quootta.mdate.base.BaseApp;
@@ -49,12 +50,15 @@ public class GiftPopuWindow extends Activity {
     RecyclerView giftRecycler;
 //    @Bind(R.id.gold_recharge)
 //    TextView goldRecharge;
-//    @Bind(R.id.gold_limit)
-//    TextView goldLimit;
+    @Bind(R.id.gold_limit)
+    TextView goldLimit;
 //    @Bind(R.id.test)
 //    TextView test;
     @Bind(R.id.give_gift)
     Button giveGift;
+
+    @Bind(R.id.btnCharge)
+    Button btnCharge;
 
 
 
@@ -102,12 +106,12 @@ public class GiftPopuWindow extends Activity {
 //        test.setText("真实余额"+BaseApp.getGoldCount());
 //
 //        //如果balnace不等于99999999 说明是在通话中  使用balnace的值显示余额
-//        if (BaseApp.getBalnace()!=BALANCE){
-//            //金币余额  settext必须是string类型的
-//            goldLimit.setText(BaseApp.getBalnace()+"");
-//        }else {
-//            goldLimit.setText(BaseApp.getGoldCount()+"");
-//        }
+        if (BaseApp.getBalnace()!=BALANCE){
+            //金币余额  settext必须是string类型的
+            goldLimit.setText(BaseApp.getBalnace()+"");
+        }else {
+            goldLimit.setText(BaseApp.getGoldCount()+"");
+        }
 
 
         isClick=false;
@@ -247,14 +251,14 @@ public class GiftPopuWindow extends Activity {
         });
 
 
-//        goldRecharge.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent=new Intent(GiftPopuWindow.this, ChargeActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
+        btnCharge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(GiftPopuWindow.this, ChargeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 

@@ -20,7 +20,7 @@
     <ImageView
         android:id="@+id/gift_image"
         android:layout_width="60dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:src="@mipmap/gift_car_in"
 
        android:layout_centerHorizontal="true"
@@ -31,44 +31,41 @@
         android:layout_below="@id/gift_image"
         android:layout_centerInParent="true"
         >
-        <TextView
-            android:id="@+id/gift_gold"
-            android:layout_marginTop="3dp"
-            android:textSize="8sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/coin"
 
-            />
-        <TextView
-            android:id="@+id/gift_gold_num"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10"
-            android:lines="1"
-            android:textSize="8sp"
-            android:layout_alignTop="@+id/gift_gold"
-            android:layout_toRightOf="@+id/gift_charm"
-            android:layout_toEndOf="@+id/gift_charm" />
+            android:layout_below="@+id/gift_charm"
+            android:layout_marginTop="4dp"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/gift_gold_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:layout_gravity="center_vertical"
+                android:lines="1"
+                android:textSize="@dimen/font_size_10"/>
+            <TextView
+                android:id="@+id/gift_gold"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_vip_money"
+
+                />
+        </LinearLayout>
         <TextView
             android:paddingRight="5dp"
-            android:layout_below="@id/gift_gold"
             android:id="@+id/gift_charm"
             android:layout_marginTop="3dp"
-            android:textSize="8sp"
+            android:textSize="@dimen/font_size_10"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_tips_text10"
             />
-        <TextView
-            android:id="@+id/gift_charm_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="200"
-            android:textSize="8sp"
-            android:layout_alignTop="@+id/gift_charm"
-            android:layout_toRightOf="@+id/gift_charm"
-            android:layout_toEndOf="@+id/gift_charm" />
     </RelativeLayout>
 
 
