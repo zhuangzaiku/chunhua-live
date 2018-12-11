@@ -42,7 +42,7 @@ public class ChargeActivity extends BaseActivity implements View.OnClickListener
 
     @Bind(R.id.iv_back_title_bar)ImageView iv_back;
     @Bind(R.id.tv_title_bar)TextView tv_title;
-    @Bind(R.id.tv_Withdraw_title_bar)TextView withdrao_title;
+    @Bind(R.id.tv_right_title_bar)TextView withdrao_title;
     @Bind(R.id.btn_gold1_charge_activity)Button btn_gold1;
 //    @Bind(R.id.btn_gold2_charge_activity)Button btn_gold2;
 //    @Bind(R.id.btn_gold3_charge_activity)Button btn_gold3;
@@ -96,6 +96,7 @@ public class ChargeActivity extends BaseActivity implements View.OnClickListener
 
     private void initTitle() {
         tv_title.setText(getString(R.string.app_tips_text24));
+        withdrao_title.setText(R.string.withdraw);
         withdrao_title.setVisibility(View.VISIBLE);
         iv_back.setVisibility(View.VISIBLE);
 

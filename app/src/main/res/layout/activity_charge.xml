@@ -4,13 +4,13 @@
     android:id="@+id/ll_charge_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/myWhite"
     tools:context="com.quootta.mdate.ui.activity.ChargeActivity"
     android:orientation="vertical">
 
     <include
         android:id="@+id/include_title_bar"
-        layout="@layout/title_bar" />
+        layout="@layout/layout_common_header_with_bg" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -155,7 +155,7 @@
                         android:layout_height="40dp"
                         android:layout_alignParentRight="false"
                         android:layout_centerVertical="true"
-                        android:background="@drawable/shape_button_pink"
+                        android:background="@drawable/shape_button"
                         android:focusable="true"
                         android:text="@string/rmb_charge"
                         android:textColor="@color/myWhite" />

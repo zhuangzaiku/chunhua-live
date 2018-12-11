@@ -198,6 +198,7 @@
         android:layout_marginTop="@dimen/margin_size_60"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/shape_button"
+        android:textColor="@color/myWhite"
         android:text="@string/ensure"/>
 
 </LinearLayout>

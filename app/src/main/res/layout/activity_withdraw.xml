@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/include_title_bar"
-        layout="@layout/title_bar" />
+        layout="@layout/layout_common_header_with_bg" />
 
     <!--<Button-->
         <!--android:id="@+id/rb_alipay_withdraw"-->

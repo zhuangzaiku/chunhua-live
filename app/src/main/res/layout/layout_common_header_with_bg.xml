@@ -27,4 +27,15 @@
         android:textColor="@color/myWhite"
         android:textSize="@dimen/font_size_18" />
 
+    <TextView
+        android:id="@+id/tv_right_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/toolbar_image_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/margin_size_12"
+        android:textSize="@dimen/font_size_16"
+        android:textColor="@color/myWhite"/>
+
 </RelativeLayout>
