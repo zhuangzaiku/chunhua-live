@@ -2,10 +2,13 @@ package com.quootta.mdate.ui.fragment;
 
 import android.net.Uri;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.quootta.mdate.R;
 import com.quootta.mdate.base.BaseFragment;
 
+import butterknife.Bind;
 import io.rong.imkit.fragment.ConversationListFragment;
 import io.rong.imlib.model.Conversation;
 
@@ -13,6 +16,11 @@ import io.rong.imlib.model.Conversation;
  * Created by Ryon on 2016/2/18.
  */
 public class ChatsListFragment extends BaseFragment {
+    @Bind(R.id.tv_title_bar)
+    TextView tvTitle;
+
+    @Bind(R.id.iv_back_title_bar)
+    ImageView ivBack;
 
     @Override
     protected int getRootView() {
@@ -27,6 +35,8 @@ public class ChatsListFragment extends BaseFragment {
     @Override
     protected void initData(View view) {
         initChatList();
+        tvTitle.setText(R.string.chats);
+        ivBack.setVisibility(View.GONE);
     }
 
     private void initChatList() {

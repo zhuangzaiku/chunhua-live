@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="rc_text_color_primary">#353535</color>
-    <color name="rc_text_color_secondary">#999999</color>
+    <color name="rc_text_color_primary">#494949</color>
+    <color name="rc_text_color_secondary">#939393</color>
     <color name="rc_text_color_tertiary">#d7d7d7</color>
     <color name="rc_text_color_primary_inverse">@android:color/white</color>
     <color name="rc_normal_bg">#EBEBEB</color>

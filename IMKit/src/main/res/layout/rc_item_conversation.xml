@@ -10,21 +10,19 @@
 
     <FrameLayout
         android:id="@id/rc_item1"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
         android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="6dp">
+        android:layout_centerVertical="true">
 
         <io.rong.imkit.widget.AsyncImageView
             android:id="@+id/rc_left"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            app:RCCornerRadius="3dp"
             app:RCDefDrawable="@drawable/rc_default_portrait"
-            app:RCShape="square" />
+            app:RCShape="circle" />
 
         <FrameLayout
             android:layout_width="wrap_content"
@@ -38,15 +36,21 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
 
-            <TextView
-                android:id="@+id/rc_unread_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="@android:color/white"
-                android:textSize="10dp" />
+
         </FrameLayout>
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/rc_unread_message"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:background="@drawable/rc_bg_unread_msg"
+        android:textColor="@android:color/white"
+        android:textSize="7sp" />
 
     <io.rong.imkit.widget.ProviderContainerView
         android:id="@+id/rc_content"
