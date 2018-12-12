@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -69,14 +70,10 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
 
     @Bind(R.id.tv_title_bar)
     TextView tv_title_bar;
-    @Bind(R.id.rl_status_title_bar)
-    RelativeLayout rl_status;
-    @Bind(R.id.tv_name_title_bar)
-    TextView tv_name_title;
     @Bind(R.id.tv_status_title_bar)
     TextView tv_status;
-    @Bind(R.id.iv_more_title_bar)
-    ImageView iv_more;
+    @Bind(R.id.tv_right_title_bar)
+    TextView iv_more;
     @Bind(R.id.ll_personal_details_activity)
     LinearLayout ll_body;
     @Bind(R.id.tv_age_personal_details_activity)
@@ -117,13 +114,13 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
     @Bind(R.id.rv_gallery_personal_details_activity)
     RecyclerView rv_gallery;
     @Bind(R.id.ll_operate_personal_details_activity)
-    LinearLayout ll_operate;
+    RelativeLayout ll_operate;
     @Bind(R.id.btn_video_chat_personal_details_activity)
-    Button btnVideoChat;
+    ImageView btnVideoChat;
     @Bind(R.id.btn_voice_chat_personal_details_activity)
-    Button btnVoiceChat;
+    ImageView btnVoiceChat;
     @Bind(R.id.btn_private_chat_personal_details_activity)
-    Button btnPrivateChat;
+    ImageView btnPrivateChat;
     //    @Bind(R.id.tv_personal_sign_personal_details_activity)
 //    TextView tvPersonalSignPersonalDetailsActivity;
     @Bind(R.id.receiver_pic_one)
@@ -162,6 +159,16 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
     LinearLayout receivegift;
     @Bind(R.id.receiver_text_one)
     TextView receiverTextOne;
+
+
+    @Bind(R.id.tvNickname)
+    TextView tvNickname;
+    @Bind(R.id.tvId)
+    TextView tvId;
+    @Bind(R.id.tvAge)
+    TextView tvAge;
+    @Bind(R.id.ivGender)
+    ImageView ivGender;
 
     private final static int ADD = 0;
     private final static int REMOVE = 1;
@@ -254,6 +261,7 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
                 imageLoader.get(LocalUrl.getPicUrl(userDetail.gift_receive.get(0).getCover()),
                         imageLoader.getImageListener(receiverPicOne, R.mipmap.home_show_loading, R.mipmap.home_show_loading));
                 receiverTextOne.setText("x"+userDetail.gift_receive.get(0).getCount());
+                receiverTextOne.setBackgroundResource(R.mipmap.ic_gift_num_bg);
 
             }
             if (userDetail.gift_receive.size() >=2){
@@ -263,18 +271,21 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
 
 
                 receiverTextTwo.setText("x"+userDetail.gift_receive.get(1).getCount());
+                receiverTextTwo.setBackgroundResource(R.mipmap.ic_gift_num_bg);
             }
 
             if (userDetail.gift_receive.size() >= 3){
                 imageLoader.get(LocalUrl.getPicUrl(userDetail.gift_receive.get(2).getCover()),
                         imageLoader.getImageListener(receiverPicThree, R.mipmap.home_show_loading, R.mipmap.home_show_loading));
                 receiverTextThree.setText("x"+userDetail.gift_receive.get(2).getCount());
+                receiverTextThree.setBackgroundResource(R.mipmap.ic_gift_num_bg);
             }
 
             if (userDetail.gift_receive.size() >= 4){
                 imageLoader.get(LocalUrl.getPicUrl(userDetail.gift_receive.get(3).getCover()),
                         imageLoader.getImageListener(receiverPicFour, R.mipmap.home_show_loading, R.mipmap.home_show_loading));
                 receiverTextFour.setText("x"+userDetail.gift_receive.get(3).getCount());
+                receiverTextFour.setBackgroundResource(R.mipmap.ic_gift_num_bg);
             }
         }
 
@@ -285,23 +296,27 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
                 imageLoader.get(LocalUrl.getPicUrl(userDetail.gift_send.get(0).getCover()),
                         imageLoader.getImageListener(sendPicOne, R.mipmap.home_show_loading, R.mipmap.home_show_loading));
                 sendTextOne.setText("x"+userDetail.gift_send.get(0).getCount());
+                sendTextOne.setBackgroundResource(R.mipmap.ic_gift_num_bg);
             }
 
             if (userDetail.gift_send.size()>=2){
                 imageLoader.get(LocalUrl.getPicUrl(userDetail.gift_send.get(1).getCover()),
                         imageLoader.getImageListener(sendPicTwo, R.mipmap.home_show_loading, R.mipmap.home_show_loading));
                 sendTextTwo.setText("x"+userDetail.gift_send.get(1).getCount());
+                sendTextTwo.setBackgroundResource(R.mipmap.ic_gift_num_bg);
             }
 
             if (userDetail.gift_send.size()>=3){
                 imageLoader.get(LocalUrl.getPicUrl(userDetail.gift_send.get(2).getCover()),
                         imageLoader.getImageListener(sendPicThree, R.mipmap.home_show_loading, R.mipmap.home_show_loading));
                 sendTextThree.setText("x"+userDetail.gift_send.get(2).getCount());
+                sendTextThree.setBackgroundResource(R.mipmap.ic_gift_num_bg);
             }
             if (userDetail.gift_send.size()>=4){
                 imageLoader.get(LocalUrl.getPicUrl(userDetail.gift_send.get(3).getCover()),
                         imageLoader.getImageListener(sendPicFour, R.mipmap.home_show_loading, R.mipmap.home_show_loading));
                 sendTextFour.setText("x"+userDetail.gift_send.get(3).getCount());
+                sendTextFour.setBackgroundResource(R.mipmap.ic_gift_num_bg);
             }
         }
 
@@ -312,13 +327,10 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
 
 
     private void initTitleBar() {
-        tv_title_bar.setVisibility(View.GONE);
-        rl_status.setVisibility(View.VISIBLE);
-
         if (userDetail.nick_name != null) {
-            tv_name_title.setText(userDetail.nick_name);
+            tv_title_bar.setText(userDetail.nick_name);
         } else {
-            tv_name_title.setText(getString(R.string.unknown));
+            tv_title_bar.setText(getString(R.string.unknown));
         }
 
         if (Boolean.parseBoolean(userDetail.is_online)) {
@@ -353,7 +365,10 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
     }
 
     private void initDetails() {
-        tv_age.setText(userDetail.age + baseContext.getString(R.string.year));
+        tvAge.setText(userDetail.age);
+        tvNickname.setText(getResources().getString(R.string.nickname, userDetail.nick_name));
+        tvId.setText(getResources().getString(R.string.id, userDetail._id));
+//        ivGender.setBackgroundResource(userDetail.);  没有性别信息
         tv_constellation.setText(userDetail.constellation);
 
 //        double distance = Double.parseDouble(userDetail.distance);

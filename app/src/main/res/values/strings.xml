@@ -231,6 +231,8 @@
     <string name="hint_space_spilt">多项请用空格隔开</string>
     <string name="signature">个性签名</string>
     <string name="save">保存</string>
+    <string name="nickname">昵称：%s</string>
+    <string name="id">ID：%s</string>
     <!--充值-->
     <string name="amount_sum">账户余额：</string>
     <string name="choose_amount">选择充值金额</string>

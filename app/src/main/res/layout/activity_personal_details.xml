@@ -3,19 +3,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/myWhite"
     tools:context=".ui.activity.PersonalDetailsActivity">
 
-    <include
-        android:id="@+id/include_title_bar"
-        layout="@layout/title_bar" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_join_height"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="-6dp"
+        android:layout_marginRight="24dp"
+        android:background="@mipmap/bg_discover_tablayout"
+        android:elevation="2dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_back_title_bar"
+            android:layout_width="@dimen/toolbar_image_size"
+            android:layout_height="@dimen/toolbar_image_size"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_size_12"
+            android:src="@mipmap/ic_close_white" />
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/tv_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/font_size_18" />
+
+        <TextView
+            android:id="@+id/tv_status_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_size_6"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/font_size_10" />
+
+        <TextView
+            android:id="@+id/tv_right_title_bar"
+            android:layout_width="6dp"
+            android:layout_height="31dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_size_24"
+            android:background="@mipmap/ic_more"
+            android:gravity="center"
+            android:rotation="90"
+            android:textColor="@color/myWhite"
+            android:textSize="@dimen/font_size_16" />
+
+    </RelativeLayout>
 
     <ScrollView
         android:id="@+id/sv_content"
-        android:layout_below="@id/include_title_bar"
-        android:layout_above="@+id/ll_operate_personal_details_activity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_operate_personal_details_activity"
+        android:layout_below="@id/include_title_bar">
+
         <LinearLayout
             android:id="@+id/ll_personal_details_activity"
             android:layout_width="match_parent"
@@ -25,48 +76,106 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/vp_detail_personal_details_activity"
                 android:layout_width="match_parent"
-                android:layout_height="320dp"/>
+                android:layout_height="320dp" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_gallery_personal_details_activity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_size_2"
-                android:layout_marginBottom="@dimen/margin_size_2">
-            </android.support.v7.widget.RecyclerView>
+                android:layout_marginBottom="@dimen/margin_size_2"
+                android:visibility="gone"></android.support.v7.widget.RecyclerView>
 
             <!--签名和认证-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:padding="10dp"
-                android:background="@color/backgroundWhite">
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundWhite"
+                android:padding="10dp">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tvNickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="34dp"
+                        android:text="昵称：美丽天使"
+                        android:textColor="@color/color_494949"
+                        android:textSize="@dimen/font_size_14" />
+
+                    <TextView
+                        android:id="@+id/tvId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvNickname"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="@dimen/margin_size_14"
+                        android:text="  ID：1242"
+                        android:textColor="@color/color_b9b9b9"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <TextView
+                        android:id="@+id/tvAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="35dp"
+                        android:background="@mipmap/ic_indicator_pink"
+                        android:gravity="center"
+                        android:text="21"
+                        android:textColor="@color/myWhite"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <ImageView
+                        android:id="@+id/ivGender"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignTop="@+id/tvAge"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/tvAge"
+                        android:background="@mipmap/ic_indicator_pink"
+                        android:padding="7dp"
+                        android:src="@mipmap/ic_female" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/tvId"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/color_b9b9b9" />
+
+                </RelativeLayout>
                 <!--年龄和星座-->
                 <LinearLayout
                     android:id="@+id/ll_age_personal_details_activity"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:layout_marginTop="@dimen/margin_size_10"
+                    android:background="@drawable/bg_detail_age"
                     android:gravity="center"
+                    android:orientation="horizontal"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
-                    android:background="@drawable/bg_detail_age"
-                    android:orientation="horizontal">
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/tv_age_personal_details_activity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myWhite"
                         android:layout_margin="@dimen/margin_size_2"
-                        android:textSize="@dimen/font_size_12"/>
+                        android:textColor="@color/myWhite"
+                        android:textSize="@dimen/font_size_12" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myWhite"
-                        android:text="|"/>
+                        android:text="|"
+                        android:textColor="@color/myWhite" />
 
                     <TextView
                         android:id="@+id/tv_constellation_personal_details_activity"
@@ -74,27 +183,28 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/margin_size_2"
                         android:textColor="@color/myWhite"
-                        android:textSize="@dimen/font_size_12"/>
+                        android:textSize="@dimen/font_size_12" />
                 </LinearLayout>
 
                 <!--位置-->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_size_8"
                     android:layout_alignParentRight="true"
-                    android:gravity="center_vertical">
+                    android:layout_marginTop="@dimen/margin_size_8"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="15dp"
                         android:layout_height="25dp"
-                        android:src="@mipmap/location"/>
+                        android:src="@mipmap/location" />
 
                     <TextView
                         android:id="@+id/tv_distance_personal_details_activity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_size_4"/>
+                        android:layout_marginLeft="@dimen/margin_size_4" />
                 </LinearLayout>
 
                 <!--签名-->
@@ -102,15 +212,16 @@
                     android:id="@+id/ll_sign_personal_details_activity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_size_10"
                     android:layout_below="@id/ll_age_personal_details_activity"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="@dimen/margin_size_10"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myBlack"
-                        android:text="@string/personal_sign"/>
+                        android:text="@string/personal_sign"
+                        android:textColor="@color/myBlack" />
 
                     <TextView
                         android:id="@+id/tv_personal_sign_personal_details_activity"
@@ -122,29 +233,30 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_size_10"
                     android:layout_alignParentBottom="true"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="@dimen/margin_size_10"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myBlack"
                         android:layout_marginRight="@dimen/margin_size_10"
-                        android:text="@string/verification"/>
+                        android:text="@string/verification"
+                        android:textColor="@color/myBlack" />
 
                     <ImageView
                         android:id="@+id/iv_sesame_credit_personal_details"
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_marginRight="@dimen/margin_size_10"
-                        android:src="@mipmap/credit_sesame_personal_uncheck"/>
+                        android:src="@mipmap/credit_sesame_personal_uncheck" />
 
                     <ImageView
                         android:id="@+id/iv_camera_credit_personal_details"
                         android:layout_width="18dp"
                         android:layout_height="18dp"
-                        android:src="@mipmap/camera"/>
+                        android:src="@mipmap/camera" />
                 </LinearLayout>
 
             </RelativeLayout>
@@ -154,61 +266,82 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_size_2"
-                android:padding="10dp"
-                android:background="@color/backgroundWhite"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/video"
                         android:textColor="@color/myTextBlack"
-                        android:text="@string/video"/>
+                        android:textSize="@dimen/font_size_12" />
 
                     <TextView
                         android:id="@+id/tv_video_price"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_size_24"
+                        android:textColor="@color/color_939393"
+                        android:textSize="@dimen/font_size_12" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_size_4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="@dimen/margin_size_12"
+                    android:layout_marginRight="15dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/audio"
                         android:textColor="@color/myTextBlack"
-                        android:text="@string/audio"/>
+                        android:textSize="@dimen/font_size_12" />
 
                     <TextView
                         android:id="@+id/tv_audio_price"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_size_24"
+                        android:textColor="@color/color_939393"
+                        android:textSize="@dimen/font_size_12" />
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/tvId"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/color_b9b9b9" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_size_4"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myTextBlack"
-                        android:text="@string/connection_rate"/>
+                        android:text="@string/connection_rate"
+                        android:textColor="@color/myTextBlack" />
 
                     <TextView
                         android:id="@+id/tv_connection_rate"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -218,15 +351,16 @@
                 android:layout_height="75dp"
                 android:layout_marginTop="@dimen/margin_size_2"
                 android:background="@color/backgroundWhite"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_marginTop="@dimen/margin_size_10"
-                    android:layout_marginLeft="@dimen/margin_size_10"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_marginLeft="@dimen/margin_size_10"
+                    android:layout_marginTop="@dimen/margin_size_10"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/ll_height_personal_details_activity"
@@ -238,8 +372,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/myBlack"
-                            android:text="@string/height_colon"/>
+                            android:text="@string/height_colon"
+                            android:textColor="@color/myBlack" />
 
                         <TextView
                             android:id="@+id/tv_height_personal_details_activity"
@@ -257,8 +391,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/myBlack"
-                            android:text="@string/weight"/>
+                            android:text="@string/weight"
+                            android:textColor="@color/myBlack" />
 
                         <TextView
                             android:id="@+id/tv_weight_personal_details_activity"
@@ -270,22 +404,25 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginTop="@dimen/margin_size_6"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:layout_marginLeft="@dimen/margin_size_10"
+                        android:layout_weight="1"
                         android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="#000000"
-                            android:text="@string/job_colon"/>
+                            android:text="@string/job_colon"
+                            android:textColor="#000000" />
+
                         <TextView
                             android:id="@+id/tv_job_personal_details_activity"
                             android:layout_width="wrap_content"
@@ -301,8 +438,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="@dimen/margin_size_2"
+                android:background="@color/backgroundWhite"
                 android:paddingLeft="@dimen/padding_size_10"
-                android:background="@color/backgroundWhite">
+                android:visibility="gone">
 
                 <!--喜欢的异性类型-->
                 <LinearLayout
@@ -315,8 +453,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myBlack"
-                        android:text="@string/liked_opposite_sex"/>
+                        android:text="@string/liked_opposite_sex"
+                        android:textColor="@color/myBlack" />
 
                     <TextView
                         android:id="@+id/tv_liked_sex_personal_details_activity"
@@ -336,8 +474,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myBlack"
-                        android:text="@string/liked_date_way"/>
+                        android:text="@string/liked_date_way"
+                        android:textColor="@color/myBlack" />
 
                     <TextView
                         android:id="@+id/tv_liked_date_personal_details_activity"
@@ -357,8 +495,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myBlack"
-                        android:text="@string/advantage_field"/>
+                        android:text="@string/advantage_field"
+                        android:textColor="@color/myBlack" />
 
                     <TextView
                         android:id="@+id/tv_expertise_personal_details_activity"
@@ -378,8 +516,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/myBlack"
-                        android:text="@string/interests"/>
+                        android:text="@string/interests"
+                        android:textColor="@color/myBlack" />
 
                     <TextView
                         android:id="@+id/tv_chat_personal_details_activity"
@@ -392,234 +530,259 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="2dp"
-                >
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
                 <!--收到的礼物-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="2dp"
+                    android:text="@string/app_tips_text135"
+                    android:textColor="@color/color_494949" />
+
                 <LinearLayout
                     android:id="@+id/receive_gift"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:background="@color/backgroundWhite"
-                    android:orientation="horizontal"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@mipmap/bg_profile_gallery"
                     android:gravity="center_vertical"
-                    >
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:text="@string/app_tips_text135"
-                        android:layout_marginLeft="6dp"
-                        />
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
                     <RelativeLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <ImageView
                             android:id="@+id/receiver_pic_one"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
                             android:layout_centerVertical="true"
-                            />
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp" />
 
                         <TextView
                             android:id="@+id/receiver_text_one"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:layout_alignBottom="@+id/receiver_pic_one"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
                             android:layout_toRightOf="@id/receiver_pic_one"
+                            android:gravity="center"
+                            android:minWidth="19dp"
+                            android:textSize="@dimen/font_size_10"
 
                             />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <ImageView
                             android:id="@+id/receiver_pic_two"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
                             android:layout_centerVertical="true"
-                            />
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp" />
 
                         <TextView
                             android:id="@+id/receiver_text_two"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/receiver_pic_two"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
                             android:layout_toRightOf="@id/receiver_pic_two"
+                            android:gravity="center"
+                            android:minWidth="19dp"
+                            android:textSize="@dimen/font_size_10"
 
                             />
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <ImageView
                             android:id="@+id/receiver_pic_three"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
                             android:layout_centerVertical="true"
-                            />
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp" />
 
                         <TextView
                             android:id="@+id/receiver_text_three"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:layout_alignBottom="@+id/receiver_pic_three"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
                             android:layout_toRightOf="@id/receiver_pic_three"
+                            android:gravity="center"
+                            android:minWidth="19dp"
+                            android:textSize="@dimen/font_size_10"
 
                             />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <ImageView
                             android:id="@+id/receiver_pic_four"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
                             android:layout_centerVertical="true"
-                            />
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp" />
 
                         <TextView
                             android:id="@+id/receiver_text_four"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:layout_alignBottom="@+id/receiver_pic_four"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
                             android:layout_toRightOf="@id/receiver_pic_four"
+                            android:gravity="center"
+                            android:minWidth="19dp"
+                            android:textSize="@dimen/font_size_10"
 
                             />
                     </RelativeLayout>
                 </LinearLayout>
 
                 <!--送出的礼物-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="2dp"
+                    android:text="@string/app_tips_text136"
+                    android:textColor="@color/color_494949" />
+
                 <LinearLayout
-                    android:layout_marginTop="2dp"
                     android:id="@+id/send_gift"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:background="@color/backgroundWhite"
-                    android:orientation="horizontal"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="9dp"
+                    android:background="@mipmap/bg_profile_gallery"
                     android:gravity="center_vertical"
-                    >
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:text="@string/app_tips_text136"
-                        android:layout_marginLeft="6dp"
-                        />
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
                     <RelativeLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <ImageView
                             android:id="@+id/send_pic_one"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
                             android:layout_centerVertical="true"
-                            />
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp" />
 
                         <TextView
                             android:id="@+id/send_text_one"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/send_pic_one"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
                             android:layout_toRightOf="@id/send_pic_one"
+                            android:gravity="center"
+                            android:minWidth="19dp"
+                            android:textSize="@dimen/font_size_10"
 
                             />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <ImageView
                             android:id="@+id/send_pic_two"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
                             android:layout_centerVertical="true"
-                            />
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp" />
 
                         <TextView
                             android:id="@+id/send_text_two"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:layout_alignBottom="@+id/send_pic_two"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
                             android:layout_toRightOf="@id/send_pic_two"
+                            android:gravity="center"
+                            android:minWidth="19dp"
+                            android:textSize="@dimen/font_size_10"
 
                             />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <ImageView
                             android:id="@+id/send_pic_three"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
                             android:layout_centerVertical="true"
-                            />
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp" />
 
                         <TextView
                             android:id="@+id/send_text_three"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:layout_alignBottom="@+id/send_pic_three"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
                             android:layout_toRightOf="@id/send_pic_three"
+
+                            android:gravity="center"
+                            android:minWidth="19dp"
+                            android:textSize="@dimen/font_size_10"
 
                             />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2">
+
                         <ImageView
                             android:id="@+id/send_pic_four"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
 
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
                             android:layout_centerVertical="true"
-                            />
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp" />
 
                         <TextView
                             android:id="@+id/send_text_four"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:layout_alignBottom="@+id/send_pic_four"
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
                             android:layout_toRightOf="@id/send_pic_four"
+                            android:gravity="center"
+                            android:minWidth="22dp"
+                            android:textSize="@dimen/font_size_10"
 
                             />
                     </RelativeLayout>
@@ -630,52 +793,55 @@
     </ScrollView>
 
     <!--&lt;!&ndash;底部Button&ndash;&gt;-->
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/ll_operate_personal_details_activity"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:paddingTop="@dimen/padding_size_4"
-        android:orientation="horizontal">
+        android:background="@color/myWhite"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_size_4">
 
-        <Button
-            android:id="@+id/btn_video_chat_personal_details_activity"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:elevation="10dp"
-            android:layout_margin="@dimen/margin_size_2"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/shape_button"
-            android:drawableLeft="@mipmap/ic_video_personal"
-            android:paddingLeft="@dimen/padding_size_16"
-            android:textColor="@color/backgroundWhite"
-            android:text="@string/video_chat"/>
-
-        <Button
-            android:id="@+id/btn_voice_chat_personal_details_activity"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/margin_size_2"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/shape_button"
-            android:drawableLeft="@mipmap/ic_voice_personal"
-            android:textColor="@color/backgroundWhite"
-            android:paddingLeft="@dimen/padding_size_16"
-            android:text="@string/voice_chat"/>
-
-        <Button
+        <ImageView
             android:id="@+id/btn_private_chat_personal_details_activity"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/margin_size_2"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/shape_button"
-            android:drawableLeft="@mipmap/ic_direct_messages"
-            android:textColor="@color/backgroundWhite"
-            android:paddingLeft="@dimen/padding_size_16"
-            android:text="@string/private_chat"/>
-    </LinearLayout>
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="12dp"
+            android:background="@mipmap/bg_person_detail_btn"
+            android:padding="10dp"
+            android:src="@mipmap/ic_person_detail_text"
+            android:textColor="@color/backgroundWhite" />
+
+        <ImageView
+            android:id="@+id/btn_video_chat_personal_details_activity"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="18dp"
+            android:background="@mipmap/bg_person_detail_btn"
+            android:padding="10dp"
+            android:src="@mipmap/ic_person_detail_video"
+            android:text="@string/voice_chat"
+            android:textColor="@color/backgroundWhite" />
+
+        <ImageView
+            android:id="@+id/btn_voice_chat_personal_details_activity"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="28dp"
+            android:background="@mipmap/bg_person_detail_btn"
+            android:elevation="10dp"
+            android:padding="8dp"
+            android:src="@mipmap/ic_person_detail_audio"
+            android:textColor="@color/backgroundWhite" />
+
+
+    </RelativeLayout>
 </RelativeLayout>
