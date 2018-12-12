@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/include_title_bar"
-        layout="@layout/title_bar" />
+        layout="@layout/layout_common_header_with_bg" />
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -18,8 +18,8 @@
         card_view:cardCornerRadius="6dp"
         card_view:cardBackgroundColor="@color/backgroundWhite"
         android:layout_marginTop="@dimen/margin_size_20"
-        android:layout_marginLeft="@dimen/margin_size_10"
-        android:layout_marginRight="@dimen/margin_size_10">
+        android:layout_marginLeft="@dimen/margin_size_25"
+        android:layout_marginRight="@dimen/margin_size_25">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -41,11 +41,14 @@
 
     <Button
         android:id="@+id/btn_feed_back"
-        android:layout_width="@dimen/button_width_120"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/button_height_40"
         android:background="@drawable/shape_button"
         android:layout_marginTop="@dimen/margin_size_30"
+        android:layout_marginLeft="@dimen/margin_size_25"
+        android:layout_marginRight="@dimen/margin_size_25"
         android:layout_gravity="center_horizontal"
+        android:textColor="@color/myWhite"
         android:text="@string/ensure"/>
     <!--<Button-->
         <!--android:id="@+id/user_service"-->

@@ -34,7 +34,7 @@ public class FeedbackActivity extends BaseActivity {
     @Bind(R.id.btn_feed_back)Button btn_feedback;
     @Bind(R.id.bt_sousuo) Button sou;
     @Bind(R.id.ed_sousuo) EditText ed_sou;
-    @Bind(R.id.tv_ensure_title_bar) TextView user_service;
+    @Bind(R.id.tv_right_title_bar) TextView user_service;
     private RequestQueue requestQueue;
     private Map<String,String> paramsMap;
 
