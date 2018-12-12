@@ -39,6 +39,7 @@
         android:dividerHeight="0.5dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
+        android:scrollbars="none"
         android:background="@color/rc_text_color_primary_inverse" />
 
 

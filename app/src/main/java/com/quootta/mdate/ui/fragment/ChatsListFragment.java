@@ -5,11 +5,24 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
 import com.quootta.mdate.R;
 import com.quootta.mdate.base.BaseFragment;
+import com.quootta.mdate.domain.SystemMessageList;
+import com.quootta.mdate.engine.myCenter.SysMessageRequest;
+import com.quootta.mdate.myListener.VolleyListener;
+import com.quootta.mdate.utils.GsonUtil;
+import com.quootta.mdate.utils.LogUtil;
+import com.quootta.mdate.utils.ToastUtil;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 import butterknife.Bind;
-import io.rong.imkit.fragment.ConversationListFragment;
 import io.rong.imlib.model.Conversation;
 
 /**
@@ -21,6 +34,7 @@ public class ChatsListFragment extends BaseFragment {
 
     @Bind(R.id.iv_back_title_bar)
     ImageView ivBack;
+
 
     @Override
     protected int getRootView() {
@@ -40,7 +54,8 @@ public class ChatsListFragment extends BaseFragment {
     }
 
     private void initChatList() {
-        ConversationListFragment fragment = (ConversationListFragment) getChildFragmentManager().findFragmentById(R.id.fm_chat_list_fragment);
+        MyConversationListFragment fragment = (MyConversationListFragment) getChildFragmentManager().findFragmentById(R.id.fm_chat_list_fragment);
+
         Uri uri = Uri.parse("rong://" + getActivity().getApplicationInfo().packageName).buildUpon()
                 .appendPath("conversationlist")
                 .appendQueryParameter(Conversation.ConversationType.PRIVATE.getName(), "false") //设置私聊会话是否聚合显示
@@ -53,7 +68,6 @@ public class ChatsListFragment extends BaseFragment {
 
         fragment.setUri(uri);
     }
-
 
     @Override
     protected void setListener() {

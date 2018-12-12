@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/myWhite">
 
 
     <include
@@ -10,8 +11,8 @@
         layout="@layout/layout_common_header_with_bg" />
     <fragment
         android:id="@+id/fm_chat_list_fragment"
-        android:name="io.rong.imkit.fragment.ConversationListFragment"
+        android:name="com.quootta.mdate.ui.fragment.MyConversationListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="22dp"/>
+        android:layout_marginTop="18dp"/>
 </LinearLayout>
