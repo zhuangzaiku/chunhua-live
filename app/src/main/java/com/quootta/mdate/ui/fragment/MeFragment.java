@@ -71,6 +71,8 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
     @Bind(R.id.iv_head_me_fragment) ImageView iv_head;
     @Bind(R.id.tv_name_me_fragment) TextView tv_name;
     @Bind(R.id.tvId) TextView tvId;
+    @Bind(R.id.iv_back_title_bar) ImageView iv_back_title_bar;
+    @Bind(R.id.tv_title_bar) TextView tv_title_bar;
     //    @Bind(R.id.tv_connection_rate) TextView tvConn;
 //    @Bind(R.id.rl_edit_profile) RelativeLayout rlEditProfile;
     //    @Bind(R.id.iv_sesame_credit_me_fragment) ImageView ivSesameCreditMeFragment;
@@ -164,6 +166,8 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
     @Override
     protected void initData(View view) {
         baseContext = view.getContext();
+        iv_back_title_bar.setVisibility(View.GONE);
+        tv_title_bar.setText(R.string.me);
         requestBaseInfoDetail();
         //展示图片的接口
         requestAlbum();
