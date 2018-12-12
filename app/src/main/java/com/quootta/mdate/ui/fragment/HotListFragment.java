@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.quootta.mdate.R;
@@ -65,7 +66,7 @@ public class HotListFragment extends BaseFragment {
     @Bind(R.id.rv_hot)
     RecyclerView rvHot;
     @Bind(R.id.fab_group_send)
-    FloatingActionButton fabSend;
+    Button fabSend;
     @Bind(R.id.hotLoading)
     ImageView hotLoading;
 
@@ -439,7 +440,7 @@ public class HotListFragment extends BaseFragment {
     }
 
     private void attachFabButton() {
-        fabSend.attachToRecyclerView(rvHot);
+//        fabSend.attachToRecyclerView(rvHot);
         fabSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

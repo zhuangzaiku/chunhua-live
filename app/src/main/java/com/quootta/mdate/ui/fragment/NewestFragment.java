@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.quootta.mdate.R;
@@ -57,7 +58,7 @@ public class NewestFragment extends BaseFragment {
     @Bind(R.id.srl_discover)
     SwipeRefreshLayout srlDiscover;
     @Bind(R.id.fab_group_send)
-    FloatingActionButton fabSend;
+    Button fabSend;
     @Bind(R.id.newLoading)
     ImageView newloading;
 
@@ -347,7 +348,7 @@ public class NewestFragment extends BaseFragment {
     }
 
     private void attachFabButton() {
-        fabSend.attachToRecyclerView(rvNewest);
+//        fabSend.attachToRecyclerView(rvNewest);
         fabSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

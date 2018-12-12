@@ -31,15 +31,18 @@
         android:visibility="gone"
         />
 
-
-    <com.melnykov.fab.FloatingActionButton
+    <Button
         android:id="@+id/fab_group_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="116dp"
+        android:layout_height="95dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
-        android:layout_margin="16dp"
-        android:src="@mipmap/group_send"
-        fab:fab_colorNormal="@color/FloatingActionButtonColor"
-        fab:fab_colorPressed="@color/FloatingActionButtonColorEnd"
-        fab:fab_colorRipple="@color/myGrayLight" />
+        android:layout_margin="8dp"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="24dp"
+        android:text="@string/group_call"
+        android:textColor="@color/myWhite"
+        android:textSize="19sp"
+        android:background="@mipmap/group_send" />
 </FrameLayout>

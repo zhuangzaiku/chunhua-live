@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.quootta.mdate.R;
@@ -56,7 +57,8 @@ public class DiscoverFragment extends BaseFragment {
     @Bind(R.id.srl_discover) SwipeRefreshLayout srl_discover ;
     @Bind(R.id.rl_null_discover)RelativeLayout rl_null_discover;
     @Bind(R.id.rv_discover) RecyclerView rv_discover;
-    @Bind(R.id.fab_group_send) FloatingActionButton fabSend;
+    @Bind(R.id.fab_group_send)
+    Button fabSend;
 
     public final static int POPULAR = 0;
     public final static int CITY = 1;
@@ -374,7 +376,7 @@ public class DiscoverFragment extends BaseFragment {
     }
 
     private void attachFabButton() {
-        fabSend.attachToRecyclerView(rv_discover);
+//        fabSend.attachToRecyclerView(rv_discover);
         fabSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
