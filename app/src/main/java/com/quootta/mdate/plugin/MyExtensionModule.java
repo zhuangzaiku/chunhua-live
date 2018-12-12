@@ -27,7 +27,7 @@ public class MyExtensionModule extends DefaultExtensionModule {
         pluginModules.add(new MyVideoPlugin());
         pluginModules.add(new MyAudioPlugin());
         pluginModules.add(new MyImagePlugin());
-        pluginModules.add(new MyCameraPlugin());
+//        pluginModules.add(new MyCameraPlugin());
        // pluginModules.add(new FilePlugin());
 
         return pluginModules;
