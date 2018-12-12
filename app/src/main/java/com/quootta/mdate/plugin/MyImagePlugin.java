@@ -10,6 +10,7 @@ import com.quootta.mdate.R;
 
 import io.rong.imkit.RongExtension;
 import io.rong.imkit.plugin.IPluginModule;
+import io.rong.imkit.plugin.ImagePlugin;
 import io.rong.imkit.plugin.image.PictureSelectorActivity;
 import io.rong.imkit.utilities.PermissionCheckUtil;
 import io.rong.imlib.model.Conversation;
@@ -19,7 +20,7 @@ import io.rong.imlib.model.Conversation;
  * Created by Ryon on 2017/1/16/0016.
  */
 
-public class MyImagePlugin implements IPluginModule {
+public class MyImagePlugin extends ImagePlugin {
 
     private Conversation.ConversationType conversationType;
     private String targetId;
@@ -41,25 +42,6 @@ public class MyImagePlugin implements IPluginModule {
     @Override
     public String obtainTitle(Context context) {
         return "";
-    }
-
-    @Override
-    public void onClick(Fragment currentFragment, RongExtension extension) {
-        String[] permissions = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE};
-        if (PermissionCheckUtil.requestPermissions(currentFragment, permissions)) {
-            this.conversationType = extension.getConversationType();
-            this.targetId = extension.getTargetId();
-            Intent intent = new Intent(currentFragment.getActivity(), PictureSelectorActivity.class);
-            extension.startActivityForPluginResult(intent, 23, this);
-        }
-    }
-
-
-
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
     }
 
 
