@@ -104,6 +104,11 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
     @Bind(R.id.sw_audio)
     Switch swAudio;
 
+    @Bind(R.id.tv_video_switch)
+    TextView tvVideoSwitch;
+    @Bind(R.id.tv_audio_switch)
+    TextView tvAudioSwitch;
+
     private Map<String , String> statusMap;
     private int audioPrice;
     private int videoPrice;
@@ -170,14 +175,18 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
 
         if (BaseApp.getIsVideoEnable()){
             swVideo.setChecked(true);
+            tvVideoSwitch.setText(videoPrice + getString(R.string.gold_per_min));
         } else {
             swVideo.setChecked(false);
+            tvVideoSwitch.setText(getString(R.string.abandon_answer));
         }
 
         if(BaseApp.getIsAudioEnable()) {
             swAudio.setChecked(true);
+            tvAudioSwitch.setText(audioPrice + getString(R.string.gold_per_min));
         } else {
             swAudio.setChecked(false);
+            tvAudioSwitch.setText(getString(R.string.abandon_answer));
         }
     }
 
@@ -431,6 +440,20 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
         wallet.setOnClickListener(this);
         videoVerify.setOnClickListener(this);
 
+        tvAudioSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onPricePicker(TYPE_AUDIO);
+            }
+        });
+
+        tvVideoSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onPricePicker(TYPE_VIDEO);
+            }
+        });
+
         swAudio.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -452,6 +475,18 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
                 requestAnswerStatus(TYPE_VIDEO, statusMap, null);
             }
         });
+
+        if (BaseApp.getIsAudioEnable()) {
+            tvAudioSwitch.setClickable(true);
+        } else {
+            tvAudioSwitch.setClickable(false);
+        }
+
+        if (BaseApp.getIsVideoEnable()) {
+            tvVideoSwitch.setClickable(true);
+        } else {
+            tvVideoSwitch.setClickable(false);
+        }
 
     }
 
@@ -512,12 +547,35 @@ public class MeFragment extends BaseFragment implements View.OnClickListener{
                         BaseApp.setIsVideoEnable(Boolean.parseBoolean(chargeStandard.video_enable));
                         BaseApp.setVideoPrice(Integer.parseInt(chargeStandard.video_pay));
 
+                        //根据接听状态设置点击事件和图片显示状态
+                        if(!BaseApp.getIsVideoEnable()) {
+                            //不可接听
+                            tvVideoSwitch.setClickable(false);
+                            tvVideoSwitch.setText(getString(R.string.abandon_answer));
+                        } else {
+                            //可接听
+                            tvVideoSwitch.setClickable(true);
+
+                            tvVideoSwitch.setText(chargeStandard.video_pay + getString(R.string.gold_per_min));
+                        }
+
                         break;
                     case TYPE_AUDIO:
                         //成功后同步本地属性值
                         BaseApp.setIsAudioEnable(Boolean.parseBoolean(chargeStandard.audio_enable));
                         BaseApp.setAudioPrice(Integer.parseInt(chargeStandard.audio_pay));
 
+                        //根据接听状态设置点击事件和图片显示状态
+                        if(!BaseApp.getIsAudioEnable()) {
+                            //不可接听
+                            tvAudioSwitch.setClickable(false);
+                            tvAudioSwitch.setText(getString(R.string.abandon_answer));
+                        } else {
+                            //可接听
+                            tvAudioSwitch.setClickable(true);
+
+                            tvAudioSwitch.setText(chargeStandard.audio_pay + getString(R.string.gold_per_min));
+                        }
                         break;
                 }
 

@@ -224,14 +224,15 @@
                     android:src="@mipmap/ic_arrow_right"/>
 
                 <TextView
+                    android:id="@+id/tv_audio_switch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_12"
-                    android:layout_toLeftOf="@+id/iv_audio_enter"
+                    android:layout_toLeftOf="@id/iv_audio_enter"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="12dp"
                     android:textColor="@color/color_cbcbcb"
-                    android:text="@string/free"/>
+                    android:text="@string/free"
+                    android:textSize="@dimen/font_size_12"
+                    android:layout_marginRight="@dimen/margin_size_10"/>
 
 
             </RelativeLayout>
@@ -267,7 +268,7 @@
                     android:layout_width="50dp"
                     android:layout_height="29dp"
                     android:layout_toRightOf="@id/tv_video_label"
-                    android:layout_marginLeft="@dimen/margin_size_25"
+                    android:layout_marginLeft="@dimen/margin_size_22"
                     android:thumb="@drawable/selector_switch_thumb"
                     android:track="@drawable/selector_switch_track"
                     android:layout_centerVertical="true" />
@@ -281,16 +282,16 @@
                     android:layout_centerVertical="true"
                     android:src="@mipmap/ic_arrow_right"/>
 
-
                 <TextView
+                    android:id="@+id/tv_video_switch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_12"
-                    android:layout_toLeftOf="@+id/iv_video_enter"
+                    android:layout_toLeftOf="@id/iv_video_enter"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="12dp"
                     android:textColor="@color/color_cbcbcb"
-                    android:text="@string/free"/>
+                    android:text="@string/free"
+                    android:textSize="@dimen/font_size_12"
+                    android:layout_marginRight="@dimen/margin_size_10"/>
 
             </RelativeLayout>
         </LinearLayout>
@@ -762,7 +763,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/Meitem_height"
             android:layout_marginTop="0.5dp"
-
+            android:visibility="gone"
             android:background="@color/backgroundWhite">
 
             <ImageView
