@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.volley.toolbox.NetworkImageView
+<com.quootta.mdate.ui.view.RoundRectNetworkImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jianyue="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/banner_height_size"
     android:scaleType="fitXY"
+    jianyue:borderRadius="6dp"
+    jianyue:type="round"
     android:clickable="true"/>

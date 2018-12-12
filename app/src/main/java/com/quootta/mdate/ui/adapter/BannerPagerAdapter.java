@@ -12,6 +12,7 @@ import com.quootta.mdate.constant.LocalUrl;
 import com.quootta.mdate.domain.BannerList;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.quootta.mdate.ui.view.RoundRectNetworkImageView;
 
 import java.util.List;
 public class BannerPagerAdapter extends PagerAdapter {
@@ -46,7 +47,7 @@ public class BannerPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, final int position) {
-        NetworkImageView imageView = (NetworkImageView) mInflater.inflate(R.layout.item_banner, container, false);
+        RoundRectNetworkImageView imageView = (RoundRectNetworkImageView) mInflater.inflate(R.layout.item_banner, container, false);
         imageView.setDefaultImageResId(R.mipmap.home_show_loading);
         imageView.setErrorImageResId(R.mipmap.home_show_loading);
         imageView.setImageUrl(LocalUrl.getPicUrl(bannerList.get(position).image_url), imageLoader);
