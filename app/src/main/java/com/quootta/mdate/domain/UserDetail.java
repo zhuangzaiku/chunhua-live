@@ -25,6 +25,7 @@ public class UserDetail implements Serializable {
     public String city;
     public String request;
     public String date_way;
+    public String gender;
     public String expertise;
     public String chat;
     public String distance;
