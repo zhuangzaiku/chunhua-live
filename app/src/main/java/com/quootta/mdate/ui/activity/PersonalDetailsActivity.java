@@ -13,6 +13,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -368,7 +369,11 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
         tvAge.setText(userDetail.age);
         tvNickname.setText(getResources().getString(R.string.nickname, userDetail.nick_name));
         tvId.setText(getResources().getString(R.string.id, userDetail._id));
-//        ivGender.setBackgroundResource(userDetail.);  没有性别信息
+        if(TextUtils.isEmpty(userDetail.gender)) {
+            ivGender.setImageResource(R.mipmap.ic_female);
+        } else {
+            ivGender.setImageResource(userDetail.gender.equals("female") ? R.mipmap.ic_female : R.mipmap.ic_male);
+        }
         tv_constellation.setText(userDetail.constellation);
 
 //        double distance = Double.parseDouble(userDetail.distance);
