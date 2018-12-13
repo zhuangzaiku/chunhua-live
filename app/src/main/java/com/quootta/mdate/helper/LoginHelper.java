@@ -216,6 +216,7 @@ public class LoginHelper {
                     protected void onSuccess(JSONObject response) {
                         try {
                             RongIM.getInstance().disconnect();
+                            RongIM.getInstance().logout();
                             LogUtil.d("LoginHelper", "Response:" + response.toString());
                             ToastUtil.showToast(response.getString("msg"));
                             finishActivity();

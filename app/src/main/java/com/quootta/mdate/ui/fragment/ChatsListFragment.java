@@ -67,6 +67,7 @@ public class ChatsListFragment extends BaseFragment {
                 .build();
 
         fragment.setUri(uri);
+        fragment.onRestoreUI();
     }
 
     @Override
