@@ -233,6 +233,13 @@
     <string name="save">保存</string>
     <string name="nickname">昵称：%s</string>
     <string name="id">ID：%s</string>
+
+    <string name="menu_black">拉黑</string>
+    <string name="menu_cancel_black">取消拉黑</string>
+    <string name="menu_tip_off">举报</string>
+    <string name="menu_follow">关注</string>
+    <string name="menu_cancel_follow">取消关注</string>
+
     <!--充值-->
     <string name="amount_sum">账户余额：</string>
     <string name="choose_amount">选择充值金额</string>

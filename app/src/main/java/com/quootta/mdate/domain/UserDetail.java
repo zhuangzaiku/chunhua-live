@@ -41,6 +41,7 @@ public class UserDetail implements Serializable {
     public String audio_enable;
     public List<Gift_receiver> gift_receive;
     public List<Gift_send> gift_send;
+    public String is_blacklist;
 
 }
 

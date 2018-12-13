@@ -653,23 +653,38 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
     private void showItemsDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(baseContext);
 
-        String[] items;
+        String[] items = new String[]{
+                getResources().getString(R.string.menu_black),
+                getResources().getString(R.string.menu_tip_off),
+                getResources().getString(R.string.menu_follow)
+        };
         final int type;
 
         if (Boolean.parseBoolean(userDetail.is_favorite)) {
-            items = getResources().getStringArray(R.array.more_btn_item2);
+            items[2] = getResources().getString(R.string.menu_cancel_follow);
             type = REMOVE;
         } else {
-            items = getResources().getStringArray(R.array.more_btn_item1);
+            items[2] = getResources().getString(R.string.menu_follow);
             type = ADD;
         }
+
+        int blackType = ADD;
+        if (Boolean.parseBoolean(userDetail.is_blacklist)) {
+            items[0] = getResources().getString(R.string.menu_cancel_black);
+            blackType = REMOVE;
+        } else {
+            items[0] = getResources().getString(R.string.menu_black);
+            blackType = ADD;
+        }
+
+        final int paramBlack = blackType;
 
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case 0://拉黑
-                        requestBlackList();
+                        requestBlackList(paramBlack);
                         break;
                     case 1://举报
                         requestReport();
@@ -691,14 +706,19 @@ public class PersonalDetailsActivity extends BaseActivity implements ViewPager.O
 
 
 
-    private void requestBlackList() {
+    private void requestBlackList(final int type) {
         Map<String, String> listParams = new HashMap<String, String>();
         listParams.put("user_id", userId);
-        BlackListRequest blackListRequest = new BlackListRequest(ADD, listParams, new VolleyListener() {
+        BlackListRequest blackListRequest = new BlackListRequest(type, listParams, new VolleyListener() {
             @Override
             protected void onSuccess(JSONObject response) {
                 try {
                     ToastUtil.showToast(response.getString("msg"));
+                    if(type == ADD) {
+                        userDetail.is_blacklist = "true";
+                    } else {
+                        userDetail.is_blacklist = "false";
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
