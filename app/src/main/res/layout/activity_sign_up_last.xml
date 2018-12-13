@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/myWhite"
-    tools:context=".ui.activity.SignActivitys.SignUpSecondActivity">
+    android:background="@color/myWhite">
 
     <include
         android:id="@+id/commonHeader"
@@ -24,14 +23,27 @@
             android:layout_marginRight="@dimen/margin_size_24"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/iv_head_sign_up_activity"
-                android:layout_width="93dp"
-                android:layout_height="93dp"
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@mipmap/ic_signup_head_circle"
-                android:padding="36dp"
-                android:src="@mipmap/ic_signup_head_cross" />
+                android:background="@mipmap/ic_signup_head_circle">
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_signup_head_cross" />
+
+                <com.quootta.mdate.ui.view.CircleImageView
+                    android:id="@+id/iv_head_sign_up_activity"
+                    android:layout_width="93dp"
+                    android:layout_height="93dp"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+
 
             <TextView
                 android:layout_width="wrap_content"

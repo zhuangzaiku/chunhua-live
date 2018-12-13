@@ -181,13 +181,13 @@ public class BaseApp extends Application{
         //配置主题
         //ThemeConfig
         ThemeConfig theme = new ThemeConfig.Builder()
-                .setTitleBarBgColor(getResources().getColor(R.color.themePink))
-                .setTitleBarTextColor(Color.BLACK)
-                .setTitleBarIconColor(Color.BLACK)
-                .setFabNornalColor(getResources().getColor(R.color.themePink))
-                .setFabPressedColor(getResources().getColor(R.color.themeYellowDark))
+                .setTitleBarBgColor(getResources().getColor(R.color.color_ec76a2))
+                .setTitleBarTextColor(Color.WHITE)
+                .setTitleBarIconColor(Color.WHITE)
+                .setFabNornalColor(getResources().getColor(R.color.color_ec76a2))
+                .setFabPressedColor(getResources().getColor(R.color.color_ec76a2))
                 .setCheckNornalColor(Color.GRAY)
-                .setCheckSelectedColor(getResources().getColor(R.color.themePink))
+                .setCheckSelectedColor(getResources().getColor(R.color.color_ec76a2))
                 .setCropControlColor(getResources().getColor(R.color.myWhite))
                 .build();
         //配置功能

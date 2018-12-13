@@ -41,6 +41,7 @@ import com.quootta.mdate.ui.activity.MainActivity;
 import com.quootta.mdate.ui.activity.UserDealActivity;
 import com.quootta.mdate.ui.dialog.MyProgressDialog;
 import com.quootta.mdate.ui.popupWindow.SelectPicPopupWindow;
+import com.quootta.mdate.ui.view.CircleImageView;
 import com.quootta.mdate.utils.ActivityUtil;
 import com.quootta.mdate.utils.FileUtil;
 import com.quootta.mdate.utils.GsonUtil;
@@ -74,7 +75,7 @@ import okhttp3.Call;
 public class SignUpLastFragment extends BaseFragment implements View.OnClickListener {
     @Bind(R.id.iv_back_title_bar)ImageView iv_back;
     @Bind(R.id.tv_title_bar)TextView tv_title;
-    @Bind(R.id.iv_head_sign_up_activity)ImageView iv_head;
+    @Bind(R.id.iv_head_sign_up_activity)CircleImageView iv_head;
     @Bind(R.id.et_name_sign_up_activity)EditText et_name;
     @Bind(R.id.rg_sex_sign_up_activity)RadioGroup rg_sex;
     @Bind(R.id.ll_city_sign_up_activity)LinearLayout ll_city;
